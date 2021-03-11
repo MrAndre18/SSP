@@ -1,0 +1,158 @@
+$main-font-family: "Pragmatica", Arial, sans-serif !default;
+$fullpage-bg: url("../../assets/images/header-slider-1.jpg");
+$fullpage-color: #fff;
+$main-color: #173551;
+$fullpage-more-btn-color: #f76c72;
+
+.main {
+  color: $main-color;
+  font-family: $main-font-family;
+  overflow: hidden;
+
+  .fullpage-block {
+    height: 100vh;
+    width: 100%;
+    padding: 120px 0 0;
+    background: $fullpage-bg no-repeat center;
+    background-size: cover;
+    color: $fullpage-color;
+
+    &__content {
+      position: relative;
+      height: 100%;
+      padding: 37px 40px 40px;
+
+      .fullpage-block__title {
+        .first-line {
+          display: flex;
+          align-items: center;
+
+          .line {
+            height: 1px;
+            width: 110px;
+            margin: 0 20px;
+            background: $fullpage-color;
+          }
+
+          .big-text {
+            line-height: 140%;
+          }
+        }
+        .small-text {
+          font-size: 14px;
+          text-transform: uppercase;
+        }
+
+        .big-text {
+          font-size: 37px;
+        }
+      }
+
+      .fullpage-block__description {
+        position: absolute;
+        right: 115px;
+        top: 225px;
+        max-width: 486px;
+        font-size: 24px;
+        line-height: 140%;
+
+        .more-btn {
+          margin: 44px 0 0;
+
+          a {
+            background: $fullpage-more-btn-color;
+          }
+        }
+      }
+
+      .fullpage-block__contacts {
+        position: absolute;
+        right: 40px;
+        bottom: 40px;
+        text-align: right;
+        font-size: 16px;
+
+        .phone {
+          margin: 0 0 10px;
+        }
+      }
+    }
+  }
+
+  .practices-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px 40px 0;
+    margin: 0 40px;
+    border-bottom: 1px solid #cfdeea;
+
+    .all-practices {
+      font-size: 24px;
+    }
+
+    .practices__item {
+      font-size: 16px;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .recognition {
+    margin: 160px 0;
+
+    &__title {
+      font-size: 130px;
+      line-height: 90%;
+      padding: 0 0 0 40px;
+    }
+
+    &__content {
+      margin: 80px 0 0;
+      width: 120%;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &-row-1 {
+        background: url("../../assets/images/recognition.png") repeat;
+        background-position: 10%;
+        height: 116px;
+      }
+
+      &-row-2 {
+        background: url("../../assets/images/recognition.png") repeat;
+        background-position: -20%;
+        height: 116px;
+      }
+    }
+  }
+
+  .news {
+    padding: 0 40px;
+    margin: 0 0 160px;
+
+    &__subtitle {
+      font-size: 24px;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin: 20px 0 80px;
+
+      .news__title {
+        font-size: 55px;
+        line-height: 120%;
+      }
+
+      .more-btn {
+        margin: 0 0 14px;
+      }
+    }
+  }
+}

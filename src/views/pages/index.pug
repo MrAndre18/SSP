@@ -1,0 +1,66 @@
+extends ../layouts/master.pug
+
+block header
+  include ../partials/_header.pug
+
+block content
+  main.main
+    .fullpage-block
+      .fullpage-block__content
+        h1.fullpage-block__title
+          p.first-line
+            span.small-text Сила Стабильного Партнерства
+            span.line
+            span.big-text Наш основной принцип деятельности
+          span.big-text заложен в самом названии
+        .fullpage-block__description
+          p Мы исключительные профессионалы. Для нас нет неразрешимых задач. Мы идем до конца. Экспертиза, креативное мышление и коллективизм — это то, что делает нашу компанию сильной.
+          .more-btn
+            a(href="#")
+              img(src="assets/images/icons/arrow-right.svg", alt="more")
+            span Больше о нас
+        .fullpage-block__contacts
+          p.phone 8 812 901–02–01
+          p.email site@ssp-consult.ru
+
+    .practices-block
+      p.all-practices Все практики
+      ul.practices__items
+        li.practices__item
+          a(href="") Банкротство и корпоративные конфликты
+        li.practices__item
+          a(href="") Административно–правовая защита
+        li.practices__item
+          a(href="") Абонентское обслуживание
+      ul.practices__items
+        li.practices__item
+          a(href="") Трудовое и административное право
+        li.practices__item
+          a(href="") Недвижимость и строительство
+        li.practices__item
+          a(href="") Страховое право
+      ul.practices__items
+        li.practices__item
+          a(href="") Управление финансовой задолженностью
+        li.practices__item
+          a(href="") Разрешение споров
+        li.practices__item
+          a(href="") PRO BONO
+
+    .recognition
+      h2.recognition__title Признание
+      .recognition__content
+        .recognition__content-row-1
+        .recognition__content-row-2
+
+    .news
+      .news__subtitle События
+      .news__header
+        h2.news__title
+          | Делимся экспертизой.
+          br
+          | Публикуемся в СМИ. Развиваемся.
+        .more-btn
+          a(href="#")
+            img(src="assets/images/icons/arrow-right.svg", alt="more")
+          span Все события
