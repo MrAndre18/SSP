@@ -1,9 +1,20 @@
 @font-face {
-  font-family: 'Pragmatica';
-  src: url('../fonts/pragmatica.woff2') format('woff2'),
-    url('../fonts/pragmatica.woff') format('woff'),
-    url('../fonts/pragmatica.ttf') format('truetype'),
-    url('../fonts/pragmatica.svg#pragmatica') format('svg');
+  font-family: "Pragmatica";
+  src: url("../fonts/pragmatica.woff2") format("woff2"),
+    url("../fonts/pragmatica.woff") format("woff"),
+    url("../fonts/pragmatica.ttf") format("truetype"),
+    url("../fonts/pragmatica.svg#pragmatica") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kudryashev Headline";
+  src: url("../fonts/Kudryashev Headline.woff2") format("woff2"),
+    url("../fonts/Kudryashev Headline.woff") format("woff"),
+    url("../fonts/Kudryashev Headline.ttf") format("truetype"),
+    url("../fonts/Kudryashev Headline.svg#KudryashevHeadline") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -59,36 +70,35 @@
 //– main.scss              # Main Sass file
 //
 
-
 //*
 // Which objects and abstractions would you like to use?
 //base
-$use-btn-color:                true!default;
-$use-btn-size:                 true!default;
-$use-btn-group:                false!default;
-$use-input-group:              false!default;
-$use-table:                    true!default;
-$use-color-table:              false!default;
-$use-column-table:             false!default;
-$use-color-text:               true!default;
+$use-btn-color: true !default;
+$use-btn-size: true !default;
+$use-btn-group: false !default;
+$use-input-group: false !default;
+$use-table: true !default;
+$use-color-table: false !default;
+$use-column-table: false !default;
+$use-color-text: true !default;
 
 //modules
-$use-accordion:                false!default;
-$use-breadcrumb:               true!default;
-$use-pagination:               true!default;
-$use-pager:                    true!default;
-$use-space:                    true!default;
-$use-split:                    false!default;
-$use-rules:                    false!default;
-$use-this-or-this:             false!default;
-$use-media:                    true!default;
+$use-accordion: false !default;
+$use-breadcrumb: true !default;
+$use-pagination: true !default;
+$use-pager: true !default;
+$use-space: true !default;
+$use-split: false !default;
+$use-rules: false !default;
+$use-this-or-this: false !default;
+$use-media: true !default;
 // grids
-$use-adaptive:                 true!default;
-$use-flexbox:                  true!default;
-$use-bem:                      false!default;
+$use-adaptive: true !default;
+$use-flexbox: true !default;
+$use-bem: false !default;
 // plugins
-$use-animations:               false!default;
-$debug-mode:                   false!default;
+$use-animations: false !default;
+$debug-mode: false !default;
 
 // @import "_sprites";
 

@@ -1,0 +1,103 @@
+$footer-font-family: "Pragmatica", Arial, sans-serif !default;
+$additional-font-family: "Kudryashev Headline", serif !default;
+$footer-color: #fff;
+$footer-title-color: #3691e1;
+
+$footer-bg-color: #124471;
+$footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
+
+.footer {
+  width: 100%;
+  background-color: $footer-bg-color;
+  background-image: $footer-bg-img;
+  background-position: center;
+  background-size: cover;
+  padding: 160px 85px 80px 40px;
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: $footer-font-family;
+    color: $footer-color;
+
+    .footer__title {
+      max-width: 510px;
+      width: 100%;
+      font-size: 90px;
+      color: $footer-title-color;
+      font-family: $additional-font-family;
+
+      span {
+        font-family: $footer-font-family;
+      }
+    }
+
+    .footer-block {
+      width: calc(100% - 510px - 420px);
+      display: flex;
+      flex-direction: column;
+
+      .footer__links-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 132px;
+        font-size: 20px;
+        line-height: 140%;
+
+        .footer__links {
+          display: flex;
+
+          &-block {
+            margin: 0 88px 0 0;
+
+            &:last-child {
+              margin: 0;
+            }
+          }
+
+          &-item {
+            margin: 0 0 20px;
+
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+
+        .footer__network {
+          margin: 0 0 10px;
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+
+      .footer__contacts {
+        display: flex;
+        flex-direction: column;
+        font-size: 55px;
+        line-height: 100%;
+        font-family: $additional-font-family;
+
+        .phone {
+          margin: 0 0 20px;
+        }
+      }
+    }
+
+    .footer__bottom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 70px 0 0;
+      font-size: 14px;
+
+      .author a {
+        color: $footer-title-color;
+      }
+    }
+  }
+}
