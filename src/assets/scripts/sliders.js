@@ -19,9 +19,11 @@ const fullPageSlider = new Swiper(".fulpage__slider", {
   loop: true,
   loopedSlides: 3,
   effect: "fade",
+  speed: 700,
   simulateTouch: false,
 
   autoplay: {
     delay: 5000,
+    disableOnInteraction: false,
   },
 });
