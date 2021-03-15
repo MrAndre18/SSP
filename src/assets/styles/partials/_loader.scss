@@ -1,0 +1,52 @@
+$main-font-family: "Pragmatica", Arial, sans-serif !default;
+$additional-font-family: "Kudryashev Headline", serif !default;
+
+$loader-bg: #bcdcf9;
+$loader-color: #173551;
+
+.loader {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: $loader-bg;
+  transform: translateY(0);
+  transition: transform 0.6s cubic-bezier(0.45, 0, 0.55, 1);
+
+  &.hidden {
+    transform: translateY(-100vh);
+    transition: transform 0.6s cubic-bezier(0.45, 0, 0.55, 1);
+  }
+
+  &-title {
+    font-size: 40px;
+    line-height: 100%;
+    color: $loader-color;
+    font-family: $additional-font-family;
+
+    span {
+      font-family: $main-font-family;
+    }
+  }
+
+  &-progress {
+    position: absolute;
+    top: calc(50% - 610px / 2);
+    left: calc(50% - 610px / 2);
+    width: 610px;
+    height: 610px;
+
+    &__circle {
+      transform-origin: center;
+      transform: rotate(-90deg);
+      stroke: $loader-color;
+
+      transition: stroke-dashoffset 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+    }
+  }
+}

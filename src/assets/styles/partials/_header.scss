@@ -2,7 +2,7 @@ $header-font-family: "Pragmatica", Arial, sans-serif !default;
 $header-color: #fff;
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
