@@ -24,16 +24,19 @@ block content
               p Наша философия — каждый клиент это партнер. Именно такое отношение позволяет эффективно взаимодействовать, отметая формализм и барьеры в коммуникации.
               +moreBtn('#', "Больше о нас")
         .fulpage__slider-pagination.swiper-pagination
-          .fulpage__slider-bullet.swiper-pagination-bullet(data-bullet-index=0)
+          .fulpage__slider-bullet.fulpage__slider-bullet-active.swiper-pagination-bullet(data-bullet-index=0)
             span.bullet-content С
+            .colored-circle
             svg.bullet-progress(width='220', height='220')
               circle.bullet-progress__circle(stroke='#fff', stroke-width='1', cx='104', cy='104', r='103', fill='transparent')
           .fulpage__slider-bullet.swiper-pagination-bullet(data-bullet-index=1)
             span.bullet-content С
+            .colored-circle
             svg.bullet-progress(width='220', height='220')
               circle.bullet-progress__circle(stroke='#fff', stroke-width='1', cx='104', cy='104', r='103', fill='transparent')
           .fulpage__slider-bullet.swiper-pagination-bullet(data-bullet-index=2)
             span.bullet-content П
+            .colored-circle
             svg.bullet-progress(width='220', height='220')
               circle.bullet-progress__circle(stroke='#fff', stroke-width='1', cx='104', cy='104', r='103', fill='transparent')
       .fullpage-block__content
@@ -49,53 +52,51 @@ block content
 
     .practices-block
       .practices__slider.swiper-container
-        .swiper-wrapper
-          .swiper-slide.swiper-slide-1
+        .practices__slider-wrapper.swiper-wrapper
+          .practices__slider-slide.practices__slider-slide-1.swiper-slide
             p.slide__subtitle Ведущие практики
             p.slide__title
               span 01
               | Банкротство #[br] и корпоративные конфликты
-          .swiper-slide.swiper-slide-2
+          .practices__slider-slide.practices__slider-slide-2.swiper-slide
             p.slide__subtitle Ведущие практики
             p.slide__title
               span 02
               | Трудовое и административное право
-          .swiper-slide.swiper-slide-3
+          .practices__slider-slide.practices__slider-slide-3.swiper-slide
             p.slide__subtitle Ведущие практики
             p.slide__title
               span 03
               | Разрешение споров
-        .swiper-button-next
+        .practices__slider-button-next.swiper-button-next
+          .button-active
+            img(src="assets/images/icons/slider-arrow-white.svg", alt="next")
           img(src="assets/images/icons/slider-arrow.svg", alt="next")
       .practices__bottom
         p.all-practices Все практики
         ul.practices__items
           li.practices__item
-            a(href="") Банкротство и корпоративные конфликты
+            a.link(href="#") Банкротство и корпоративные конфликты
           li.practices__item
-            a(href="") Административно–правовая защита
+            a.link(href="#") Административно–правовая защита
           li.practices__item
-            a(href="") Абонентское обслуживание
+            a.link(href="#") Абонентское обслуживание
         ul.practices__items
           li.practices__item
-            a(href="") Трудовое и административное право
+            a.link(href="#") Трудовое и административное право
           li.practices__item
-            a(href="") Недвижимость и строительство
+            a.link(href="#") Недвижимость и строительство
           li.practices__item
-            a(href="") Страховое право
+            a.link(href="#") Страховое право
         ul.practices__items
           li.practices__item
-            a(href="") Управление финансовой задолженностью
+            a.link(href="#") Управление финансовой задолженностью
           li.practices__item
-            a(href="") Разрешение споров
+            a.link(href="#") Разрешение споров
           li.practices__item
-            a(href="") PRO BONO
+            a.link(href="#") PRO BONO
 
-    .recognition
-      h2.recognition__title Признание
-      .recognition__content
-        .recognition__content-row-1
-        .recognition__content-row-2
+    include ../components/_recognition.pug
 
     .news
       .news__subtitle События
@@ -113,15 +114,19 @@ block content
             p.news__item-date 20 декабря 2020
             p.news__item-title Дарья Титкова в «Диалоге с бизнесом», при поддержке ЛО ТПП
             ul.news__item-themes
-              li.news__item-theme суды
-              li.news__item-theme адвокаты
-              li.news__item-theme арбитраж
+              li.news__item-theme
+                +tabBtn("#", "суды", "disabled")
+              li.news__item-theme
+                +tabBtn("#", "адвокаты", "disabled")
+              li.news__item-theme
+                +tabBtn("#", "арбитраж", "disabled")
             +moreBtn('#', "Подробнее")
           li.news__item
             p.news__item-date 20 декабря 2020
             p.news__item-title ССП–Консалт ищет пострадавших от бездействий авиакомпаний
             ul.news__item-themes
-              li.news__item-theme суды
+              li.news__item-theme
+                +tabBtn("#", "суды", "disabled")
             +moreBtn('#', "Подробнее")
 
 block footer

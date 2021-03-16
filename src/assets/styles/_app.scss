@@ -112,7 +112,7 @@ $debug-mode: false !default;
 @import "vendors/*.scss";
 
 // Base
-// @import "base/*.scss";
+@import "base/*.scss";
 
 // Modules
 @import "modules/*.scss";

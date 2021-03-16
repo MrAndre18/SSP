@@ -2,6 +2,8 @@ $footer-font-family: "Pragmatica", Arial, sans-serif !default;
 $additional-font-family: "Kudryashev Headline", serif !default;
 $footer-color: #fff;
 $footer-title-color: #3691e1;
+$footer-hover-color: #9bd1ff;
+$footer-author-hover-color: #F66C72;
 
 $footer-bg-color: #124471;
 $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
@@ -46,6 +48,14 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
         font-size: 20px;
         line-height: 140%;
 
+        .link:hover {
+          color: $footer-hover-color;
+        }
+
+        .link::before {
+          background: $footer-hover-color;
+        }
+
         .footer__links {
           display: flex;
 
@@ -82,6 +92,15 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
         line-height: 100%;
         font-family: $additional-font-family;
 
+        a {
+          width: fit-content;
+          transition: all 0.6s cubic-bezier(0.45, 0, 0.55, 1);
+
+          &:hover {
+            color: $footer-hover-color;
+          }
+        }
+
         .phone {
           margin: 0 0 20px;
         }
@@ -97,6 +116,11 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
 
       .author a {
         color: $footer-title-color;
+        transition: all 0.6s cubic-bezier(0.45, 0, 0.55, 1);
+
+        &:hover {
+          color: $footer-author-hover-color;
+        }
       }
     }
   }

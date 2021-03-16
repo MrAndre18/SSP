@@ -2,7 +2,6 @@
 import AOS from "aos";
 import Rellax from "rellax";
 import Sticky from "sticky-js";
-// import Swiper from 'swiper/swiper-bundle.min';
 import "velocity-animate";
 // import './assets/scripts/backend.js';
 // import './assets/scripts/map.js';
@@ -13,188 +12,167 @@ import "jquery";
 import "Styles/_app.scss";
 
 $(() => {
-  require("Scripts/convert-svg");
   require("Scripts/sliders");
+  require("Scripts/convert-svg");
   require("Scripts/scroll");
 });
 
-// $(document).ready(() => {
-// 	const screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-// 	require('Scripts/sliders');
+// MAIN PAGE: loader
 
-// 	require('Scripts/header');
-// 	require('Scripts/showMore');
-// 	require('Scripts/filtering');
-// 	require('Scripts/select');
-// 	require('Scripts/popup');
-// 	require('Scripts/ref');
+$(() => {
+  const loader = $(".loader"),
+    progress = loader.find(".loader-progress"),
+    circle = progress.find(".loader-progress__circle"),
+    radius = +circle.attr("r"),
+    circumference = 2 * Math.PI * radius;
 
-// 	if (screenWidth > 1150 && $('.sticky').length) {
-// 		const sticky = new Sticky('.sticky');
-// 	}
+  if (process.env.NODE_ENV === "production" || !loader.hasClass("hidden")) {
+    setTimeout(function () {
+      window.scrollTo(0, 0);
+    }, 200);
+  }
 
-// 	$('.backLink').mouseover(function () {
-// 		const getBtnWidth = $(this).width();
-// 		const getArrWidth = $(this).find('.nextBlock--ico').width();
-// 		$(this).find('.nextBlock--ico').css('left', -(getBtnWidth / 2 - getArrWidth * 2.5));
-// 	}).mouseleave(function () {
-// 		$(this).find('.nextBlock--ico').css('left', 0);
-// 	});
+  if (!loader.hasClass("hidden")) {
+    // $(".loaded-content").css("display", "none");
+    $("body").css("overflow", "hidden");
+    circle.css("strokeDasharray", `${circumference} ${circumference}`);
+    circle.css("strokeDashoffset", circumference);
 
-// 	require('Scripts/input');
-// 	require('Scripts/server');
-// });
+    // параметры прелоадера
+    const // информация об изображениях
+      img = {
+        elem: $("img"),
+        count: $("img").length,
+      };
+    // информация о загрузке изображений
+    const load = {
+      counter: 0,
+      startTime: null,
+      endTime: null,
+      time: null,
+      progress: null,
+      TAIL: {
+        MIN_TIME: 200,
+        MAX_TIME: 500,
+        PARTS: 5,
+        BREAKPOINT: 0.6 + 0.2 * Math.random(),
+      },
+    };
 
-// // MAIN PAGE: loader
+    // загрузка одного изображения (тэг img)
+    img.elem.on("load", () => {
+      load.counter++;
 
-// $(() => {
-//   const loader = $(".loader"),
-//     progress = loader.find(".loader-progress"),
-//     circle = progress.find(".loader-progress__circle"),
-//     radius = +circle.attr("r"),
-//     circumference = 2 * Math.PI * radius;
+      if (!load.startTime) {
+        load.startTime = new Date().getTime();
+      }
 
-//   if (process.env.NODE_ENV === "production" || !loader.hasClass("hidden")) {
-//     setTimeout(function () {
-//       window.scrollTo(0, 0);
-//     }, 200);
-//   }
+      load.progress = load.counter / img.count;
+      load.progress =
+        load.progress < load.TAIL.BREAKPOINT
+          ? load.progress
+          : load.TAIL.BREAKPOINT;
 
-//   if (!loader.hasClass("hidden")) {
-//     // $(".loaded-content").css("display", "none");
-//     $("body").css("overflow", "hidden");
-//     circle.css("strokeDasharray", `${circumference} ${circumference}`);
-//     circle.css("strokeDashoffset", circumference);
+      preloaderUpdate(load.progress * 0.5);
+    });
 
-//     // параметры прелоадера
-//     const // информация об изображениях
-//       img = {
-//         elem: $("img"),
-//         count: $("img").length,
-//       };
-//     // информация о загрузке изображений
-//     const load = {
-//       counter: 0,
-//       startTime: null,
-//       endTime: null,
-//       time: null,
-//       progress: null,
-//       TAIL: {
-//         MIN_TIME: 200,
-//         MAX_TIME: 500,
-//         PARTS: 5,
-//         BREAKPOINT: 0.6 + 0.2 * Math.random(),
-//       },
-//     };
+    // загрузка всей страницы (всех изображений)
+    $(window).on("load", () => {
+      load.progress = load.progress <= 0 ? load.TAIL.BREAKPOINT : load.progress;
 
-//     // загрузка одного изображения (тэг img)
-//     img.elem.on("load", () => {
-//       load.counter++;
+      if (load.progress >= 1) {
+        preloaderClose();
+      } else {
+        load.endTime = new Date().getTime();
 
-//       if (!load.startTime) {
-//         load.startTime = new Date().getTime();
-//       }
+        load.time = load.endTime - load.startTime;
+        load.time = load.time > 0 ? load.time : 0;
 
-//       load.progress = load.counter / img.count;
-//       load.progress =
-//         load.progress < load.TAIL.BREAKPOINT
-//           ? load.progress
-//           : load.TAIL.BREAKPOINT;
+        const tail = {
+          time: null,
+          partCounter: 0,
+          partTime: null,
+          interval: null,
+        };
 
-//       preloaderUpdate(load.progress * 0.5);
-//     });
+        tail.time = (load.time / load.progress) * (1 - load.progress);
+        tail.time =
+          tail.time < load.TAIL.MAX_TIME
+            ? tail.time < load.TAIL.MIN_TIME
+              ? load.TAIL.MIN_TIME
+              : tail.time
+            : load.TAIL.MAX_TIME;
 
-//     // загрузка всей страницы (всех изображений)
-//     $(window).on("load", () => {
-//       load.progress = load.progress <= 0 ? load.TAIL.BREAKPOINT : load.progress;
+        tail.partCounter = 0;
+        tail.partTime = tail.time / load.TAIL.PARTS;
+        tail.interval = setInterval(() => {
+          tail.partCounter++;
 
-//       if (load.progress >= 1) {
-//         preloaderClose();
-//       } else {
-//         load.endTime = new Date().getTime();
+          if (tail.partCounter < load.TAIL.PARTS) {
+            preloaderUpdate(
+              load.progress +
+                ((1 - load.progress) / load.TAIL.PARTS) * tail.partCounter
+            );
+          } else {
+            preloaderClose();
 
-//         load.time = load.endTime - load.startTime;
-//         load.time = load.time > 0 ? load.time : 0;
+            clearInterval(tail.interval);
+          }
+        }, tail.partTime);
+      }
+    });
 
-//         const tail = {
-//           time: null,
-//           partCounter: 0,
-//           partTime: null,
-//           interval: null,
-//         };
+    // обновление прелоадера (отображение прогресса)
+    function preloaderUpdate(loadProgress) {
+      const loadProgressPercent = Math.round(loadProgress * 100);
 
-//         tail.time = (load.time / load.progress) * (1 - load.progress);
-//         tail.time =
-//           tail.time < load.TAIL.MAX_TIME
-//             ? tail.time < load.TAIL.MIN_TIME
-//               ? load.TAIL.MIN_TIME
-//               : tail.time
-//             : load.TAIL.MAX_TIME;
+      const offset =
+        circumference - (loadProgressPercent / 100) * circumference;
+      circle.css("strokeDashoffset", offset);
+    }
 
-//         tail.partCounter = 0;
-//         tail.partTime = tail.time / load.TAIL.PARTS;
-//         tail.interval = setInterval(() => {
-//           tail.partCounter++;
+    // закрытие прелоадера
+    function preloaderClose() {
+      $(".loaded-content").css("display", "block");
+      circle.css("strokeDashoffset", 0);
 
-//           if (tail.partCounter < load.TAIL.PARTS) {
-//             preloaderUpdate(
-//               load.progress +
-//                 ((1 - load.progress) / load.TAIL.PARTS) * tail.partCounter
-//             );
-//           } else {
-//             preloaderClose();
+      $("body").css("overflow", "visible");
 
-//             clearInterval(tail.interval);
-//           }
-//         }, tail.partTime);
-//       }
-//     });
+      setTimeout(() => {
+        $(".loader").addClass("hidden");
 
-//     // обновление прелоадера (отображение прогресса)
-//     function preloaderUpdate(loadProgress) {
-//       const loadProgressPercent = Math.round(loadProgress * 100);
 
-//       const offset =
-//         circumference - (loadProgressPercent / 100) * circumference;
-//       circle.css("strokeDashoffset", offset);
-//     }
 
-//     // закрытие прелоадера
-//     function preloaderClose() {
-//       $(".loaded-content").css("display", "block");
-//       circle.css("strokeDashoffset", 0);
+        const fullpageBullets = $(".fulpage__slider-bullet"),
+          fullpageBulletsCircle = fullpageBullets.find(
+            ".bullet-progress__circle"
+          );
+        $(fullpageBullets[0]).addClass("fulpage__slider-bullet-filling");
+        $(fullpageBulletsCircle[0]).css("strokeDashoffset", 0);
 
-//       // OLD CODE START
+        // AOS.init({ offset: 50 });
+      }, 500);
 
-//       $("body").css("overflow", "visible");
+      // if ($(".rellax").length) {
+      //   // eslint-disable-next-line no-new
+      //   new Rellax(".rellax");
+      // }
+    }
+  } else {
+    $("body").css("overflow", "hidden");
 
-//       setTimeout(() => {
-//         $(".loader").addClass("hidden");
-//         AOS.init({ offset: 50 });
-//       }, 500);
+    setTimeout(() => {
+      $("body").css("overflow", "visible");
 
-//       if ($(".rellax").length) {
-//         // eslint-disable-next-line no-new
-//         new Rellax(".rellax");
-//       }
+      // AOS.init({ offset: 50 });
 
-//       // OLD CODE END
-//     }
-//   } else {
-//     $("body").css("overflow", "hidden");
-
-//     setTimeout(() => {
-//       $("body").css("overflow", "visible");
-
-//       AOS.init({ offset: 50 });
-
-//       if ($(".rellax").length) {
-//         // eslint-disable-next-line no-new
-//         new Rellax(".rellax");
-//       }
-//     }, 500);
-//   }
-// });
+      // if ($(".rellax").length) {
+      //   // eslint-disable-next-line no-new
+      //   new Rellax(".rellax");
+      // }
+    }, 500);
+  }
+});
 
 // {
 // 	$(() => {

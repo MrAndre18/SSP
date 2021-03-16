@@ -7,7 +7,7 @@ $(window).on("scroll", () => {
 const changeHeaderBg = () => {
   const header = $(".header");
 
-  if ($(window).scrollTop() > $(window).height() / 4) {
+  if ($(window).scrollTop() > $(window).height() / 15) {
     header.addClass("scrolled");
   } else header.removeClass("scrolled");
 
