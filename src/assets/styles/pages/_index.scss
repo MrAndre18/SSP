@@ -18,9 +18,9 @@ $fullpage-slide-bg-imgs: (
   3: url("../../assets/images/header-slider-3.jpg"),
 );
 
-.loaded-content {
-  display: none;
-}
+// .loaded-content {
+//   display: none;
+// }
 
 .main {
   color: $main-color;
@@ -63,8 +63,12 @@ $fullpage-slide-bg-imgs: (
           .more-btn {
             margin: 44px 0 0;
 
-            a {
+            &::before {
               background: $fullpage-more-btn-color;
+            }
+
+            span {
+              color: $fullpage-color;
             }
           }
         }

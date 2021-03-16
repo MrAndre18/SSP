@@ -12,26 +12,17 @@ block content
             h3.fulpage__slider-title Сила
             .fullpage__slider-description
               p Мы исключительные профессионалы. Для нас нет неразрешимых задач. Мы идем до конца. Экспертиза, креативное мышление и коллективизм — это то, что делает нашу компанию сильной.
-              .more-btn
-                a(href="#")
-                  img(src="assets/images/icons/arrow-right.svg", alt="more")
-                span Больше о нас
+              +moreBtn('#', "Больше о нас")
           .fulpage__slider-slide.fulpage__slider-slide-2.swiper-slide
             h3.fulpage__slider-title Стабильного
             .fullpage__slider-description
               p Высокая экспертиза, сила каждого специалиста и огромный опыт на рынке позволяют нам стабильно работать и достигать нужного результата.
-              .more-btn
-                a(href="#")
-                  img(src="assets/images/icons/arrow-right.svg", alt="more")
-                span Больше о нас
+              +moreBtn('#', "Больше о нас")
           .fulpage__slider-slide.fulpage__slider-slide-3.swiper-slide
             h3.fulpage__slider-title Партнерства
             .fullpage__slider-description
               p Наша философия — каждый клиент это партнер. Именно такое отношение позволяет эффективно взаимодействовать, отметая формализм и барьеры в коммуникации.
-              .more-btn
-                a(href="#")
-                  img(src="assets/images/icons/arrow-right.svg", alt="more")
-                span Больше о нас
+              +moreBtn('#', "Больше о нас")
         .fulpage__slider-pagination.swiper-pagination
           .fulpage__slider-bullet.swiper-pagination-bullet(data-bullet-index=0)
             span.bullet-content С
@@ -113,10 +104,7 @@ block content
           | Делимся экспертизой.
           br
           | Публикуемся в СМИ. Развиваемся.
-        .more-btn
-          a(href="#")
-            img(src="assets/images/icons/arrow-right.svg", alt="more")
-          span Все события
+        +moreBtn('#', "Все события")
       .news__content
         .news__content-img
           img(src="assets/images/news.jpg", alt="news")
@@ -128,19 +116,13 @@ block content
               li.news__item-theme суды
               li.news__item-theme адвокаты
               li.news__item-theme арбитраж
-            .more-btn
-              a(href="#")
-                img(src="assets/images/icons/arrow-right.svg", alt="more")
-              span Подробнее
+            +moreBtn('#', "Подробнее")
           li.news__item
             p.news__item-date 20 декабря 2020
             p.news__item-title ССП–Консалт ищет пострадавших от бездействий авиакомпаний
             ul.news__item-themes
               li.news__item-theme суды
-            .more-btn
-              a(href="#")
-                img(src="assets/images/icons/arrow-right.svg", alt="more")
-              span Подробнее
+            +moreBtn('#', "Подробнее")
 
 block footer
   include ../partials/_footer.pug

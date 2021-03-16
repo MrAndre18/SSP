@@ -1,24 +1,48 @@
+$main-color: #173551;
+$hover-color: #fff;
+
 .more-btn {
+  position: relative;
+  z-index: 3;
   display: flex;
   align-items: center;
+  width: fit-content;
+  min-height: 55px;
+  height: 55px;
+  border-radius: 27.5px;
+  padding: 0 30px 0 24px;
 
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
     width: 55px;
-    height: 55px;
-    background: #3691E1;
-    border-radius: 50%;
-    margin: 0 20px 0 0;
+    border-radius: 27.5px;
+    background: #3691e1;
+    transition: all 0.6s cubic-bezier(0.45, 0, 0.55, 1);
+  }
 
-    img {
-      height: 14px;
-      width: 10px;
+  &:hover {
+    span {
+      color: $hover-color;
+    }
+
+    &::before {
+      width: 100%;
     }
   }
 
+  img {
+    height: 14px;
+    width: 10px;
+    margin: 0 41px 0 0;
+  }
   span {
     font-size: 16px;
+    color: $main-color;
+    transition: all 0.6s cubic-bezier(0.45, 0, 0.55, 1);
   }
 }
