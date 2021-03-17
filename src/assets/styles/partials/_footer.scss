@@ -1,38 +1,32 @@
-$footer-font-family: "Pragmatica", Arial, sans-serif !default;
-$additional-font-family: "Kudryashev Headline", serif !default;
-$footer-color: #fff;
-$footer-title-color: #3691e1;
-$footer-hover-color: #9bd1ff;
-$footer-author-hover-color: #F66C72;
-
-$footer-bg-color: #124471;
 $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
 
 .footer {
   width: 100%;
-  background-color: $footer-bg-color;
+  background-color: $color-8;
   background-image: $footer-bg-img;
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
-  padding: 160px 85px 80px 40px;
+  padding: 160px 40px 80px;
 
   &__content {
+    max-width: 1920px;
+    margin: 0 auto;
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    font-family: $footer-font-family;
-    color: $footer-color;
+    font-family: $main-font-family;
+    color: $color-7;
 
     .footer__title {
       max-width: 510px;
       width: 100%;
       font-size: 90px;
-      color: $footer-title-color;
+      color: $color-6;
       font-family: $additional-font-family;
 
       span {
-        font-family: $footer-font-family;
+        font-family: $main-font-family;
       }
     }
 
@@ -49,11 +43,11 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
         line-height: 140%;
 
         .link:hover {
-          color: $footer-hover-color;
+          color: $color-4;
         }
 
         .link::before {
-          background: $footer-hover-color;
+          background: $color-4;
         }
 
         .footer__links {
@@ -94,10 +88,10 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
 
         a {
           width: fit-content;
-          transition: all 0.6s cubic-bezier(0.45, 0, 0.55, 1);
+          @include transition();
 
           &:hover {
-            color: $footer-hover-color;
+            color: $color-4;
           }
         }
 
@@ -114,12 +108,21 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
       margin: 70px 0 0;
       font-size: 14px;
 
-      .author a {
-        color: $footer-title-color;
-        transition: all 0.6s cubic-bezier(0.45, 0, 0.55, 1);
+      .copyrigh {
+        font-weight: 300;
+      }
 
-        &:hover {
-          color: $footer-author-hover-color;
+      .author {
+        font-weight: 300;
+
+        a {
+          color: $color-6;
+          font-weight: normal;
+          @include transition();
+
+          &:hover {
+            color: $color-5;
+          }
         }
       }
     }

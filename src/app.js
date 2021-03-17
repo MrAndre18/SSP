@@ -7,6 +7,7 @@ import "velocity-animate";
 // import './assets/scripts/map.js';
 // import './assets/scripts/tab-nav.js';
 import "jquery";
+import bootstrap from "bootstrap-4-grid";
 
 // Styles
 import "Styles/_app.scss";

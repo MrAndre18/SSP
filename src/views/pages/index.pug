@@ -4,130 +4,94 @@ block header
   include ../partials/_header.pug
 
 block content
-  main.main
-    .fullpage-block
-      .fulpage__slider.swiper-container
-        .fulpage__slider-wrapper.swiper-wrapper
-          .fulpage__slider-slide.fulpage__slider-slide-1.swiper-slide
-            h3.fulpage__slider-title Сила
-            .fullpage__slider-description
-              p Мы исключительные профессионалы. Для нас нет неразрешимых задач. Мы идем до конца. Экспертиза, креативное мышление и коллективизм — это то, что делает нашу компанию сильной.
-              +moreBtn('#', "Больше о нас")
-          .fulpage__slider-slide.fulpage__slider-slide-2.swiper-slide
-            h3.fulpage__slider-title Стабильного
-            .fullpage__slider-description
-              p Высокая экспертиза, сила каждого специалиста и огромный опыт на рынке позволяют нам стабильно работать и достигать нужного результата.
-              +moreBtn('#', "Больше о нас")
-          .fulpage__slider-slide.fulpage__slider-slide-3.swiper-slide
-            h3.fulpage__slider-title Партнерства
-            .fullpage__slider-description
-              p Наша философия — каждый клиент это партнер. Именно такое отношение позволяет эффективно взаимодействовать, отметая формализм и барьеры в коммуникации.
-              +moreBtn('#', "Больше о нас")
-        .fulpage__slider-pagination.swiper-pagination
-          .fulpage__slider-bullet.fulpage__slider-bullet-active.swiper-pagination-bullet(data-bullet-index=0)
-            span.bullet-content С
-            .colored-circle
-            svg.bullet-progress(width='220', height='220')
-              circle.bullet-progress__circle(stroke='#fff', stroke-width='1', cx='104', cy='104', r='103', fill='transparent')
-          .fulpage__slider-bullet.swiper-pagination-bullet(data-bullet-index=1)
-            span.bullet-content С
-            .colored-circle
-            svg.bullet-progress(width='220', height='220')
-              circle.bullet-progress__circle(stroke='#fff', stroke-width='1', cx='104', cy='104', r='103', fill='transparent')
-          .fulpage__slider-bullet.swiper-pagination-bullet(data-bullet-index=2)
-            span.bullet-content П
-            .colored-circle
-            svg.bullet-progress(width='220', height='220')
-              circle.bullet-progress__circle(stroke='#fff', stroke-width='1', cx='104', cy='104', r='103', fill='transparent')
-      .fullpage-block__content
-        h1.fullpage-block__title
-          p.first-line
-            span.small-text Сила Стабильного Партнерства
-            span.line
-            span.big-text Наш основной принцип деятельности
-          span.big-text заложен в самом названии
-        .fullpage-block__contacts
-          a(href="tel:+7 812 901–02–01").phone 8 812 901–02–01
-          a(href="mailto:site@ssp-consult.ru").email site@ssp-consult.ru
+  -
+    const clients = [
+      {
+        url: '../../assets/images/about-company/sevkabel.png',
+        alt: 'Севкабель',
+        name: 'ООО «Группа компаний «Севкабель»',
+        class: 'sevkabel',
+      },
+      {
+        url: '../../assets/images/about-company/rise-development.png',
+        alt: 'Райз Девелопмент',
+        name: 'ООО «Райз Девелопмент»',
+        class: 'rise-development',
+      },
+      {
+        url: '../../assets/images/about-company/rise-development.png',
+        alt: 'Райз Девелопмент',
+        name: 'ООО «Райз Девелопмент»',
+        class: 'rise-development',
+      },
+      {
+        url: '../../assets/images/about-company/university.png',
+        alt: 'Европейский университет в Санкт-Петербурге',
+        name: 'АНООВО «Европейский университет в Санкт-Петербурге»',
+        class: 'university',
+      },
+      {
+        url: '../../assets/images/about-company/metrostroy.png',
+        alt: 'Метрострой',
+        name: 'ЗАО «Семнадцатое управление «Метрострой»',
+        class: 'metrostroy',
+      },
+      {
+        url: '../../assets/images/about-company/baltic-plant.png',
+        alt: 'Балтийский завод',
+        name: 'ОАО «Балтийский завод»',
+        class: 'baltic-plant',
+      },
+      {
+        url: '../../assets/images/about-company/university.png',
+        alt: 'К-40',
+        name: 'ООО «К-40»',
+        class: 'university',
+      },
+      {
+        url: '../../assets/images/about-company/rise-development.png',
+        alt: 'Райз Девелопмент',
+        name: 'ООО «Райз Девелопмент»',
+        class: 'rise-development',
+      },
+    ]
 
-    .practices-block
-      .practices__slider.swiper-container
-        .practices__slider-wrapper.swiper-wrapper
-          .practices__slider-slide.practices__slider-slide-1.swiper-slide
-            p.slide__subtitle Ведущие практики
-            p.slide__title
-              span 01
-              | Банкротство #[br] и корпоративные конфликты
-          .practices__slider-slide.practices__slider-slide-2.swiper-slide
-            p.slide__subtitle Ведущие практики
-            p.slide__title
-              span 02
-              | Трудовое и административное право
-          .practices__slider-slide.practices__slider-slide-3.swiper-slide
-            p.slide__subtitle Ведущие практики
-            p.slide__title
-              span 03
-              | Разрешение споров
-        .practices__slider-button-next.swiper-button-next
-          .button-active
-            img(src="assets/images/icons/slider-arrow-white.svg", alt="next")
-          img(src="assets/images/icons/slider-arrow.svg", alt="next")
-      .practices__bottom
-        p.all-practices Все практики
-        ul.practices__items
-          li.practices__item
-            a.link(href="#") Банкротство и корпоративные конфликты
-          li.practices__item
-            a.link(href="#") Административно–правовая защита
-          li.practices__item
-            a.link(href="#") Абонентское обслуживание
-        ul.practices__items
-          li.practices__item
-            a.link(href="#") Трудовое и административное право
-          li.practices__item
-            a.link(href="#") Недвижимость и строительство
-          li.practices__item
-            a.link(href="#") Страховое право
-        ul.practices__items
-          li.practices__item
-            a.link(href="#") Управление финансовой задолженностью
-          li.practices__item
-            a.link(href="#") Разрешение споров
-          li.practices__item
-            a.link(href="#") PRO BONO
+  main.main.about-company
+    +pageTitle("О компании")
+
+    .ticker
+      .ticker-wrapper
+        p #[span Сила] #[span Стабильного] #[span Партнерства]
+        p #[span Сила] #[span Стабильного] #[span Партнерства]
+
+    .about-company__top
+      p.about-company__top-description С 2008 года, специализируемся на консалтинге в области права и риск менеджмента, оказании профессиональной юридической помощи и сопровождении бизнеса своих клиентов.
+      .about-company__top-subdescription
+        p Наш основной принцип деятельности заложен в самом названии и представляет собой силу стабильного партнерства, мы стремимся достигать высоких результатов и поставленных перед нами задач, становясь не просто инструментом для наших клиентов, а полноценным партнером в ведении их бизнеса и решении иных задач.
+
+    .about-company__advantages
+      p.about-company__advantages-text #[span Доверие, конфиденциальность,] #[br] #[span ответственность и] #[br] #[span профессионализм] — то, что мы готовы предоставить Вам #[br] в процессе нашего сотрудничества.
 
     include ../components/_recognition.pug
 
-    .news
-      .news__subtitle События
-      .news__header
-        h2.news__title
-          | Делимся экспертизой.
-          br
-          | Публикуемся в СМИ. Развиваемся.
-        +moreBtn('#', "Все события")
-      .news__content
-        .news__content-img
-          img(src="assets/images/news.jpg", alt="news")
-        ul.news__content-block.news__items
-          li.news__item
-            p.news__item-date 20 декабря 2020
-            p.news__item-title Дарья Титкова в «Диалоге с бизнесом», при поддержке ЛО ТПП
-            ul.news__item-themes
-              li.news__item-theme
-                +tabBtn("#", "суды", "disabled")
-              li.news__item-theme
-                +tabBtn("#", "адвокаты", "disabled")
-              li.news__item-theme
-                +tabBtn("#", "арбитраж", "disabled")
-            +moreBtn('#', "Подробнее")
-          li.news__item
-            p.news__item-date 20 декабря 2020
-            p.news__item-title ССП–Консалт ищет пострадавших от бездействий авиакомпаний
-            ul.news__item-themes
-              li.news__item-theme
-                +tabBtn("#", "суды", "disabled")
-            +moreBtn('#', "Подробнее")
+    .about-company__clients
+      .about-company__clients-header
+        h2 Наши клиенты
+        .about-company__clients-slider-navigation
+          .prev-btn
+            img.svg(src="../../assets/images/icons/slider-arrow-small.svg", alt="prev")
+          .next-btn
+            img.svg(src="../../assets/images/icons/slider-arrow-small.svg", alt="next")
+      .about-company__clients-slider.swiper-container
+        .about-company__clients-slider-wrapper.swiper-wrapper
+          each client in clients
+            .about-company__clients-slider-slide.swiper-slide
+              .slide-img
+                img(src=client.url, alt=client.alt, class=client.class)
+              p= client.name
+
+
+    +seeNext("Команда")
 
 block footer
   include ../partials/_footer.pug

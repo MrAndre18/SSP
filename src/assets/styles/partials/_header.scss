@@ -1,7 +1,3 @@
-$header-font-family: "Pragmatica", Arial, sans-serif !default;
-$header-color: #fff;
-$header-scrolled-color: #173551;
-
 .header {
   position: fixed;
   top: 0;
@@ -10,10 +6,10 @@ $header-scrolled-color: #173551;
   width: 100%;
   height: 120px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  font-family: $header-font-family;
-  color: $header-color;
+  font-family: $main-font-family;
+  color: $color-1;
   background: transparent;
-  transition: transform 0.9s cubic-bezier(0.45, 0, 0.55, 1);
+  @include transition($duration: 0.9s, $property: transform);
 
   &::before {
     content: "";
@@ -21,50 +17,22 @@ $header-scrolled-color: #173551;
     top: 0;
     left: 0;
     z-index: -1;
-    background: $header-color;
+    background: $color-7;
     width: 100%;
     height: 0;
-    transition: all 0.9s cubic-bezier(0.45, 0, 0.55, 1);
+    @include transition($duration: 0.9s);
+  }
+
+  .link::before {
+    @include transition($duration: 0.9s);
+    background: $color-1;
   }
 
   &.scrolled {
-    color: $header-scrolled-color;
-
-    .link {
-      transition: all 0.9s cubic-bezier(0.45, 0, 0.55, 1);
-
-      &::before {
-        background: $header-scrolled-color;
-      }
-    }
-
     &.out {
       transform: translateY(-100%);
     }
 
-    .header__content {
-      .header__logo {
-        a {
-          .logo__img {
-            path:nth-child(1),
-            path:nth-child(2) {
-              fill: $header-scrolled-color;
-            }
-          }
-        }
-      }
-      .practices {
-        &__item {
-          a {
-            .practices__item-dots {
-              .dot {
-                background: $header-scrolled-color;
-              }
-            }
-          }
-        }
-      }
-    }
     &::before {
       height: 100%;
     }
@@ -90,7 +58,8 @@ $header-scrolled-color: #173551;
 
           path:nth-child(1),
           path:nth-child(2) {
-            transition: all 0.9s cubic-bezier(0.45, 0, 0.55, 1);
+            fill: $color-1;
+            @include transition($duration: 0.9s);
           }
         }
       }
@@ -122,9 +91,9 @@ $header-scrolled-color: #173551;
             .dot {
               width: 6px;
               height: 6px;
-              background: $header-color;
+              background: $color-1;
               border-radius: 50%;
-              transition: all 0.9s cubic-bezier(0.45, 0, 0.55, 1);
+              @include transition($duration: 0.9s);
             }
           }
         }
@@ -138,6 +107,72 @@ $header-scrolled-color: #173551;
       &__item {
         margin: 0 0 0 82px;
         font-size: 16px;
+      }
+    }
+  }
+}
+
+.index-page {
+  .header {
+    color: $color-7;
+
+    .link::before {
+      background: $color-7;
+    }
+
+    .header__content {
+      .header__logo {
+        a {
+          .logo__img {
+            path:nth-child(1),
+            path:nth-child(2) {
+              fill: $color-7;
+            }
+          }
+        }
+      }
+      .practices {
+        &__item {
+          a {
+            .practices__item-dots {
+              .dot {
+                background: $color-7;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.scrolled {
+      color: $color-1;
+
+      .link::before {
+        background: $color-1;
+      }
+
+      .header__content {
+        .header__logo {
+          a {
+            .logo__img {
+              path:nth-child(1),
+              path:nth-child(2) {
+                fill: $color-1;
+              }
+            }
+          }
+        }
+        .practices {
+          &__item {
+            a {
+              .practices__item-dots {
+                .dot {
+                  background: $color-1;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

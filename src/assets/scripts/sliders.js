@@ -6,6 +6,24 @@ const circles = $(".bullet-progress__circle"),
 
 initialCircles(circles);
 
+const clientsSliderSettings = {
+  loop: true,
+  spaceBetween: 20,
+  watchOverflow: true,
+  speed: 600,
+  slidesPerView: 8,
+
+  navigation: {
+    nextEl: ".next-btn",
+    prevEl: ".prev-btn",
+  },
+};
+
+const clientsSlider = new Swiper(
+  ".about-company__clients-slider",
+  clientsSliderSettings
+);
+
 const practicesSlider = new Swiper(".practices__slider", {
   loop: true,
   loopedSlides: 3,
@@ -119,34 +137,3 @@ function clearCircle(circle) {
 function fillingCircle(circle) {
   $(circle).css("strokeDashoffset", 0);
 }
-
-// function setCircleFilling() {
-//   const bullets = $(".swiper-pagination-bullet");
-//   $(bullets).each(function (index, bullet) {
-//     if (!$(bullet).hasClass("swiper-pagination-bullet-active")) {
-//       const progress = $(bullet).find(".bullet-progress"),
-//         circle = progress.find(".bullet-progress__circle"),
-//         radius = +circle.attr("r"),
-//         circumference = 2 * Math.PI * radius;
-
-//       circle.css("strokeDasharray", `${circumference} ${circumference}`);
-//       circle.css("strokeDashoffset", circumference);
-//     } else {
-//       const activeBullet = $(".swiper-pagination-bullet-active"),
-//         progress = activeBullet.find(".bullet-progress"),
-//         circle = progress.find(".bullet-progress__circle"),
-//         radius = +circle.attr("r"),
-//         circumference = 2 * Math.PI * radius,
-//         delay = 5000;
-
-//       filingCircle(100, circumference, circle);
-//     }
-//   });
-// }
-
-// function filingCircle(percent, circumference, circle) {
-//   const offset = circumference - (percent / 100) * circumference;
-//   console.log("offset: ", offset);
-//   circle.css("strokeDashoffset", offset);
-//   console.log("circle: ", circle.css("strokeDashoffset"));
-// }

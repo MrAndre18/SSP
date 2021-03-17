@@ -5,3 +5,24 @@ mixin moreBtn(href, text)
 
 mixin tabBtn(href, text, disabledClass)
   a.tab-btn(href=href class = (disabledClass == "disabled") ? disabledClass : "")= text
+
+mixin newsItem(date, title, moreUrl, tabs)
+  li.news__item
+    p.news__item-date= date
+    p.news__item-title= title
+    ul.news__item-themes
+      each tab in tabs
+        li.news__item-theme
+          +tabBtn(tab.url, tab.text, "disabled")
+    +moreBtn(moreUrl, "Подробнее")
+
+mixin pageTitle(title)
+  .page-title
+    h1= title
+
+mixin seeNext(title)
+  a.see-next(href="#")
+    p.see-next__subtitle Смотрите дальше
+    h2.see-next__title= title
+    button.see-next__button
+      img(src="assets/images/icons/arrow-right.svg", alt="more")

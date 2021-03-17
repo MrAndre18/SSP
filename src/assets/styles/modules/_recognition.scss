@@ -1,5 +1,3 @@
-$additional-font-family: "Kudryashev Headline", serif !default;
-
 .recognition {
   margin: 160px 0;
 
@@ -8,6 +6,7 @@ $additional-font-family: "Kudryashev Headline", serif !default;
     font-size: 130px;
     line-height: 90%;
     padding: 0 0 0 40px;
+    color: $color-1;
   }
 
   &__content {

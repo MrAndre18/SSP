@@ -1,0 +1,47 @@
+.news__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 506px;
+  padding: 20px 0 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    height: 1px;
+    width: 0;
+    background: $color-4;
+    @include transition();
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &-date {
+    font-family: $additional-font-family;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  &-title {
+    font-size: 39px;
+    line-height: 140%;
+    margin: 20px 0 0;
+  }
+
+  &-themes {
+    margin: auto 0 40px;
+    display: flex;
+
+    .news__item-theme {
+      margin: 0 10px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
