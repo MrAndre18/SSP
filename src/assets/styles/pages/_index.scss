@@ -19,10 +19,15 @@ $fullpage-slide-bg-imgs: (
 .main {
   color: $color-1;
   font-family: $main-font-family;
-  overflow: hidden;
+  // overflow: hidden;
+  margin: 120px 0 0;
 }
 
 .index-main {
+  color: $color-1;
+  font-family: $main-font-family;
+  overflow: hidden;
+  margin: 0;
 
   .fullpage-block {
     position: relative;
@@ -92,7 +97,6 @@ $fullpage-slide-bg-imgs: (
 
         .fulpage__slider-bullet {
           position: relative;
-          // z-index: 1;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -111,17 +115,15 @@ $fullpage-slide-bg-imgs: (
 
           &:nth-child(2) {
             transform: translateX(-20px);
-            // z-index: 2;
           }
           &:nth-child(3) {
             transform: translateX(-40px);
-            // z-index: 3;
           }
 
           .bullet-content {
             position: relative;
             z-index: 5;
-            padding-top: 20px;
+            padding-bottom: 8px;
           }
 
           .colored-circle {
@@ -237,6 +239,7 @@ $fullpage-slide-bg-imgs: (
   }
 
   .practices-block {
+    overflow: hidden;
     padding: 40px 0 40px 40px;
 
     .practices__slider {

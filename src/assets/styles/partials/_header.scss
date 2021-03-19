@@ -23,6 +23,18 @@
     @include transition($duration: 0.9s);
   }
 
+  .link::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 4px);
+    left: -18px;
+    width: 8px;
+    height: 8px;
+    display: none;
+    border-radius: 50%;
+    background: $color-6;
+  }
+
   .link::before {
     @include transition($duration: 0.9s);
     background: $color-1;
@@ -176,4 +188,28 @@
       }
     }
   }
+}
+
+.practices-page .header .link.practices::after {
+  display: block;
+}
+
+.cases-page .header .link.cases::after {
+  display: block;
+}
+
+.about-company-page .header .link.about-company::after {
+  display: block;
+}
+
+.command-page .header .link.command::after {
+  display: block;
+}
+
+.events-page .header .link.events::after {
+  display: block;
+}
+
+.contacts-page .header .link.contacts::after {
+  display: block;
 }

@@ -1,24 +1,65 @@
 $advantages-bg-img: url("../../assets/images/about-company/about-company-advantages.svg");
 
 .about-company {
-  margin: 120px 0 0;
+
+  .page-title {
+    margin-left: 405px;
+    text-align: left;
+  }
 
   .ticker {
-    width: 80%;
+    position: relative;
+    height: min-content;
+    overflow: hidden;
 
     &-wrapper {
-      width: 200%;
+      position: relative;
+      width: 100%;
       display: flex;
-      animation: ticker 5s linear infinite;
+
+      &.images {
+        // position: absolute;
+        left: 0;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+
+        .ticker-content {
+          width: 180%;
+
+          img {
+            position: absolute;
+            width: 194px;
+            height: 140px;
+
+            &.ticker-img-1 {
+              top: 0;
+              left: 250px;
+              z-index: 2;
+            }
+
+            &.ticker-img-2 {
+              bottom: 0;
+              left: 50%;
+              z-index: 6;
+            }
+
+            &.ticker-img-3 {
+              top: 0;
+              right: 240px;
+              z-index: 0;
+            }
+          }
+        }
+      }
 
       p {
-        width: 100%;
         font-family: $additional-font-family;
         font-size: 150px;
         line-height: 140%;
         word-spacing: 35px;
         white-space: nowrap;
-        margin-right: 40%;
+        padding-right: 80%;
 
         span {
           position: relative;
@@ -35,16 +76,6 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
             z-index: 5;
           }
         }
-      }
-    }
-
-    @keyframes ticker {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
       }
     }
   }

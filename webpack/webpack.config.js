@@ -105,12 +105,12 @@ module.exports = env => {
 						'pug-loader',
 						{
 							loader: 'pug-html-loader',
-							options: {
-								data: {
-									menu: require('../src/views/data/menu.json'),
-									index: require('../src/views/data/index.json'),
-								}
-							}
+							// options: {
+							// 	data: {
+							// 		menu: require('../src/views/data/menu.json'),
+							// 		index: require('../src/views/data/index.json'),
+							// 	}
+							// }
 						}
 					]
 				},

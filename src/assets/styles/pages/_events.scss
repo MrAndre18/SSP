@@ -1,0 +1,34 @@
+.events {
+  &__content {
+    display: flex;
+    max-width: 1920px;
+    margin: 0 0 160px;
+    padding: 0 40px;
+
+    .left-block {
+      position: relative;
+      max-width: 385px;
+      width: 100%;
+      margin: 0 100px 0 0;
+    }
+  }
+
+  &__block-list {
+    width: 100%;
+    padding-right: 20px;
+
+    .events__block-item {
+      border-top: 1px solid $color-1;
+      margin: 0 0 40px;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      .events__items {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

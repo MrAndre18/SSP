@@ -3,8 +3,9 @@ mixin moreBtn(href, text)
     img(src="assets/images/icons/arrow-right.svg", alt="more")
     span= text
 
-mixin tabBtn(href, text, disabledClass)
-  a.tab-btn(href=href class = (disabledClass == "disabled") ? disabledClass : "")= text
+mixin tabBtn(href, text, className)
+  a.tab-btn(href=href ? href : "" class=className ? className : "")
+    span= text
 
 mixin newsItem(date, title, moreUrl, tabs)
   li.news__item
@@ -26,3 +27,41 @@ mixin seeNext(title)
     h2.see-next__title= title
     button.see-next__button
       img(src="assets/images/icons/arrow-right.svg", alt="more")
+
+mixin agreeCheckbox(id)
+  input(type="checkbox" name="agree" id=id)
+  label(for=id)
+    | Согласен на обработку персональных данных в соответствии с #[a.link(href="#") политикой конфиденциальности]
+    p.error Остутствует согласие на обработку персональных данных
+
+mixin eventsSubscribe(is_detail)
+  .events__subscribe
+    .events__subscribe-block
+      if !is_detail
+        .filter
+          .filter__tabs
+            each item, index in filters
+              if index == 0
+                +tabBtn(item.url, item.text, "active")
+              else
+                +tabBtn(item.url, item.text)
+          button.filter__discard
+            img.svg(src="../../assets/images/icons/discard.svg", alt="discard")
+            span Сбросить
+      .subscribe
+        p.subscribe-title.active Подписаться на ССП–Консалт
+        p.subscribe-title Подписка успешно оформлена
+        input(type="email" name="email" placeholder="E-mail*")
+        +agreeCheckbox("subscribe-agree")
+        .subscribe-btn.active
+          +moreBtn("#", "Подписаться")
+        .subscribe-btn
+          +moreBtn("#", "Подписаться еще")
+      if is_detail
+        .share
+          p.share__title Поделиться новостью
+          ul.share__links
+            li.share__links-item
+              a(href="#") Facebook
+            li.share__links-item
+              a(href="#") Вконтакте

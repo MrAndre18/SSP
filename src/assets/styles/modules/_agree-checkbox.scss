@@ -1,0 +1,73 @@
+input[name="agree"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  + label {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 0 40px;
+    padding-left: 40px;
+    font-size: 12px;
+    line-height: 140%;
+    font-weight: 300;
+    cursor: pointer;
+    @include transition();
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid $color-3;
+      background: transparent;
+      background-position: center;
+      @include transition();
+    }
+
+    &:hover::before {
+      border-color: $color-6;
+    }
+
+    a {
+      font-weight: 400;
+
+      &::before {
+        background: $color-1;
+        bottom: -2px;
+      }
+    }
+
+    .error {
+      position: absolute;
+      top: 100%;
+      left: 40px;
+      color: $color-5;
+      font-size: 12px;
+      line-height: 140%;
+      opacity: 0;
+      @include transition();
+
+      &.active {
+        top: calc(100% + 10px);
+        opacity: 1;
+      }
+    }
+  }
+
+  &:checked + label::before {
+    border-color: $color-6;
+    background-color: $color-6;
+    background-image: url("../../assets/images/icons/checked.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+  }
+}
