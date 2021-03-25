@@ -29,7 +29,7 @@ block content
       {
         date: '20 декабря 2020',
         title: 'ССП–Консалт ищет пострадавших от бездействий авиакомпаний',
-        moreUrl: '/event',
+        moreUrl: 'event',
         tabs: [
           {
             url: "#",
@@ -70,28 +70,30 @@ block content
       },
     ]
 
-  main.main.events
+  main.main.events.container-fluid.p-0
     +pageTitle("События")
 
     .events__content
-      .left-block
-        +eventsSubscribe()
+      .row.justify-content-between.flex-nowrap
+        .col-2
+          .left-block
+            +eventsSubscribe()
+        .col-6
+          ul.events__block-list
+            li.events__block-item
+              ul.events__items
+                each event in events
+                  +newsItem(event.date, event.title, event.moreUrl, event.tabs)
+            li.events__block-item
+              ul.events__items
+                each event in events
+                  +newsItem(event.date, event.title, event.moreUrl, event.tabs)
+            li.events__block-item
+              ul.events__items
+                each event in events
+                  +newsItem(event.date, event.title, event.moreUrl, event.tabs)
 
-      ul.events__block-list
-        li.events__block-item
-          ul.events__items
-            each event in events
-              +newsItem(event.date, event.title, event.moreUrl, event.tabs)
-        li.events__block-item
-          ul.events__items
-            each event in events
-              +newsItem(event.date, event.title, event.moreUrl, event.tabs)
-        li.events__block-item
-          ul.events__items
-            each event in events
-              +newsItem(event.date, event.title, event.moreUrl, event.tabs)
-
-    +seeNext("Контакты")
+    +seeNext("contacts", "Контакты")
 
 block footer
   include ../partials/_footer.pug

@@ -1,23 +1,27 @@
-header.header
+header.header.container-fluid.p-0
   .header__content
-    .header__logo
-      a(href="/index")
-        img.svg.logo__img(src="assets/images/icons/logo.svg", alt="logo")
-    ul.practices
-      li.practices__item
-        a.link.practices(href="/practices") Практики
-          ul.practices__item-dots
-            li.dot
-            li.dot
-            li.dot
-      li.practices__item
-        a.link.cases(href="/cases") Кейсы
-    ul.header__menu.menu
-      li.menu__item
-        a.link.about-company(href="/about-company") О компании
-      li.menu__item
-        a.link.command(href="/command") Команда
-      li.menu__item
-        a.link.events(href="/events") События
-      li.menu__item
-        a.link.contacts(href="/contacts") Контакты
+    .row.align-items-center
+      .col-2
+        .header__logo
+          a(href="/")
+            img.svg.logo__img(src="assets/images/icons/logo.svg", alt="logo")
+      .col-2
+        ul.practices.d-flex
+          li.practices__item
+            a.link.practices(href="#") Практики
+              ul.practices__item-dots
+                li.dot
+                li.dot
+                li.dot
+          li.practices__item
+            a.link.cases(href="cases") Кейсы
+      .col-4
+        ul.header__menu.menu.d-flex.justify-content-end
+            li.menu__item
+              a.link.about-company(href="about-company") О компании
+            li.menu__item
+              a.link.command(href="#") Команда
+            li.menu__item
+              a.link.events(href="events") События
+            li.menu__item
+              a.link.contacts(href="contacts") Контакты

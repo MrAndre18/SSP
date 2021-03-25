@@ -1,0 +1,46 @@
+.before-btn {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 55px;
+  height: 55px;
+  border-radius: 27.5px;
+  padding: 0 30px 0 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 55px;
+    border-radius: 27.5px;
+    background: $color-3;
+    @include transition();
+  }
+
+  &:hover {
+    span {
+      color: $color-1;
+    }
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  img {
+    height: 14px;
+    width: 10px;
+    margin: 0 41px 0 0;
+    transform: rotate(180deg);
+  }
+  span {
+    font-size: 16px;
+    color: $color-1;
+    @include transition();
+  }
+}

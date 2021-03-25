@@ -1,27 +1,20 @@
-$practices-slide-bg-color: rgba(188, 220, 249, 0.3);
+$practices-slide-bg-color: #a0c2cd;
 
 $practices-slide-bg-imgs: (
-  1: url("../../assets/images/practices-slide-1.png"),
-  2: url("../../assets/images/practices-slide-2.png"),
-  3: url("../../assets/images/practices-slide-3.png"),
+  1: url("../../assets/images/practices/practices-slide-1.png"),
+  2: url("../../assets/images/practices/practices-slide-2.png"),
+  3: url("../../assets/images/practices/practices-slide-3.png"),
 );
 
 $fullpage-slide-bg-imgs: (
-  1: url("../../assets/images/header-slider-1.jpg"),
-  2: url("../../assets/images/header-slider-2.jpg"),
-  3: url("../../assets/images/header-slider-3.jpg"),
+  1: url("../../assets/images/header/header-slider-1.jpg"),
+  2: url("../../assets/images/header/header-slider-2.jpg"),
+  3: url("../../assets/images/header/header-slider-3.jpg"),
 );
 
 // .loaded-content {
 //   display: none;
 // }
-
-.main {
-  color: $color-1;
-  font-family: $main-font-family;
-  // overflow: hidden;
-  margin: 120px 0 0;
-}
 
 .index-main {
   color: $color-1;
@@ -174,10 +167,7 @@ $fullpage-slide-bg-imgs: (
           &-filling {
             .bullet-progress {
               &__circle {
-                @include transition(
-                  $duration: 5s,
-                  $property: stroke-dashoffset
-                );
+                @include transition($duration: 5s, $property: stroke-dashoffset);
               }
             }
           }
@@ -271,18 +261,11 @@ $fullpage-slide-bg-imgs: (
 
           @each $index, $img in $practices-slide-bg-imgs {
             &-#{$index} {
-              background: linear-gradient(
-                  rgba(155, 208, 255, 0.3),
-                  rgba(155, 208, 255, 0.3)
-                ),
-                linear-gradient(
-                  $practices-slide-bg-color,
-                  $practices-slide-bg-color
-                ),
-                $img;
+              background: linear-gradient($color-3, $color-3),
+                linear-gradient($practices-slide-bg-color, $practices-slide-bg-color), linear-gradient(#fff, #fff), $img;
               background-repeat: no-repeat;
               background-position: right bottom;
-              mix-blend-mode: darken;
+              background-blend-mode: darken, color, multiply;
             }
           }
 
@@ -316,7 +299,12 @@ $fullpage-slide-bg-imgs: (
         right: -100px;
         width: 180px;
         height: 136px;
-        @include transition();
+
+        & > .svg {
+          width: 180px;
+          height: 136px;
+          @include transition();
+        }
 
         .button-active {
           position: absolute;
@@ -335,10 +323,10 @@ $fullpage-slide-bg-imgs: (
         }
 
         &:hover {
-          width: 0;
-          height: 0;
-          top: 50%;
-          right: -10px;
+          & > .svg {
+            width: 0;
+            height: 0;
+          }
 
           .button-active {
             transform: rotate(360deg);
@@ -411,24 +399,20 @@ $fullpage-slide-bg-imgs: (
     }
 
     &__content {
-      display: flex;
-      height: 500px;
 
       &-img {
         height: 100%;
-        min-width: 304px;
+        max-height: 500px;
+        max-width: 304px;
       }
 
       &-block {
-        width: 100%;
-        margin: 0 0 0 162px;
+        height: 100%;
         border-top: 1px solid $color-1;
       }
 
-      .news__items {
-        display: flex;
-        justify-content: space-between;
-        padding-right: 172px;
+      .news__item {
+        padding-right: 170px;
       }
     }
   }

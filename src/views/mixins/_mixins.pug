@@ -3,6 +3,11 @@ mixin moreBtn(href, text)
     img(src="assets/images/icons/arrow-right.svg", alt="more")
     span= text
 
+mixin beforeBtn(href, text)
+  a.before-btn(href=href)
+    img(src="assets/images/icons/arrow-right.svg", alt="more")
+    span= text
+
 mixin tabBtn(href, text, className)
   a.tab-btn(href=href ? href : "" class=className ? className : "")
     span= text
@@ -19,17 +24,23 @@ mixin newsItem(date, title, moreUrl, tabs)
 
 mixin pageTitle(title)
   .page-title
-    h1= title
+    .row.justify-content-center
+      .col-4
+        h1= title
 
-mixin seeNext(title)
-  a.see-next(href="#")
-    p.see-next__subtitle Смотрите дальше
-    h2.see-next__title= title
-    button.see-next__button
-      img(src="assets/images/icons/arrow-right.svg", alt="more")
+mixin seeNext(url, title)
+  a.see-next(href=url)
+    .see-next__content
+      .row
+        .col-2
+          p.see-next__subtitle Смотрите дальше
+        .col-5
+          h2.see-next__title= title
+      button.see-next__button
+        img(src="assets/images/icons/arrow-right.svg", alt="more")
 
 mixin agreeCheckbox(id)
-  input(type="checkbox" name="agree" id=id)
+  input(type="checkbox", name="agree", id=id, required)
   label(for=id)
     | Согласен на обработку персональных данных в соответствии с #[a.link(href="#") политикой конфиденциальности]
     p.error Остутствует согласие на обработку персональных данных
@@ -46,12 +57,16 @@ mixin eventsSubscribe(is_detail)
               else
                 +tabBtn(item.url, item.text)
           button.filter__discard
-            img.svg(src="../../assets/images/icons/discard.svg", alt="discard")
+            img.svg(src="assets/images/icons/discard.svg", alt="discard")
             span Сбросить
+      else
+        +beforeBtn("/events", "Все события")
       .subscribe
         p.subscribe-title.active Подписаться на ССП–Консалт
         p.subscribe-title Подписка успешно оформлена
-        input(type="email" name="email" placeholder="E-mail*")
+        .subscribe-email
+          input(type="email" name="email" placeholder="E-mail*")
+          p.error Поле не заполнено
         +agreeCheckbox("subscribe-agree")
         .subscribe-btn.active
           +moreBtn("#", "Подписаться")
@@ -65,3 +80,26 @@ mixin eventsSubscribe(is_detail)
               a(href="#") Facebook
             li.share__links-item
               a(href="#") Вконтакте
+
+mixin feedbackForm(title)
+  .feedback
+    h2.feedback__title.active=title
+    h2.feedback__title Мы приняли ваше сообщение и ответим вам в ближайшее время.
+    form.feedback__form
+      .feedback-field.feedback-name
+        input(type="name", name="name", placeholder="Имя*", required)
+        p.error Поле не заполнено
+      .feedback-field.feedback-email
+        input(type="email", name="email", placeholder="E-mail")
+        p.error Поле не заполнено
+      .feedback-field.feedback-phone
+        input(type="phone", name="phone", placeholder="Телефон*", required)
+        p.error Поле не заполнено
+      textarea(name="message", placeholder="Сообщение")
+    .feedback__submit
+      .submit-btn.active
+        +moreBtn("#", "Отправить")
+      .submit-btn
+        +moreBtn("#", "Отправить еще")
+      .feedback-agree
+        +agreeCheckbox("feedback-agree")

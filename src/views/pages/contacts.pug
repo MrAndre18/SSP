@@ -1,0 +1,66 @@
+extends ../layouts/master.pug
+
+block header
+  .contacts-page
+    include ../partials/_header.pug
+
+block content
+  main.main.contacts.container-fluid.p-0
+    .contacts-block
+      .contacts-block__content
+        +pageTitle("Контакты")
+        .row
+          .col-2
+          .col-2
+            ul.contacts-block__addresses
+              li.contacts-block__address
+                span.number 01
+                p.address #[span Каменноостровский пр.,] #[span 73–75,] #[span оф. 9]
+              li.contacts-block__address
+                span.number 02
+                p.address #[span ул. Чайковского,] 50
+          .col-3.d-flex.justify-content-end
+            .contacts-block__links
+              a(href="tel:+7 812 901–02–01").phone +7 812 901–02–01
+              a(href="mailto:site@ssp-consult.ru").email site@ssp-consult.ru
+              p.work-time #[span пнд — пт] #[br] #[span 9 — 18.30]
+
+    .contacts__map
+      #map
+
+    .contacts__advices
+      p.contacts__advices-subtitle Интересное о праве
+      h2.contacts__advices-title Советы и рекомендации в наших соц.сетях
+      .contacts__advices-imgs
+        .row.justify-content-end
+          .col-2
+            a.contacts__advice-img(href="#")
+              img(src="assets/images/contacts/advice-1.png")
+          .col-2
+            a.contacts__advice-img(href="#")
+              img(src="assets/images/contacts/advice-2.png")
+          .col-2
+            a.contacts__advice-img(href="#")
+              img(src="assets/images/contacts/advice-3.png")
+      .contacts__advices-join
+        .row.justify-content-end
+          .col-4
+            p.join-title Присоединяйтесь
+          .col-2
+            ul.contacts__advices-networks
+              li.contacts__advices-network
+                a(href="#") Instagram
+              li.contacts__advices-network
+                a(href="#") Facebook
+              li.contacts__advices-network
+                a(href="#") Telegram
+
+    .contacts__feedback
+      .row
+        .col-6
+          +feedbackForm("Задать вопрос или запросить коммерческое предложение")
+
+    +seeNext("about-company", "О компании")
+
+block footer
+  include ../partials/_footer.pug

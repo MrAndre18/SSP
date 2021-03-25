@@ -130,6 +130,17 @@ button {
   margin: 0;
   cursor: pointer;
 }
+input {
+  outline: none;
+  border: none;
+  background: inherit;
+}
+textarea {
+  outline: none;
+  border: none;
+  background: inherit;
+  resize: none;
+}
 blockquote,
 q {
   quotes: none;

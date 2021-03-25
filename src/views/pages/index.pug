@@ -13,17 +13,17 @@ block content
             h3.fulpage__slider-title Сила
             .fullpage__slider-description
               p Мы исключительные профессионалы. Для нас нет неразрешимых задач. Мы идем до конца. Экспертиза, креативное мышление и коллективизм — это то, что делает нашу компанию сильной.
-              +moreBtn('#', "Больше о нас")
+              +moreBtn('/about-company', "Больше о нас")
           .fulpage__slider-slide.fulpage__slider-slide-2.swiper-slide
             h3.fulpage__slider-title Стабильного
             .fullpage__slider-description
               p Высокая экспертиза, сила каждого специалиста и огромный опыт на рынке позволяют нам стабильно работать и достигать нужного результата.
-              +moreBtn('#', "Больше о нас")
+              +moreBtn('/about-company', "Больше о нас")
           .fulpage__slider-slide.fulpage__slider-slide-3.swiper-slide
             h3.fulpage__slider-title Партнерства
             .fullpage__slider-description
               p Наша философия — каждый клиент это партнер. Именно такое отношение позволяет эффективно взаимодействовать, отметая формализм и барьеры в коммуникации.
-              +moreBtn('#', "Больше о нас")
+              +moreBtn('/about-company', "Больше о нас")
         .fulpage__slider-pagination.swiper-pagination
           .fulpage__slider-bullet.fulpage__slider-bullet-active.swiper-pagination-bullet(data-bullet-index=0)
             span.bullet-content С
@@ -106,41 +106,44 @@ block content
           | Делимся экспертизой.
           br
           | Публикуемся в СМИ. Развиваемся.
-        +moreBtn('#', "Все события")
-      .news__content
-        .news__content-img
-          img(src="assets/images/news.jpg", alt="news")
-        ul.news__content-block.news__items
-          +newsItem(
-            "20 декабря 2020",
-            "Дарья Титкова в «Диалоге с бизнесом», при поддержке ЛО ТПП",
-            "#",
-            [
-              {
-                url: "#",
-                text: "суды"
-              },
-              {
-                url: "#",
-                text: "адвокаты"
-              },
-              {
-                url: "#",
-                text: "арбитраж"
-              }
-            ]
-          )
-          +newsItem(
-            "20 декабря 2020",
-            "ССП–Консалт ищет пострадавших от бездействий авиакомпаний",
-            "#",
-            [
-              {
-                url: "#",
-                text: "суды"
-              }
-            ]
-          )
+        +moreBtn('/events', "Все события")
+      .news__content.container-fluid
+        .row.justify-content-between
+          .col-2.ps-0
+            .news__content-img
+              img(src="assets/images/news.jpg", alt="news")
+          .col-6.pe-0
+            ul.news__content-block.news__items.d-flex.justify-content-between
+              +newsItem(
+                "20 декабря 2020",
+                "Дарья Титкова в «Диалоге с бизнесом», при поддержке ЛО ТПП",
+                "#",
+                [
+                  {
+                    url: "#",
+                    text: "суды"
+                  },
+                  {
+                    url: "#",
+                    text: "адвокаты"
+                  },
+                  {
+                    url: "#",
+                    text: "арбитраж"
+                  }
+                ]
+              )
+              +newsItem(
+                "20 декабря 2020",
+                "ССП–Консалт ищет пострадавших от бездействий авиакомпаний",
+                "event",
+                [
+                  {
+                    url: "#",
+                    text: "суды"
+                  }
+                ]
+              )
 
 block footer
   include ../partials/_footer.pug

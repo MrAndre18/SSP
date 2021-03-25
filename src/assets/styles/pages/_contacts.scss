@@ -1,0 +1,172 @@
+$contacts-bg-img: url("../../assets/images/contacts/contacts-bg.png");
+
+.contacts {
+  margin: 0;
+
+  &-block {
+    width: 100%;
+    height: 725px;
+    background: $contacts-bg-img, linear-gradient($color-3, $color-3);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: soft-light;
+
+    &__content {
+      max-width: 1920px;
+      padding: 0 40px;
+      margin: 0 auto;
+
+      .page-title {
+        padding: 160px 40px 77px;
+      }
+    }
+
+    &__addresses {
+      padding-left: 25px;
+      font-size: 30px;
+      line-height: 140%;
+      font-weight: 300;
+
+      .contacts-block__address {
+        position: relative;
+        margin-bottom: 64px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .number {
+          position: absolute;
+          bottom: 100%;
+          left: -25px;
+          font-family: $additional-font-family;
+          font-size: 24px;
+          line-height: 140%;
+        }
+
+        .address {
+          span {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+
+      .phone,
+      .email {
+        font-size: 59px;
+        line-height: 100%;
+        font-family: $additional-font-family;
+        white-space: nowrap;
+        @include transition();
+
+        &:hover {
+          color: $color-6;
+        }
+      }
+
+      .email {
+        margin: 20px 0 40px;
+      }
+
+      .work-time {
+        font-size: 12px;
+        line-height: 140%;
+        text-transform: uppercase;
+
+        span {
+          margin-bottom: 5px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 600px;
+    background: $color-8;
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__advices {
+    max-width: 1920px;
+    padding: 0 40px;
+    margin: 160px auto;
+
+    &-subtitle {
+      font-size: 24px;
+      line-height: 140%;
+      font-family: $additional-font-family;
+      margin-bottom: 20px;
+    }
+
+    &-title {
+      font-size: 55px;
+      line-height: 120%;
+      font-weight: 300;
+      max-width: 680px;
+    }
+
+    &-imgs {
+      margin: 86px 0 160px;
+    }
+
+    &-join {
+      .join-title {
+        font-weight: 300;
+        font-size: 55px;
+        line-height: 120%;
+      }
+
+      .contacts__advices-networks {
+        a {
+          position: relative;
+          width: fit-content;
+          font-weight: 300;
+          color: $color-6;
+          font-size: 55px;
+          line-height: 120%;
+          @include transition();
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: $color-6;
+            @include transition();
+          }
+
+          &:hover {
+            color: $color-8;
+
+            &::before {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__feedback {
+    max-width: 1920px;
+    padding: 0 40px;
+    margin: 0 auto 160px;
+  }
+}

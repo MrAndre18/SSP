@@ -19,42 +19,64 @@
 		</div>
 		<div class="loaded-content">
 			<div class="about-company-page">
-				<header class="header">
+				<header class="header container-fluid p-0">
 					<div class="header__content">
-						<div class="header__logo"><a href="/index"><img class="svg logo__img" src="assets/images/icons/logo.svg" alt="logo"></a></div>
-						<ul class="practices">
-							<li class="practices__item"><a class="link practices" href="/practices">Практики<ul class="practices__item-dots">
-										<li class="dot"></li>
-										<li class="dot"></li>
-										<li class="dot"></li>
-									</ul></a></li>
-							<li class="practices__item"><a class="link cases" href="/cases">Кейсы</a></li>
-						</ul>
-						<ul class="header__menu menu">
-							<li class="menu__item"><a class="link about-company" href="/about-company">О компании</a></li>
-							<li class="menu__item"><a class="link command" href="/command">Команда</a></li>
-							<li class="menu__item"><a class="link events" href="/events">События</a></li>
-							<li class="menu__item"><a class="link contacts" href="/contacts">Контакты</a></li>
-						</ul>
+						<div class="row align-items-center">
+							<div class="col-2">
+								<div class="header__logo"><a href="/"><img class="svg logo__img" src="assets/images/icons/logo.svg" alt="logo"></a></div>
+							</div>
+							<div class="col-2">
+								<ul class="practices d-flex">
+									<li class="practices__item"><a class="link practices" href="#">Практики<ul class="practices__item-dots">
+												<li class="dot"></li>
+												<li class="dot"></li>
+												<li class="dot"></li>
+											</ul></a></li>
+									<li class="practices__item"><a class="link cases" href="cases">Кейсы</a></li>
+								</ul>
+							</div>
+							<div class="col-4">
+								<ul class="header__menu menu d-flex justify-content-end">
+									<li class="menu__item"><a class="link about-company" href="about-company">О компании</a></li>
+									<li class="menu__item"><a class="link command" href="#">Команда</a></li>
+									<li class="menu__item"><a class="link events" href="events">События</a></li>
+									<li class="menu__item"><a class="link contacts" href="contacts">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</header>
 			</div>
-			<main class="main about-company">
+			<main class="main about-company container-fluid p-0">
 				<div class="page-title">
-					<h1>О компании</h1>
+					<div class="row justify-content-center">
+						<div class="col-4">
+							<h1>О компании</h1>
+						</div>
+					</div>
 				</div>
 				<div class="ticker">
-					<div class="ticker-wrapper">
+					<div class="ticker-wrapper text">
 						<p class="ticker-content"><span>Сила</span> <span>Стабильного</span> <span>Партнерства</span></p>
 					</div>
-					<div class="ticker-wrapper images">
-						<div class="ticker-content"><img class="ticker-img-1" src="../../assets/images/about-company/ticker-img-1.jpg" alt="ticker-img-1"><img class="ticker-img-2" src="../../assets/images/about-company/ticker-img-2.jpg" alt="ticker-img-2"><img class="ticker-img-3" src="../../assets/images/about-company/ticker-img-3.jpg" alt="ticker-img-3"></div>
-					</div>
+					<div class="ticker-wrapper images"><img class="ticker-img-1" src="assets/images/about-company/ticker-img-1.jpg" alt="ticker-img-1"><img class="ticker-img-2" src="assets/images/about-company/ticker-img-2.jpg" alt="ticker-img-2"><img class="ticker-img-3" src="assets/images/about-company/ticker-img-3.jpg" alt="ticker-img-3"></div>
 				</div>
 				<div class="about-company__top">
-					<p class="about-company__top-description">С 2008 года, специализируемся на консалтинге в области права и риск менеджмента, оказании профессиональной юридической помощи и сопровождении бизнеса своих клиентов.</p>
-					<div class="about-company__top-subdescription">
-						<p>Наш основной принцип деятельности заложен в самом названии и представляет собой силу стабильного партнерства, мы стремимся достигать высоких результатов и поставленных перед нами задач, становясь не просто инструментом для наших клиентов, а полноценным партнером в ведении их бизнеса и решении иных задач.</p>
+					<div class="row justify-content-center">
+						<div class="col-6">
+							<p class="about-company__top-description">С 2008 года, специализируемся на консалтинге в области права и риск менеджмента, оказании профессиональной юридической помощи и сопровождении бизнеса своих клиентов.</p>
+						</div>
+					</div>
+					<div class="row justify-content-end">
+						<div class="col-4">
+							<div class="about-company__top-subdescription">
+								<div class="row">
+									<div class="col-6">
+										<p>Наш основной принцип деятельности заложен в самом названии и представляет собой силу стабильного партнерства, мы стремимся достигать высоких результатов и поставленных перед нами задач, становясь не просто инструментом для наших клиентов, а полноценным партнером в ведении их бизнеса и решении иных задач.</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="about-company__advantages">
@@ -63,128 +85,167 @@
 				<div class="recognition">
 					<h2 class="recognition__title">Признание</h2>
 					<div class="recognition__content">
-						<div class="recognition__content-row-1 swiper-container">
-							<div class="recognition__content-wrapper swiper-wrapper">
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-							</div>
+						<div class="recognition__content-row recognition__content-row-1">
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
 						</div>
-						<div class="recognition__content-row-2 swiper-container">
-							<div class="recognition__content-wrapper swiper-wrapper">
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-2.png" alt="recognition-2"></div>
-								<div class="recognition__content-item swiper-slide"><img src="../../assets/images/recognition-1.png" alt="recognition-1"></div>
-							</div>
+						<div class="recognition__content-row recognition__content-row-2">
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
+							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
 						</div>
 					</div>
 				</div>
 				<div class="about-company__clients">
 					<div class="about-company__clients-header">
-						<h2>Наши клиенты</h2>
-						<div class="about-company__clients-slider-navigation">
-							<div class="prev-btn"><img class="svg" src="../../assets/images/icons/slider-arrow-small.svg" alt="prev"></div>
-							<div class="next-btn"><img class="svg" src="../../assets/images/icons/slider-arrow-small.svg" alt="next"></div>
+						<div class="row justify-content-between">
+							<div class="col-2"></div>
+							<div class="col">
+								<h2>Наши клиенты</h2>
+							</div>
+							<div class="col-auto">
+								<div class="about-company__clients-slider-navigation">
+									<div class="prev-btn"><img class="svg" src="assets/images/icons/slider-arrow-small.svg" alt="prev"></div>
+									<div class="next-btn"><img class="svg" src="assets/images/icons/slider-arrow-small.svg" alt="next"></div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="about-company__clients-slider swiper-container">
 						<div class="about-company__clients-slider-wrapper swiper-wrapper">
 							<div class="about-company__clients-slider-slide swiper-slide">
-								<div class="slide-img"><img class="sevkabel" src="../../assets/images/about-company/sevkabel.png" alt="Севкабель"></div>
+								<div class="slide-img"><img class="sevkabel" src="assets/images/about-company/sevkabel.png" alt="Севкабель"></div>
 								<p>ООО «Группа компаний «Севкабель»</p>
 							</div>
 							<div class="about-company__clients-slider-slide swiper-slide">
-								<div class="slide-img"><img class="rise-development" src="../../assets/images/about-company/rise-development.png" alt="Райз Девелопмент"></div>
+								<div class="slide-img"><img class="rise-development" src="assets/images/about-company/rise-development.png" alt="Райз Девелопмент"></div>
 								<p>ООО «Райз Девелопмент»</p>
 							</div>
 							<div class="about-company__clients-slider-slide swiper-slide">
-								<div class="slide-img"><img class="rise-development" src="../../assets/images/about-company/rise-development.png" alt="Райз Девелопмент"></div>
+								<div class="slide-img"><img class="rise-development" src="assets/images/about-company/rise-development.png" alt="Райз Девелопмент"></div>
 								<p>ООО «Райз Девелопмент»</p>
 							</div>
 							<div class="about-company__clients-slider-slide swiper-slide">
-								<div class="slide-img"><img class="university" src="../../assets/images/about-company/university.png" alt="Европейский университет в Санкт-Петербурге"></div>
+								<div class="slide-img"><img class="university" src="assets/images/about-company/university.png" alt="Европейский университет в Санкт-Петербурге"></div>
 								<p>АНООВО «Европейский университет в Санкт-Петербурге»</p>
 							</div>
 							<div class="about-company__clients-slider-slide swiper-slide">
-								<div class="slide-img"><img class="metrostroy" src="../../assets/images/about-company/metrostroy.png" alt="Метрострой"></div>
+								<div class="slide-img"><img class="metrostroy" src="assets/images/about-company/metrostroy.png" alt="Метрострой"></div>
 								<p>ЗАО «Семнадцатое управление «Метрострой»</p>
 							</div>
 							<div class="about-company__clients-slider-slide swiper-slide">
-								<div class="slide-img"><img class="baltic-plant" src="../../assets/images/about-company/baltic-plant.png" alt="Балтийский завод"></div>
+								<div class="slide-img"><img class="baltic-plant" src="assets/images/about-company/baltic-plant.png" alt="Балтийский завод"></div>
 								<p>ОАО «Балтийский завод»</p>
 							</div>
 							<div class="about-company__clients-slider-slide swiper-slide">
-								<div class="slide-img"><img class="university" src="../../assets/images/about-company/university.png" alt="К-40"></div>
+								<div class="slide-img"><img class="university" src="assets/images/about-company/university.png" alt="К-40"></div>
 								<p>ООО «К-40»</p>
 							</div>
 							<div class="about-company__clients-slider-slide swiper-slide">
-								<div class="slide-img"><img class="rise-development" src="../../assets/images/about-company/rise-development.png" alt="Райз Девелопмент"></div>
+								<div class="slide-img"><img class="rise-development" src="assets/images/about-company/rise-development.png" alt="Райз Девелопмент"></div>
 								<p>ООО «Райз Девелопмент»</p>
 							</div>
 						</div>
 					</div>
-				</div><a class="see-next" href="#">
-					<p class="see-next__subtitle">Смотрите дальше</p>
-					<h2 class="see-next__title">Команда</h2><button class="see-next__button"><img src="assets/images/icons/arrow-right.svg" alt="more" /></button>
+				</div><a class="see-next" href="command">
+					<div class="see-next__content">
+						<div class="row">
+							<div class="col-2">
+								<p class="see-next__subtitle">Смотрите дальше</p>
+							</div>
+							<div class="col-5">
+								<h2 class="see-next__title">Команда</h2>
+							</div>
+						</div><button class="see-next__button"><img src="assets/images/icons/arrow-right.svg" alt="more" /></button>
+					</div>
 				</a>
 			</main>
-			<footer class="footer">
-				<div class="footer__content container-fluid no-gutters">
-					<p class="footer__title"><span>С</span>ила <br> <span>С</span>табильного <br> <span>П</span>артнерства</p>
-					<div class="footer-block">
-						<div class="footer__links-wrapper">
-							<ul class="footer__links">
-								<li class="footer__links-block">
-									<ul class="footer__links-items">
-										<li class="footer__links-item"><a class="link" href="/cases">Кейсы</a></li>
-										<li class="footer__links-item"><a class="link" href="/about-company">О компании</a></li>
-										<li class="footer__links-item"><a class="link" href="/command">Команда</a></li>
-									</ul>
-								</li>
-								<li class="footer__links-block">
-									<ul class="footer__links-items">
-										<li class="footer__links-item"><a class="link" href="/events">События</a></li>
-										<li class="footer__links-item"><a class="link" href="/contacts">Контакты</a></li>
-									</ul>
-								</li>
-							</ul>
-							<ul class="footer__networks">
-								<li class="footer__network"><a class="link" href="#" target="_blank">Instagram</a></li>
-								<li class="footer__network"><a class="link" href="#" target="_blank">Facebook</a></li>
-								<li class="footer__network"><a class="link" href="#" target="_blank">Telegram</a></li>
-							</ul>
+			<footer class="footer container-fluid px-0">
+				<div class="footer__content">
+					<div class="row">
+						<div class="col-4">
+							<p class="footer__title"><span>С</span>ила <br> <span>С</span>табильного <br> <span>П</span>артнерства</p>
 						</div>
-						<div class="footer__contacts"><a class="phone" href="tel:+7 812 901–02–01">+7 812 901–02–01</a><a class="email" href="mailto:site@ssp-consult.ru">site@ssp-consult.ru</a></div>
+						<div class="col-4">
+							<div class="footer-block">
+								<div class="row row-cols-1">
+									<div class="col">
+										<div class="footer__links-wrapper">
+											<div class="row justify-content-between">
+												<div class="col-4">
+													<ul class="footer__links">
+														<div class="row">
+															<div class="col">
+																<li class="footer__links-block">
+																	<ul class="footer__links-items">
+																		<li class="footer__links-item"><a class="link" href="cases">Кейсы</a></li>
+																		<li class="footer__links-item"><a class="link" href="about-company">О компании</a></li>
+																		<li class="footer__links-item"><a class="link" href="#">Команда</a></li>
+																	</ul>
+																</li>
+															</div>
+															<div class="col">
+																<li class="footer__links-block">
+																	<ul class="footer__links-items">
+																		<li class="footer__links-item"><a class="link" href="events">События</a></li>
+																		<li class="footer__links-item"><a class="link" href="contacts">Контакты</a></li>
+																	</ul>
+																</li>
+															</div>
+														</div>
+													</ul>
+												</div>
+												<div class="col-2">
+													<ul class="footer__networks">
+														<li class="footer__network"><a class="link" href="#" target="_blank">Instagram</a></li>
+														<li class="footer__network"><a class="link" href="#" target="_blank">Facebook</a></li>
+														<li class="footer__network"><a class="link" href="#" target="_blank">Telegram</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="footer__contacts d-flex flex-column"><a class="phone" href="tel:+7 812 901–02–01">+7 812 901–02–01</a><a class="email" href="mailto:site@ssp-consult.ru">site@ssp-consult.ru</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="footer__bottom">
-						<p class="copyrigh">© 2020 ССП-Консалт</p>
-						<p class="author">Сделано в<a href="https://cloudmill.ru/" target="_blank"> CloudMill</a></p>
+					<div class="footer__bottom row justify-content-between">
+						<div class="col-1">
+							<p class="copyrigh">© 2020 ССП-Консалт</p>
+						</div>
+						<div class="col-1">
+							<p class="author">Сделано в<a href="https://cloudmill.ru/" target="_blank"> CloudMill</a></p>
+						</div>
 					</div>
 				</div>
 			</footer>

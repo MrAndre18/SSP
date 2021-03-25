@@ -1,10 +1,13 @@
 .page-title {
-  margin: 40px auto 120px;
+  max-width: 1920px;
+  padding: 40px 40px 120px;
+  margin: 0 auto;
   text-align: center;
 
   h1 {
     font-family: $additional-font-family;
     color: $color-1;
     font-size: 90px;
+    line-height: 100%;
   }
 }

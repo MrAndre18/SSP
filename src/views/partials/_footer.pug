@@ -1,36 +1,50 @@
-footer.footer
-  .footer__content.container-fluid.no-gutters
-    p.footer__title
-      | #[span С]ила #[br] #[span С]табильного #[br] #[span П]артнерства
-    .footer-block
-      .footer__links-wrapper
-        ul.footer__links
-          li.footer__links-block
-            ul.footer__links-items
-              li.footer__links-item
-                a.link(href="/cases") Кейсы
-              li.footer__links-item
-                a.link(href="/about-company") О компании
-              li.footer__links-item
-                a.link(href="/command") Команда
-          li.footer__links-block
-            ul.footer__links-items
-              li.footer__links-item
-                a.link(href="/events") События
-              li.footer__links-item
-                a.link(href="/contacts") Контакты
-        ul.footer__networks
-          li.footer__network
-            a.link(href="#" target="_blank") Instagram
-          li.footer__network
-            a.link(href="#" target="_blank") Facebook
-          li.footer__network
-            a.link(href="#" target="_blank") Telegram
-      .footer__contacts
-        a(href="tel:+7 812 901–02–01").phone +7 812 901–02–01
-        a(href="mailto:site@ssp-consult.ru").email site@ssp-consult.ru
-    .footer__bottom
-      p.copyrigh © 2020 ССП-Консалт
-      p.author
-        | Сделано в
-        a(href="https://cloudmill.ru/" target="_blank")  CloudMill
+footer.footer.container-fluid.px-0
+  .footer__content
+    .row
+      .col-4
+        p.footer__title
+          | #[span С]ила #[br] #[span С]табильного #[br] #[span П]артнерства
+      .col-4
+        .footer-block
+          .row.row-cols-1
+            .col
+              .footer__links-wrapper
+                .row.justify-content-between
+                  .col-4
+                    ul.footer__links
+                      .row
+                        .col
+                          li.footer__links-block
+                            ul.footer__links-items
+                              li.footer__links-item
+                                a.link(href="cases") Кейсы
+                              li.footer__links-item
+                                a.link(href="about-company") О компании
+                              li.footer__links-item
+                                a.link(href="#") Команда
+                        .col
+                          li.footer__links-block
+                            ul.footer__links-items
+                              li.footer__links-item
+                                a.link(href="events") События
+                              li.footer__links-item
+                                a.link(href="contacts") Контакты
+                  .col-2
+                    ul.footer__networks
+                      li.footer__network
+                        a.link(href="#" target="_blank") Instagram
+                      li.footer__network
+                        a.link(href="#" target="_blank") Facebook
+                      li.footer__network
+                        a.link(href="#" target="_blank") Telegram
+            .col
+              .footer__contacts.d-flex.flex-column
+                a(href="tel:+7 812 901–02–01").phone +7 812 901–02–01
+                a(href="mailto:site@ssp-consult.ru").email site@ssp-consult.ru
+    .footer__bottom.row.justify-content-between
+      .col-1
+        p.copyrigh © 2020 ССП-Консалт
+      .col-1
+        p.author
+          | Сделано в
+          a(href="https://cloudmill.ru/" target="_blank")  CloudMill

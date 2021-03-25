@@ -6,21 +6,17 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
   background-image: $footer-bg-img;
   background-position: bottom;
   background-size: cover;
-  padding: 160px 40px 80px;
+  padding: 160px 0 80px;
 
   &__content {
     max-width: 1920px;
+    padding: 0 40px;
     margin: 0 auto;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     font-family: $main-font-family;
     color: $color-7;
 
     .footer__title {
-      max-width: 510px;
-      width: 100%;
       font-size: 90px;
       color: $color-6;
       font-family: $additional-font-family;
@@ -31,13 +27,8 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
     }
 
     .footer-block {
-      width: calc(100% - 510px - 420px);
-      display: flex;
-      flex-direction: column;
 
       .footer__links-wrapper {
-        display: flex;
-        justify-content: space-between;
         margin: 0 0 132px;
         font-size: 20px;
         line-height: 140%;
@@ -51,8 +42,6 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
         }
 
         .footer__links {
-          display: flex;
-
           &-block {
             margin: 0 88px 0 0;
 
@@ -80,8 +69,6 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
       }
 
       .footer__contacts {
-        display: flex;
-        flex-direction: column;
         font-size: 55px;
         line-height: 100%;
         font-family: $additional-font-family;
@@ -102,11 +89,9 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
     }
 
     .footer__bottom {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      margin: 70px 0 0;
+      margin-top: 70px;
       font-size: 14px;
+      line-height: 140%;
 
       .copyrigh {
         font-weight: 300;

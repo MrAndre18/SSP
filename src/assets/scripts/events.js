@@ -3,8 +3,10 @@ const eventsSubscribe = $(".events__subscribe-block"),
   filterDiscardBtn = $(".filter .filter__discard"),
   subscribeBtn = $(eventsSubscribe).find(".subscribe .more-btn"),
   subscribeAgree = $(eventsSubscribe).find(".subscribe input[name=agree]"),
+  email = $(eventsSubscribe).find(".subscribe input[name=email]"),
   subscribeTitle = $(eventsSubscribe).find(".subscribe .subscribe-title"),
-  agreeError = $(eventsSubscribe).find(".subscribe .error");
+  agreeError = $(eventsSubscribe).find(".subscribe input[name=agree] + label .error"),
+  emailError = $(eventsSubscribe).find(".subscribe input[name=email] + .error");
 
 $(filters).on("click", (e) => {
   e.preventDefault();
@@ -25,12 +27,25 @@ $(subscribeBtn).on("click", (e) => {
     $(subscribeTitle).toggleClass("active");
     $(".subscribe-btn").toggleClass("active");
     $(agreeError).removeClass("active");
+    $(emailError).removeClass("active");
     $(subscribeAgree).prop("checked", "");
   } else {
-    if (!$(subscribeAgree).prop("checked")) $(agreeError).addClass("active");
-    else {
+    let error = false;
+
+    if (!$(subscribeAgree).prop("checked")) {
+      $(agreeError).addClass("active");
+      error = true;
+    }
+
+    if (!$(email).val()) {
+      $(emailError).addClass("active");
+      error = true;
+    }
+
+    if (!error) {
       $(subscribeAgree).prop("checked", "");
       $(agreeError).removeClass("active");
+      $(emailError).removeClass("active");
       $(eventsSubscribe).addClass("subscribed");
       $(subscribeTitle).toggleClass("active");
       $(".subscribe-btn").toggleClass("active");

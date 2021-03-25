@@ -1,9 +1,8 @@
 .see-next {
   position: relative;
-  display: flex;
+  display: block;
   height: 400px;
   background: $color-3;
-  padding: 30px 40px;
   color: $color-1;
 
   &::before {
@@ -28,6 +27,15 @@
     }
   }
 
+  &__content {
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    padding: 30px 40px 40px;
+    margin: 0 auto;
+  }
+
   &__subtitle {
     position: relative;
     z-index: 2;
@@ -40,7 +48,6 @@
   &__title {
     position: relative;
     z-index: 2;
-    max-width: 990px;
     font-family: $main-font-family;
     font-size: 90px;
     line-height: 120%;

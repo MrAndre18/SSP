@@ -39,29 +39,6 @@ const practicesSlider = new Swiper(".practices__slider", {
   },
 });
 
-const recognitionSliderSettings = {
-  loop: true,
-  slidesPerView: "auto",
-  simulateTouch: false,
-  spaceBetween: 20,
-  watchOverflow: true,
-  initialSlide: 1,
-  speed: 3000,
-
-  autoplay: {
-    delay: 0,
-  },
-};
-
-const recognitionSlider_1 = new Swiper(
-  ".recognition__content-row-1",
-  recognitionSliderSettings
-);
-const recognitionSlider_2 = new Swiper(
-  ".recognition__content-row-2",
-  recognitionSliderSettings
-);
-
 const fullPageSliderSettings = {
   loop: true,
   effect: "fade",
@@ -77,7 +54,6 @@ const fullPageSliderSettings = {
 const fullPageSlider = new Swiper(".fulpage__slider", fullPageSliderSettings);
 
 fullPageSlider.on("slideChangeTransitionStart", function () {
-  // setCircleFilling();
   activateBullet(fullPageSlider.realIndex);
 });
 

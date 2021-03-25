@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="assets/favicon.svg">
+		<title>Сила Стабильного Партнерства</title>
+		<link href="vendors.css" rel="stylesheet">
+		<link href="app.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="loader">
+			<p class="loader-title"><span>С</span>ила <br> <span>С</span>табильного <br> <span>П</span>артнерства</p><svg class="loader-progress" width="610" height="610">
+				<circle class="loader-progress__circle" stroke="transparent" stroke-width="1" cx="305" cy="305" r="304" fill="transparent"></circle>
+			</svg>
+		</div>
+		<div class="loaded-content">
+			<div class="contacts-page">
+				<header class="header container-fluid p-0">
+					<div class="header__content">
+						<div class="row align-items-center">
+							<div class="col-2">
+								<div class="header__logo"><a href="/"><img class="svg logo__img" src="assets/images/icons/logo.svg" alt="logo"></a></div>
+							</div>
+							<div class="col-2">
+								<ul class="practices d-flex">
+									<li class="practices__item"><a class="link practices" href="#">Практики<ul class="practices__item-dots">
+												<li class="dot"></li>
+												<li class="dot"></li>
+												<li class="dot"></li>
+											</ul></a></li>
+									<li class="practices__item"><a class="link cases" href="cases">Кейсы</a></li>
+								</ul>
+							</div>
+							<div class="col-4">
+								<ul class="header__menu menu d-flex justify-content-end">
+									<li class="menu__item"><a class="link about-company" href="about-company">О компании</a></li>
+									<li class="menu__item"><a class="link command" href="#">Команда</a></li>
+									<li class="menu__item"><a class="link events" href="events">События</a></li>
+									<li class="menu__item"><a class="link contacts" href="contacts">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+			<main class="main contacts container-fluid p-0">
+				<div class="contacts-block">
+					<div class="contacts-block__content">
+						<div class="page-title">
+							<div class="row justify-content-center">
+								<div class="col-4">
+									<h1>Контакты</h1>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2"></div>
+							<div class="col-2">
+								<ul class="contacts-block__addresses">
+									<li class="contacts-block__address"><span class="number">01</span>
+										<p class="address"><span>Каменноостровский пр.,</span> <span>73–75,</span> <span>оф. 9</span></p>
+									</li>
+									<li class="contacts-block__address"><span class="number">02</span>
+										<p class="address"><span>ул. Чайковского,</span> 50</p>
+									</li>
+								</ul>
+							</div>
+							<div class="col-3 d-flex justify-content-end">
+								<div class="contacts-block__links"><a class="phone" href="tel:+7 812 901–02–01">+7 812 901–02–01</a><a class="email" href="mailto:site@ssp-consult.ru">site@ssp-consult.ru</a>
+									<p class="work-time"><span>пнд — пт</span> <br> <span>9 — 18.30</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contacts__map">
+					<div id="map"></div>
+				</div>
+				<div class="contacts__advices">
+					<p class="contacts__advices-subtitle">Интересное о праве</p>
+					<h2 class="contacts__advices-title">Советы и рекомендации в наших соц.сетях</h2>
+					<div class="contacts__advices-imgs">
+						<div class="row justify-content-end">
+							<div class="col-2"><a class="contacts__advice-img" href="#"><img src="assets/images/contacts/advice-1.png"></a></div>
+							<div class="col-2"><a class="contacts__advice-img" href="#"><img src="assets/images/contacts/advice-2.png"></a></div>
+							<div class="col-2"><a class="contacts__advice-img" href="#"><img src="assets/images/contacts/advice-3.png"></a></div>
+						</div>
+					</div>
+					<div class="contacts__advices-join">
+						<div class="row justify-content-end">
+							<div class="col-4">
+								<p class="join-title">Присоединяйтесь</p>
+							</div>
+							<div class="col-2">
+								<ul class="contacts__advices-networks">
+									<li class="contacts__advices-network"><a href="#">Instagram</a></li>
+									<li class="contacts__advices-network"><a href="#">Facebook</a></li>
+									<li class="contacts__advices-network"><a href="#">Telegram</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contacts__feedback">
+					<div class="row">
+						<div class="col-6">
+							<div class="feedback">
+								<h2 class="feedback__title active">Задать вопрос или запросить коммерческое предложение</h2>
+								<h2 class="feedback__title">Мы приняли ваше сообщение и ответим вам в ближайшее время.</h2>
+								<form class="feedback__form">
+									<div class="feedback-field feedback-name"><input type="name" name="name" placeholder="Имя*" required="required" />
+										<p class="error">Поле не заполнено</p>
+									</div>
+									<div class="feedback-field feedback-email"><input type="email" name="email" placeholder="E-mail" />
+										<p class="error">Поле не заполнено</p>
+									</div>
+									<div class="feedback-field feedback-phone"><input type="phone" name="phone" placeholder="Телефон*" required="required" />
+										<p class="error">Поле не заполнено</p>
+									</div><textarea name="message" placeholder="Сообщение"></textarea>
+								</form>
+								<div class="feedback__submit">
+									<div class="submit-btn active"><a class="more-btn" href="#"><img src="assets/images/icons/arrow-right.svg" alt="more" /><span>Отправить</span></a></div>
+									<div class="submit-btn"><a class="more-btn" href="#"><img src="assets/images/icons/arrow-right.svg" alt="more" /><span>Отправить еще</span></a></div>
+									<div class="feedback-agree"><input type="checkbox" name="agree" id="feedback-agree" required="required" /><label for="feedback-agree">Согласен на обработку персональных данных в соответствии с <a class="link" href="#">политикой конфиденциальности</a>
+											<p class="error">Остутствует согласие на обработку персональных данных</p>
+										</label></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><a class="see-next" href="about-company">
+					<div class="see-next__content">
+						<div class="row">
+							<div class="col-2">
+								<p class="see-next__subtitle">Смотрите дальше</p>
+							</div>
+							<div class="col-5">
+								<h2 class="see-next__title">О компании</h2>
+							</div>
+						</div><button class="see-next__button"><img src="assets/images/icons/arrow-right.svg" alt="more" /></button>
+					</div>
+				</a>
+			</main>
+			<footer class="footer container-fluid px-0">
+				<div class="footer__content">
+					<div class="row">
+						<div class="col-4">
+							<p class="footer__title"><span>С</span>ила <br> <span>С</span>табильного <br> <span>П</span>артнерства</p>
+						</div>
+						<div class="col-4">
+							<div class="footer-block">
+								<div class="row row-cols-1">
+									<div class="col">
+										<div class="footer__links-wrapper">
+											<div class="row justify-content-between">
+												<div class="col-4">
+													<ul class="footer__links">
+														<div class="row">
+															<div class="col">
+																<li class="footer__links-block">
+																	<ul class="footer__links-items">
+																		<li class="footer__links-item"><a class="link" href="cases">Кейсы</a></li>
+																		<li class="footer__links-item"><a class="link" href="about-company">О компании</a></li>
+																		<li class="footer__links-item"><a class="link" href="#">Команда</a></li>
+																	</ul>
+																</li>
+															</div>
+															<div class="col">
+																<li class="footer__links-block">
+																	<ul class="footer__links-items">
+																		<li class="footer__links-item"><a class="link" href="events">События</a></li>
+																		<li class="footer__links-item"><a class="link" href="contacts">Контакты</a></li>
+																	</ul>
+																</li>
+															</div>
+														</div>
+													</ul>
+												</div>
+												<div class="col-2">
+													<ul class="footer__networks">
+														<li class="footer__network"><a class="link" href="#" target="_blank">Instagram</a></li>
+														<li class="footer__network"><a class="link" href="#" target="_blank">Facebook</a></li>
+														<li class="footer__network"><a class="link" href="#" target="_blank">Telegram</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="footer__contacts d-flex flex-column"><a class="phone" href="tel:+7 812 901–02–01">+7 812 901–02–01</a><a class="email" href="mailto:site@ssp-consult.ru">site@ssp-consult.ru</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom row justify-content-between">
+						<div class="col-1">
+							<p class="copyrigh">© 2020 ССП-Консалт</p>
+						</div>
+						<div class="col-1">
+							<p class="author">Сделано в<a href="https://cloudmill.ru/" target="_blank"> CloudMill</a></p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script type="text/javascript" src="assets/styles.js"></script>
+		<script type="text/javascript" src="assets/vendor.js"></script>
+		<script type="text/javascript" src="assets/app.js"></script>
+	</body>
+
+</html>

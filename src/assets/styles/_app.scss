@@ -1,6 +1,8 @@
 @font-face {
   font-family: "Pragmatica";
-  src: url("../fonts/Pragmatica-Medium.woff2") format("woff2"),
+  src: url("../fonts/Pragmatica-Medium.eot");
+  src: url("../fonts/Pragmatica-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Pragmatica-Medium.woff2") format("woff2"),
     url("../fonts/Pragmatica-Medium.woff") format("woff"),
     url("../fonts/PragmaticaExtended-Medium.ttf") format("truetype");
   font-weight: normal;
@@ -10,7 +12,9 @@
 
 @font-face {
   font-family: "Pragmatica";
-  src: url("../fonts/Pragmatica-Book.woff2") format("woff2"),
+  src: url("../fonts/Pragmatica-Book.eot");
+  src: url("../fonts/Pragmatica-Book.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Pragmatica-Book.woff2") format("woff2"),
     url("../fonts/Pragmatica-Book.woff") format("woff"),
     url("../fonts/PragmaticaExtended-Book.ttf") format("truetype");
   font-weight: 300;
@@ -20,7 +24,9 @@
 
 @font-face {
   font-family: "Kudryashev Headline";
-  src: url("../fonts/KudryashevHeadline-Sans.woff2") format("woff2"),
+  src: url("../fonts/KudryashevHeadline-Sans.eot");
+  src: url("../fonts/KudryashevHeadline-Sans.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/KudryashevHeadline-Sans.woff2") format("woff2"),
     url("../fonts/KudryashevHeadline-Sans.woff") format("woff"),
     url("../fonts/KudryashevHeadline-Sans.ttf") format("truetype");
   font-weight: normal;
@@ -30,55 +36,6 @@
 
 //@import 'normalize.css';
 
-//
-//sass/
-////
-//– base/
-//   |– _forms.scss        # Forms rules
-//   |– _typography.scss   # Typography rules
-//   |– _buttons.scss      # Buttons
-//   |– _forms.scss        # Forms
-//   …                     # Etc.
-//
-//– modules/
-//   |– _carousel.scss     # Carousel
-//   |– _cover.scss        # Cover
-//   |– _dropdown.scss     # Dropdown
-//   …                     # Etc.
-//
-//– partials/
-//   |– _navigation.scss   # Navigation
-//   |– _grid.scss         # Grid system
-//   |– _header.scss       # Header
-//   |– _footer.scss       # Footer
-//   |– _sidebar.scss      # Sidebar
-//   …                     # Etc.
-//
-//– pages/
-//   |– _home.scss         # Home specific styles
-//   |– _contact.scss      # Contact specific styles
-//   …                     # Etc.
-//
-//– themes/
-//   |– _theme.scss        # Default theme
-//   |– _admin.scss        # Admin theme
-//   …                     # Etc.
-//
-//– helpers/
-//   |– _variables.scss    # Sass Variables
-//   |– _functions.scss    # Sass Functions
-//   |– _mixins.scss       # Sass Mixins
-//   |– _placeholders.scss # Sass Placeholders
-//
-//– vendors/
-//   |– _reset.scss         # Reset
-//   |– _debug.scss         # Debug mode
-//   …                      # Etc.
-//
-//– main.scss              # Main Sass file
-//
-
-//*
 // Which objects and abstractions would you like to use?
 //base
 $use-btn-color: true !default;
@@ -131,6 +88,7 @@ $debug-mode: false !default;
 // Pages
 @import "pages/*.scss";
 
+@import "~bootstrap/scss/bootstrap-grid.scss";
 @import "~swiper/swiper-bundle.css";
 @import "~jbox/dist/jBox.all.css";
 @import "~aos/dist/aos.css";

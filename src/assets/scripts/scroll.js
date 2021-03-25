@@ -1,60 +1,60 @@
 let scrollPrev = 0;
 
-const startTicker = () => {
-  const ticker = $(".ticker");
-  let speed = 5;
-  let lastScrollPos = 0;
-  let timer;
+// const startTicker = () => {
+//   const ticker = $(".ticker");
+//   let speed = 5;
+//   let lastScrollPos = 0;
+//   let timer;
 
-  const containers = $(ticker).find(".ticker-wrapper");
+//   const containers = $(ticker).find(".ticker-wrapper");
 
-  $(containers).each(function (index, container) {
-    const content = $(container).find(".ticker-content"),
-      elWidth = content.outerWidth();
+//   $(containers).each(function (index, container) {
+//     const content = $(container).find(".ticker-content"),
+//       elWidth = content.outerWidth();
 
-    console.log("content: ", content);
+//     console.log("content: ", content);
 
-    let clone = content.clone(true),
-      progress = 1;
+//     let clone = content.clone(true),
+//       progress = 1;
 
-    $(container).append(clone);
+//     $(container).append(clone);
 
-    const loop = () => {
-      progress = progress - speed;
+//     const loop = () => {
+//       progress = progress - speed;
 
-      if (progress <= elWidth * -1) progress = 0;
+//       if (progress <= elWidth * -1) progress = 0;
 
-      $(container).css(
-        "transform",
-        `translateX(${progress}px)`
-      );
+//       $(container).css(
+//         "transform",
+//         `translateX(${progress}px)`
+//       );
 
-      window.requestAnimationFrame(loop);
-    };
+//       window.requestAnimationFrame(loop);
+//     };
 
-    loop();
-  });
+//     loop();
+//   });
 
-  $(window).on("scroll", () => {
-    const maxScrollValue = 10;
-    const newScrollPos = window.scrollY;
-    let scrollValue = newScrollPos - lastScrollPos;
+//   $(window).on("scroll", () => {
+//     const maxScrollValue = 10;
+//     const newScrollPos = window.scrollY;
+//     let scrollValue = newScrollPos - lastScrollPos;
 
-    if (scrollValue > maxScrollValue) scrollValue = maxScrollValue;
-    else if (scrollValue < -maxScrollValue) scrollValue = -maxScrollValue;
+//     if (scrollValue > maxScrollValue) scrollValue = maxScrollValue;
+//     else if (scrollValue < -maxScrollValue) scrollValue = -maxScrollValue;
 
-    speed = scrollValue;
+//     speed = scrollValue;
 
-    clearTimeout(timer);
-    timer = setTimeout(handleSpeedClear, 10);
-  });
+//     clearTimeout(timer);
+//     timer = setTimeout(handleSpeedClear, 10);
+//   });
 
-  function handleSpeedClear() {
-    speed = 5;
-  }
-};
+//   function handleSpeedClear() {
+//     speed = 5;
+//   }
+// };
 
-startTicker();
+// startTicker();
 
 $(window).on("scroll", () => {
   changeHeaderBg();
