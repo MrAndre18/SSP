@@ -4,7 +4,7 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
 .cases {
   &__content {
     max-width: 1920px;
-    margin: 0 auto 160px;
+    margin: 0 auto 120px;
     padding: 0 40px;
   }
 
@@ -82,6 +82,11 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
       background-size: contain;
       background-position: right bottom;
       padding: 30px 40px 40px 80px;
+      @include transition();
+
+      &:hover {
+        background-color: $color-3;
+      }
 
       &__img {
         position: absolute;
@@ -107,7 +112,6 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
       &__title {
         font-size: 39px;
         line-height: 140%;
-        font-weight: 300;
         max-width: 710px;
         margin-bottom: 20px;
       }
@@ -135,6 +139,12 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
           font-size: 16px;
           line-height: 100%;
           margin-bottom: 20px;
+          font-weight: 500;
+
+          .link::before {
+            bottom: -5px;
+            background: $color-1;
+          }
 
           &:last-child {
             margin-bottom: 0;
@@ -142,5 +152,10 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
         }
       }
     }
+  }
+
+  &__all {
+    display: flex;
+    flex-direction: column;
   }
 }

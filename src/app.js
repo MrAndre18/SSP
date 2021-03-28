@@ -19,6 +19,7 @@ $(() => {
   require("Scripts/marquee");
   require("Scripts/events");
   require("Scripts/contacts");
+  require("Scripts/cases");
   // require("Scripts/gMapsAPI");
   // require("Scripts/initMap");
 });

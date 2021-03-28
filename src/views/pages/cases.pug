@@ -29,6 +29,93 @@ block content
       },
     ]
 
+    const cases = [
+      {
+        url: "case",
+        title: "Защита интересов Европейского Университета",
+        category: "защита прав частного клиента",
+        img: {
+          url: "assets/images/cases/university.png",
+          alt: "Европейский университет в Санкт-Петербурге"
+        },
+        practices: [
+          {
+            url: "#",
+            name: "Банкротство и антикризисный консалтинг"
+          },
+          {
+            url: "#",
+            name: "Страховое право"
+          },
+          {
+            url: "#",
+            name: "Корпоративное право и M&A"
+          },
+        ]
+      },
+      {
+        url: "case",
+        title: "Спор с «ЛенСпецСМУ»",
+        category: "споры с государственными органами",
+        img: {
+          url: "assets/images/cases/etalon.png",
+          alt: "Эталон ЛенСпецСМУ"
+        },
+        practices: [
+          {
+            url: "#",
+            name: "Недвижимость и строительство"
+          },
+          {
+            url: "#",
+            name: "Разрешение споров и арбитраж"
+          },
+        ]
+      },
+      {
+        url: "case",
+        title: "Защита интересов Европейского Университета",
+        category: "защита прав частного клиента",
+        img: {
+          url: "assets/images/cases/university.png",
+          alt: "Европейский университет в Санкт-Петербурге"
+        },
+        practices: [
+          {
+            url: "#",
+            name: "Банкротство и антикризисный консалтинг"
+          },
+          {
+            url: "#",
+            name: "Страховое право"
+          },
+          {
+            url: "#",
+            name: "Корпоративное право и M&A"
+          },
+        ]
+      },
+      {
+        url: "case",
+        title: "Спор с «ЛенСпецСМУ»",
+        category: "споры с государственными органами",
+        img: {
+          url: "assets/images/cases/etalon.png",
+          alt: "Эталон ЛенСпецСМУ"
+        },
+        practices: [
+          {
+            url: "#",
+            name: "Недвижимость и строительство"
+          },
+          {
+            url: "#",
+            name: "Разрешение споров и арбитраж"
+          },
+        ]
+      },
+    ]
+
   main.main.cases.container-fluid.p-0
     +pageTitle("Кейсы")
 
@@ -66,6 +153,11 @@ block content
                     a.link(href="#") Страховое право
                   li.last-case__practices-item
                     a.link(href="#") Корпоративное право и M&A
+      
+      ul.cases__all
+        each caseItem in cases
+          +caseItem(caseItem)
+
 
     +seeNext("about-company", "О компании")
 

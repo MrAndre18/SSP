@@ -9,7 +9,7 @@ mixin beforeBtn(href, text)
     span= text
 
 mixin tabBtn(href, text, className)
-  a.tab-btn(href=href ? href : "" class=className ? className : "")
+  a.tab-btn(href=href ? href : "#" class=className ? className : "")
     span= text
 
 mixin newsItem(date, title, moreUrl, tabs)
@@ -103,3 +103,20 @@ mixin feedbackForm(title)
         +moreBtn("#", "Отправить еще")
       .feedback-agree
         +agreeCheckbox("feedback-agree")
+
+mixin caseItem(caseItem, isOtherCases)
+  li.case-item(class = isOtherCases ? "small" : "")
+    a(href=caseItem.url).case-item__content
+      .case-item__content-title-block
+        h4.case-item__title= caseItem.title
+        +tabBtn("#", caseItem.category, "disabled")
+      .case-item__content-img-block
+        .case-item__img
+          span
+            img(src=caseItem.img.url, alt=caseItem.img.alt)
+      .case-item__practices
+        p.case-item__practices-title Практики
+        ul.case-item__practices-block
+          each practice in caseItem.practices
+            li.case-item__practices-item
+              a.link(href=practice.url)= practice.name
