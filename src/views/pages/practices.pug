@@ -1,0 +1,201 @@
+extends ../layouts/master.pug
+
+block header
+  .practices-page
+    include ../partials/_header.pug
+
+block content
+  -
+    const practices_cases = [
+      {
+        url: "case",
+        title: "Спор с «ЛенСпецСМУ»",
+        category: "споры с государственными органами",
+        img: {
+          url: "assets/images/cases/etalon.png",
+          alt: "Эталон ЛенСпецСМУ"
+        },
+        practices: [
+          {
+            url: "#",
+            name: "Недвижимость и строительство"
+          },
+          {
+            url: "#",
+            name: "Разрешение споров и арбитраж"
+          },
+        ]
+      },
+      {
+        url: "case",
+        title: "Защита интересов Европейского Университета",
+        category: "защита прав частного клиента",
+        img: {
+          url: "assets/images/cases/university.png",
+          alt: "Европейский университет в Санкт-Петербурге"
+        },
+        practices: [
+          {
+            url: "#",
+            name: "Банкротство и антикризисный консалтинг"
+          },
+          {
+            url: "#",
+            name: "Страховое право"
+          },
+          {
+            url: "#",
+            name: "Корпоративное право и M&A"
+          },
+        ]
+      },
+      {
+        url: "case",
+        title: "Спор с «ЛенСпецСМУ»",
+        category: "споры с государственными органами",
+        img: {
+          url: "assets/images/cases/etalon.png",
+          alt: "Эталон ЛенСпецСМУ"
+        },
+        practices: [
+          {
+            url: "#",
+            name: "Недвижимость и строительство"
+          },
+          {
+            url: "#",
+            name: "Разрешение споров и арбитраж"
+          },
+        ]
+      },
+    ]
+
+    const accordion = [
+      {
+        title: "Представление интересов в государственных и муниципальных органах"
+      },
+      {
+        title: "Сопровождение проверок государственными и муниципальными органами"
+      },
+      {
+        title: "Обжалование ненормативно-правовых актов, незаконных решений и действий (бездействия) госорганов в вышестоящий орган или в судебном порядке"
+      },
+      {
+        title: "Оспаривание кадастровой стоимости"
+      },
+      {
+        title: "Урегулирование споров с государственными органами"
+      },
+    ]
+
+  main.main.practices.container-fluid.px-0
+
+    .practices__header
+      .practices__header-content
+        h1.practices__header-title Банкротство и корпоративные конфликты
+        span.practices__header-number 01
+
+    .practices__content
+      include ../components/_all-practices.pug
+
+      ul.practices__timeline
+        .practices__timeline-line
+          .row.row-cols-8
+            .col
+            .col
+            .col
+            .col
+            .col
+            .col
+            .col
+            .col
+        .row.align-items-center
+          .col-1
+            li.practices__timeline-item
+              .practices__timeline-item-img
+                img(src="assets/images/practices/pravo-300.jpg")
+              span.name ПРАВО–300
+              span.date 2020
+          .col-1
+            li.practices__timeline-item
+              .practices__timeline-item-img
+                img(src="assets/images/practices/pravo-300.jpg")
+              span.name ПРАВО–300
+              span.date 2019
+          .col-1
+            li.practices__timeline-item
+              .practices__timeline-item-img
+                img(src="assets/images/practices/pravo-300.jpg")
+              span.name ПРАВО–300
+              span.date 2018
+          .col-1
+            li.practices__timeline-item
+              .practices__timeline-item-img
+                img(src="assets/images/practices/pravo-300.jpg")
+              span.name ПРАВО–300
+              span.date 2017
+
+      .practices__about
+        .row
+          .col-2
+            p.practices__about-title О практике
+          .col-5
+            p.practices__about-top В рамках административно–правовой защиты бизнеса юристы ССП–Консалт оказывают поддержку организациям в ходе взаимодействия с государственными органами, а также помогают разрешить уже возникшие споры по делам об административных правонарушениях.
+        .row.justify-content-end
+          .col-4
+            .practices__about-bottom
+              p Усиление государственного регулирования бизнеса приводит к тому, что компании все чаще нуждаются в квалифицированной юридической помощи в сфере административного права. Большинство организаций и предпринимателей регулярно сталкиваются со всевозможными проверками, нередко их следствием являются штрафы и предписания, обоснованность которых можно поставить под сомнение.
+
+      .practices__services
+        .row.justify-content-end
+          .col-7
+            h2.practices__services-title Услуги
+          .col-6
+            ul.practices__services-accordion
+              each item,i in accordion
+                li.practices__services-accordion-item.accordion-item(class = i == 3 ? "active" : "")
+                  .accordion-item__trigger
+                    span.accordion-item__trigger-number= (i + 1)
+                    p.accordion-item__trigger-title= item.title
+                    .accordion-item__trigger-img
+                      img.svg(src="assets/images/practices/tab-arrow.svg" alt="arrow")
+                  include ../components/_accordion-content.pug
+
+    .practices__manager
+      .practices__manager-content
+        .row.justify-content-between
+          .col-2
+            .practices__manager-img
+              img(src="assets/images/practices/practice-manager.jpg")
+          .col-5
+            .practices__manager-block
+              .position-block
+                p Руководитель практики
+                .position-right
+                  p Руководитель практики административного и страхового права
+              .name-block
+                p.surname Назарова #[br]
+                p.name Екатерина Артёмовна
+              a(href="mailto:nea@ssp-consult.ru").email nea@ssp-consult.ru
+              .practices__manager-bottom
+                +moreBtn("#", "Задать вопрос")
+                .newtworks
+                  a(href="#") Telegram
+                  a(href="#") WhatsApp
+
+    .practices__cases
+      .practices__cases-block
+        h2.practices__cases-title Другие кейсы
+        ul.practices__cases-items
+          each caseItem in practices_cases
+            +caseItem(caseItem, true)
+
+      .practices__feedback
+        .row.justify-content-center
+          .col-6
+            +feedbackForm("Задать вопрос или запросить коммерческое предложение")
+
+    +seeNext("#", "Административно-правовая защита")
+
+block footer
+  include ../partials/_footer.pug

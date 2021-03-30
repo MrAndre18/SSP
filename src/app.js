@@ -1,7 +1,7 @@
 // /* src/app.js */
 import "jquery";
 import AOS from "aos";
-import Rellax from "rellax";
+import Scrollbar from "smooth-scrollbar";
 import Sticky from "sticky-js";
 import "velocity-animate";
 // import './assets/scripts/backend.js';
@@ -20,6 +20,7 @@ $(() => {
   require("Scripts/events");
   require("Scripts/contacts");
   require("Scripts/cases");
+  require("Scripts/practices");
   // require("Scripts/gMapsAPI");
   // require("Scripts/initMap");
 });
@@ -158,12 +159,12 @@ $(() => {
         $(fullpageBulletsCircle[0]).css("strokeDashoffset", 0);
 
         // AOS.init({ offset: 50 });
+        
+        Scrollbar.init(document.querySelector("#body"), {
+          damping: 0.09,
+          thumbMinSize: 10,
+        });
       }, 500);
-
-      // if ($(".rellax").length) {
-      //   // eslint-disable-next-line no-new
-      //   new Rellax(".rellax");
-      // }
     }
   } else {
     $("body").css("overflow", "hidden");
@@ -173,10 +174,10 @@ $(() => {
 
       // AOS.init({ offset: 50 });
 
-      // if ($(".rellax").length) {
-      //   // eslint-disable-next-line no-new
-      //   new Rellax(".rellax");
-      // }
+      Scrollbar.init(document.querySelector("#body"), {
+        damping: 0.09,
+        thumbMinSize: 10,
+      });
     }, 500);
   }
 });

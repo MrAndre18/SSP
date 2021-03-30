@@ -106,7 +106,8 @@ mixin feedbackForm(title)
 
 mixin caseItem(caseItem, isOtherCases)
   li.case-item(class = isOtherCases ? "small" : "")
-    a(href=caseItem.url).case-item__content
+    .case-item__content
+      a(href=caseItem.url).case-item__link
       .case-item__content-title-block
         h4.case-item__title= caseItem.title
         +tabBtn("#", caseItem.category, "disabled")

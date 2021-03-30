@@ -88,6 +88,16 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
         background-color: $color-3;
       }
 
+      .cases__last-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
       &__img {
         position: absolute;
         top: 40px;
@@ -140,6 +150,11 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
           line-height: 100%;
           margin-bottom: 20px;
           font-weight: 500;
+
+          .link {
+            position: relative;
+            z-index: 2;
+          }
 
           .link::before {
             bottom: -5px;

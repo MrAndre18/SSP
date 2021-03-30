@@ -1,0 +1,42 @@
+.all-practices {
+  display: flex;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-bottom: 1px solid $color-2;
+
+  &__title {
+    min-width: max-content;
+    font-family: $additional-font-family;
+    font-size: 24px;
+  }
+
+  &-block {
+    width: 100%;
+    margin: 8px 0 0 162px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__items {
+    width: 33%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
+    margin-top: 8px;
+  }
+
+  &__item {
+    font-size: 16px;
+    margin-bottom: 20px;
+
+    .link::before {
+      background: $color-1;
+      bottom: -4px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

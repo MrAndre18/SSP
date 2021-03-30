@@ -1,9 +1,9 @@
 $practices-slide-bg-color: #a0c2cd;
 
 $practices-slide-bg-imgs: (
-  1: url("../../assets/images/practices/practices-slide-1.png"),
-  2: url("../../assets/images/practices/practices-slide-2.png"),
-  3: url("../../assets/images/practices/practices-slide-3.png"),
+  1: url("../../assets/images/practices-slider/practices-slide-1.png"),
+  2: url("../../assets/images/practices-slider/practices-slide-2.png"),
+  3: url("../../assets/images/practices-slider/practices-slide-3.png"),
 );
 
 $fullpage-slide-bg-imgs: (
@@ -337,36 +337,6 @@ $fullpage-slide-bg-imgs: (
 
         &::after {
           display: none;
-        }
-      }
-    }
-
-    .practices__bottom {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 100px 40px 0;
-      margin: 30px 40px 0 0;
-      border-bottom: 1px solid #cfdeea;
-
-      .all-practices {
-        font-family: $additional-font-family;
-        font-size: 24px;
-      }
-
-      .practices__items {
-        margin: 8px 0 0;
-
-        .practices__item {
-          font-size: 16px;
-          margin: 0 0 20px;
-
-          .link::before {
-            background: $color-1;
-          }
-
-          &:last-child {
-            margin: 0;
-          }
         }
       }
     }
