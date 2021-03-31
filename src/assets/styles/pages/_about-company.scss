@@ -3,12 +3,20 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
 .about-company {
   .page-title {
     text-align: left;
+
+    @media (max-width: 1200px) {
+      text-align: center;
+    }
   }
 
   .ticker {
     position: relative;
     height: 286px;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+      height: 140px;
+    }
 
     &-wrapper {
       position: relative;
@@ -30,10 +38,19 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
           width: 194px;
           height: 140px;
 
+          @media (max-width: 768px) {
+            width: 88px;
+            height: 64px;
+          }
+
           &.ticker-img-1 {
             top: 0;
             left: 250px;
             z-index: 2;
+
+            @media (max-width: 768px) {
+              left: 67px;
+            }
           }
 
           &.ticker-img-2 {
@@ -46,6 +63,11 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
             top: 0;
             right: 240px;
             z-index: 0;
+
+            @media (max-width: 768px) {
+              top: 10px;
+              right: 0;
+            }
           }
         }
       }
@@ -60,6 +82,12 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
           word-spacing: 35px;
           white-space: nowrap;
           padding-top: 20px;
+
+          @media (max-width: 768px) {
+            font-size: 50px;
+            word-spacing: 10px;
+            padding-top: 30px;
+          }
 
           span {
             position: relative;
@@ -86,22 +114,41 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
     padding: 0 40px;
     margin: 160px auto;
 
+    @media (max-width: 1200px) {
+      padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+      margin: 30px 0 80px;
+    }
+
     &-description {
       margin: 0 auto 80px;
       font-size: 39px;
-      font-weight: 300;
       line-height: 140%;
       text-indent: 17%;
+
+      @media (max-width: 768px) {
+        margin: 0 auto 40px;
+        font-size: 24px;
+      }
     }
 
     &-subdescription {
-      padding: 40px 0 0;
+      padding-top: 40px;
       border-top: 1px solid $color-1;
+
+      @media (max-width: 768px) {
+        padding-top: 20px;
+      }
 
       p {
         font-size: 18px;
         line-height: 160%;
-        font-weight: 300;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -116,11 +163,19 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
     background-position: bottom;
     background-size: cover;
 
+    @media (max-width: 768px) {
+      padding: 60px 20px 58px;
+    }
+
     &-text {
       max-width: 1040px;
       font-size: 70px;
       line-height: 100%;
       text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
 
       span {
         position: relative;
@@ -144,8 +199,15 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
     padding: 0 40px;
     margin: 0 auto 160px;
 
+    @media (max-width: 1200px) {
+      margin: 0 auto 80px;
+      padding: 0 0 0 20px;
+    }
+
     &-header {
       margin-bottom: 80px;
+
+      
 
       h2 {
         font-size: 55px;

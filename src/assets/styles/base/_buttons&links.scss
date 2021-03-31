@@ -34,11 +34,19 @@
   border-radius: 4px;
   @include transition();
 
+  @media (max-width: 768px) {
+    height: 22px;
+  }
+
   span {
     display: inline-block;
     font-size: 20px;
     line-height: 140%;
     font-family: $additional-font-family;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   &:hover {

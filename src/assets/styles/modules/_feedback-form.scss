@@ -3,8 +3,11 @@
     max-width: 840px;
     font-size: 55px;
     line-height: 120%;
-    font-weight: 300;
     display: none;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
 
     &.active {
       display: block;
@@ -18,9 +21,17 @@
     opacity: 1;
     @include transition();
 
+    @media (max-width: 768px) {
+      margin: 40px 0;
+    }
+
     .feedback-field {
       position: relative;
       margin-bottom: 60px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 40px;
+      }
 
       input {
         width: 100%;
@@ -64,6 +75,10 @@
       height: 140px;
       @include transition();
 
+      @media (max-width: 768px) {
+        height: 100px;
+      }
+
       &:focus {
         border-bottom: 1px solid $color-6;
       }
@@ -80,6 +95,11 @@
     display: flex;
     align-items: center;
 
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      align-items: start;
+    }
+
     .submit-btn {
       display: none;
 
@@ -89,8 +109,17 @@
     }
 
     input[name="agree"] + label {
-      margin: 0 0 0 210px;
+      margin-left: 210px;
       width: 340px;
+
+      @media (max-width: 1200px) {
+        margin-left: 60px;
+      }
+
+      @media (max-width: 768px) {
+        margin-left: 0;
+        width: 100%;
+      }
     }
   }
 

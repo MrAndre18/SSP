@@ -25,16 +25,16 @@ mixin newsItem(date, title, moreUrl, tabs)
 mixin pageTitle(title)
   .page-title
     .row.justify-content-center
-      .col-4
+      .col-8.col-xl-4
         h1= title
 
 mixin seeNext(url, title)
   a.see-next(href=url data-aos="fade-up")
     .see-next__content
       .row
-        .col-2
+        .col-8.col-lg-2
           p.see-next__subtitle Смотрите дальше
-        .col-5
+        .col-6.col-lg-5
           h2.see-next__title= title
       button.see-next__button
         img(src="assets/images/icons/arrow-right.svg", alt="more")

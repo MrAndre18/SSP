@@ -45,7 +45,7 @@ block content
         +eventsSubscribe(true)
         .event__content
           .row.justify-content-center
-            .col-4
+            .col-8.col-xl-4
               .event__content-header(data-aos="fade-up")
                 h1.event__content-title ССП-Консалт ищет пострадавших от бездействий авиакомпаний
                 ul.event__content-tabs
@@ -57,8 +57,8 @@ block content
                     +tabBtn("#", "арбитраж", "disabled")
                 span.event__content-date 26.08.2020
           .row
-            .col-2
-            .col-5
+            .col-2.d-none.d-lg-block
+            .col-8.col-lg-5
               .event__content-block
                 p.event__content-subject(data-aos="fade-up") Будучи собственником двух парковочных мест в крытом паркинге наш Клиент после ввода в эксплуатацию паркинга обратился к Застройщику с требование о замене парковочных мест, так как использовать их без ущерба автомобилю невозможно: ширина проезжей части автостоянки заужена из-за установления металлических колесоотбойников. В замене мест Застройщик отказал.
                 img.event__content-image(src="assets/images/event/event.jpg", alt="event" data-aos="fade-up")
@@ -71,7 +71,7 @@ block content
       .event__similar
         h2.event__similar-title Похожие публикации
         .row.justify-content-end
-          .col-6
+          .col-8.col-xl-6
             ul.event__similar-list(data-aos="fade-up")
               each event in similarEvents
                 +newsItem(event.date, event.title, event.moreUrl, event.tabs)

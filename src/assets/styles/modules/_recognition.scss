@@ -2,30 +2,54 @@
   overflow: hidden;
   margin: 160px 0;
 
+  @media (max-width: 768px) {
+    margin: 80px 0;
+  }
+
   &__title {
     font-family: $additional-font-family;
     font-size: 130px;
     line-height: 90%;
-    padding: 0 0 0 40px;
+    padding-left: 40px;
     color: $color-1;
+
+    @media (max-width: 1200px) {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
   }
 
   &__content {
     position: relative;
-    margin: 80px 0 0;
+    margin-top: 80px;
     width: 100%;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+      margin-top: 40px;
+    }
 
     &-row {
       display: flex;
       align-items: center;
 
       &-1 {
-        margin: 0 0 20px;
+        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 10px;
+        }
       }
 
       &-2 {
         transform: translateX(-90px);
+
+        @media (max-width: 768px) {
+          transform: translateX(-30px);
+        }
       }
     }
 
@@ -34,11 +58,32 @@
       max-width: 240px;
       height: auto;
       max-height: 116px;
-      margin: 0 20px 0 0;
+      margin-right: 20px;
 
-      img {
-        display: block;
-        width: initial;
+      @media (max-width: 768px) {
+        max-width: 124px;
+        max-height: 60px;
+        margin-right: 10px;
+      }
+
+      .recognition-1 {
+        width: 240px;
+        height: 116px;
+
+        @media (max-width: 768px) {
+          width: 124px;
+          height: 60px;
+        }
+      }
+
+      .recognition-2 {
+        width: 182px;
+        height: 88px;
+
+        @media (max-width: 768px) {
+          width: 94px;
+          height: 46px;
+        }
       }
     }
   }

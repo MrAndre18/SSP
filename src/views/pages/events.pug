@@ -74,11 +74,11 @@ block content
     +pageTitle("События")
 
     .events__content
-      .row.justify-content-between.flex-nowrap
-        .col-2
+      .row.justify-content-xl-between.flex-xl-nowrap
+        .col-8.col-xl-2
           .left-block
             +eventsSubscribe()
-        .col-6
+        .col-8.col-xl-6
           ul.events__block-list
             li.events__block-item(data-aos="fade-up")
               ul.events__items
@@ -92,6 +92,13 @@ block content
               ul.events__items
                 each event in events
                   +newsItem(event.date, event.title, event.moreUrl, event.tabs)
+          .subscribe
+            p.subscribe-title.active Подписаться на ССП–Консалт
+            .subscribe-email
+              input(type="email" name="email" placeholder="E-mail*")
+            +agreeCheckbox("subscribe-agree")
+            .subscribe-btn.active
+              +moreBtn("#", "Подписаться")
 
     +seeNext("contacts", "Контакты")
 

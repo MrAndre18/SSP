@@ -9,6 +9,13 @@
   border-radius: 27.5px;
   padding: 0 30px 0 24px;
 
+  @media (max-width: 768px) {
+    min-height: 40px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 24px 0 17px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -20,6 +27,11 @@
     border-radius: 27.5px;
     background: $color-6;
     @include transition();
+
+    @media (max-width: 768px) {
+      width: 40px;
+      border-radius: 20px;
+    }
   }
 
   &:hover {
@@ -35,11 +47,21 @@
   img {
     height: 14px;
     width: 10px;
-    margin: 0 41px 0 0;
+    margin-right: 41px;
+
+    @media (max-width: 768px) {
+      height: 11px;
+      width: 8px;
+      margin-right: 30px;
+    }
   }
   span {
     font-size: 16px;
     color: $color-1;
     @include transition();
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 }

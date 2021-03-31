@@ -1,9 +1,13 @@
 .events {
-
   &__content {
     max-width: 1920px;
     margin: 0 auto 160px;
     padding: 0 40px;
+
+    @media (max-width: 1200px) {
+      margin: 0 auto 80px;
+      padding: 0 20px;
+    }
 
     .left-block {
       width: 100%;
@@ -15,9 +19,17 @@
   &__block-list {
     padding-left: 80px;
 
+    @media (max-width: 1200px) {
+      padding-left: 0;
+    }
+
     .events__block-item {
       border-top: 1px solid $color-1;
       margin: 0 0 40px;
+
+      @media (max-width: 768px) {
+        border-top: none;
+      }
 
       &:last-child {
         margin: 0;
@@ -27,12 +39,111 @@
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 768px) {
+          justify-content: start;
+          flex-direction: column;
+        }
+
         .news__item {
           max-width: 506px;
           margin-right: 20px;
 
+          @media (max-width: 768px) {
+            max-width: 100%;
+            border-top: 1px solid $color-1;
+            margin-right: 0;
+            margin: 0 0 40px;
+          }
+
+          &:last-child {
+            @media (max-width: 768px) {
+              margin: 0;
+            }
+          }
+
           &:last-child {
             margin-right: 0;
+          }
+        }
+      }
+    }
+
+    & + .subscribe {
+      display: none;
+      margin-top: 80px;
+
+      @media (max-width: 1200px) {
+        display: block;
+      }
+
+      &-title {
+        display: none;
+        font-size: 24px;
+        line-height: 140%;
+        @include transition();
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+        }
+
+        &.active {
+          display: block;
+        }
+      }
+
+      &-email {
+        position: relative;
+
+        .error {
+          position: absolute;
+          top: 80%;
+          color: $color-5;
+          font-size: 12px;
+          line-height: 140%;
+          opacity: 0;
+          @include transition();
+
+          &.active {
+            top: calc(100% + 5px);
+            opacity: 1;
+          }
+        }
+      }
+
+      &-btn {
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+
+      input[name="email"] {
+        width: 100%;
+        display: block;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        line-height: 100%;
+        color: inherit;
+        padding-bottom: 30px;
+        margin: 40px 0;
+        border-bottom: 1px solid $color-2;
+        @include transition();
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+          padding-bottom: 20px;
+          margin: 40px 0 20px;
+        }
+
+        &::placeholder {
+          font-size: 20px;
+          line-height: 100%;
+          color: inherit;
+
+          @media (max-width: 768px) {
+            font-size: 16px;
           }
         }
       }

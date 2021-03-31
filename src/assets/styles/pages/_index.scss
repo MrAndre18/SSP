@@ -232,6 +232,16 @@ $fullpage-slide-bg-imgs: (
     overflow: hidden;
     padding: 40px 0 40px 40px;
 
+    .all {
+      max-width: 1920px;
+      margin: 0 auto;
+      padding-right: 40px;
+
+      @media (max-width: 1200px) {
+        padding-right: 20px;
+      }
+    }
+
     .practices__slider {
       position: relative;
       height: 480px;
@@ -369,7 +379,6 @@ $fullpage-slide-bg-imgs: (
     }
 
     &__content {
-
       &-img {
         height: 100%;
         max-height: 500px;

@@ -5,6 +5,10 @@
   background: $color-3;
   color: $color-1;
 
+  @media (max-width: 768px) {
+    height: 240px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -34,6 +38,14 @@
     height: 100%;
     padding: 30px 40px 40px;
     margin: 0 auto;
+
+    @media (max-width: 1200px) {
+      padding: 30px 20px 40px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
   }
 
   &__subtitle {
@@ -42,7 +54,11 @@
     font-family: $additional-font-family;
     font-size: 24px;
     line-height: 140%;
-    margin: 10px 218px 0 0;
+    margin-top: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 
   &__title {
@@ -51,6 +67,18 @@
     font-family: $main-font-family;
     font-size: 90px;
     line-height: 120%;
+
+    @media (max-width: 1300px) {
+      font-size: 48px;
+    }
+
+    @media (max-width: 992px) {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   &__button {
@@ -70,9 +98,24 @@
     cursor: pointer;
     @include transition($delay: 0.3s);
 
+    @media (max-width: 1200px) {
+      right: 20px;
+    }
+
+    @media (max-width: 768px) {
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+    }
+
     img {
       width: 16px;
       height: 24px;
+
+      @media (max-width: 768px) {
+        width: 12px;
+        height: 17px;
+      }
     }
   }
 }

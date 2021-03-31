@@ -4,10 +4,22 @@
   margin: 0 auto;
   text-align: center;
 
+  @media (max-width: 1200px) {
+    padding: 40px 20px 120px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 20px 40px;
+  }
+
   h1 {
     font-family: $additional-font-family;
     color: $color-1;
     font-size: 90px;
     line-height: 100%;
+
+    @media (max-width: 768px) {
+      font-size: 35px;
+    }
   }
 }

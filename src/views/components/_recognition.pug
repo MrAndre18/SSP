@@ -3,143 +3,176 @@
     const recognitions_1 = [
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
     ]
   -
     const recognitions_2 = [
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
       {
         url: 'assets/images/recognition-2.png',
-        alt: 'recognition-2'
+        alt: 'recognition-2',
+        class: 'recognition-2'
       },
       {
         url: 'assets/images/recognition-1.png',
-        alt: 'recognition-1'
+        alt: 'recognition-1',
+        class: 'recognition-1'
       },
     ]
+    
   h2.recognition__title Признание
   .recognition__content(data-aos="fade-up")
     .recognition__content-row.recognition__content-row-1
       each recognition in recognitions_1
         .recognition__content-item
-          img(src=recognition.url, alt=recognition.alt)
+          img(src=recognition.url, alt=recognition.alt, class=recognition.class)
     .recognition__content-row.recognition__content-row-2
       each recognition in recognitions_2
         .recognition__content-item
-          img(src=recognition.url, alt=recognition.alt)
+          img(src=recognition.url, alt=recognition.alt, class=recognition.class)

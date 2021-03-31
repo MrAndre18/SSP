@@ -11,7 +11,7 @@
 		<link href="app.css" rel="stylesheet">
 	</head>
 
-	<body id="body">
+	<body>
 		<div class="loader">
 			<p class="loader-title"><span>С</span>ила <br> <span>С</span>табильного <br> <span>П</span>артнерства</p><svg class="loader-progress" width="610" height="610">
 				<circle class="loader-progress__circle" stroke="transparent" stroke-width="1" cx="305" cy="305" r="304" fill="transparent"></circle>
@@ -21,11 +21,11 @@
 			<div class="about-company-page">
 				<header class="header container-fluid p-0">
 					<div class="header__content">
-						<div class="row align-items-center">
+						<div class="row align-items-center justify-content-between">
 							<div class="col-2">
 								<div class="header__logo"><a href="/"><img class="svg logo__img" src="assets/images/icons/logo.svg" alt="logo"></a></div>
 							</div>
-							<div class="col-2">
+							<div class="col-2 d-xl-block d-none">
 								<ul class="practices d-flex">
 									<li class="practices__item"><a class="link practices" href="practices">Практики<ul class="practices__item-dots">
 												<li class="dot"></li>
@@ -35,7 +35,7 @@
 									<li class="practices__item"><a class="link cases" href="cases">Кейсы</a></li>
 								</ul>
 							</div>
-							<div class="col-4">
+							<div class="col-4 d-xl-block d-none">
 								<ul class="header__menu menu d-flex justify-content-end">
 									<li class="menu__item"><a class="link about-company" href="about-company">О компании</a></li>
 									<li class="menu__item"><a class="link command" href="#">Команда</a></li>
@@ -43,6 +43,30 @@
 									<li class="menu__item"><a class="link contacts" href="contacts">Контакты</a></li>
 								</ul>
 							</div>
+							<div class="col-6 d-xl-none d-flex justify-content-end">
+								<div class="header__burger">
+									<div class="header__burger_active"><span></span></div>
+									<div class="header__burger_close"><img class="svg" src="assets/images/icons/close.svg"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mobile-menu d-block d-xl-none">
+						<div class="mobile-menu__content">
+							<ul class="practices">
+								<li class="practices__item"><a class="link" href="practices">Практики<ul class="practices__item-dots">
+											<li class="dot"></li>
+											<li class="dot"></li>
+											<li class="dot"></li>
+										</ul></a></li>
+								<li class="practices__item"><a class="link" href="cases">Кейсы</a></li>
+							</ul>
+							<ul class="header__menu menu">
+								<li class="menu__item"><a class="link about-company" href="about-company">О компании</a></li>
+								<li class="menu__item"><a class="link command" href="#">Команда</a></li>
+								<li class="menu__item"><a class="link events" href="events">События</a></li>
+								<li class="menu__item"><a class="link contacts" href="contacts">Контакты</a></li>
+							</ul>
 						</div>
 					</div>
 				</header>
@@ -64,12 +88,12 @@
 				<div class="about-company__top">
 					<div class="row justify-content-center">
 						<div class="col-6">
-							<p class="about-company__top-description">С 2008 года, специализируемся на консалтинге в области права и риск менеджмента, оказании профессиональной юридической помощи и сопровождении бизнеса своих клиентов.</p>
+							<p class="about-company__top-description" data-aos="fade-up">С 2008 года, специализируемся на консалтинге в области права и риск менеджмента, оказании профессиональной юридической помощи и сопровождении бизнеса своих клиентов.</p>
 						</div>
 					</div>
 					<div class="row justify-content-end">
 						<div class="col-4">
-							<div class="about-company__top-subdescription">
+							<div class="about-company__top-subdescription" data-aos="fade-up">
 								<div class="row">
 									<div class="col-6">
 										<p>Наш основной принцип деятельности заложен в самом названии и представляет собой силу стабильного партнерства, мы стремимся достигать высоких результатов и поставленных перед нами задач, становясь не просто инструментом для наших клиентов, а полноценным партнером в ведении их бизнеса и решении иных задач.</p>
@@ -79,12 +103,12 @@
 						</div>
 					</div>
 				</div>
-				<div class="about-company__advantages">
+				<div class="about-company__advantages" data-aos="fade-up">
 					<p class="about-company__advantages-text"><span>Доверие, конфиденциальность,</span> <br> <span>ответственность и</span> <br> <span>профессионализм</span> — то, что мы готовы предоставить Вам <br> в процессе нашего сотрудничества.</p>
 				</div>
 				<div class="recognition">
 					<h2 class="recognition__title">Признание</h2>
-					<div class="recognition__content">
+					<div class="recognition__content" data-aos="fade-up">
 						<div class="recognition__content-row recognition__content-row-1">
 							<div class="recognition__content-item"><img src="assets/images/recognition-1.png" alt="recognition-1"></div>
 							<div class="recognition__content-item"><img src="assets/images/recognition-2.png" alt="recognition-2"></div>
@@ -123,7 +147,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="about-company__clients">
+				<div class="about-company__clients" data-aos="fade-up">
 					<div class="about-company__clients-header">
 						<div class="row justify-content-between">
 							<div class="col-2"></div>
@@ -174,7 +198,7 @@
 							</div>
 						</div>
 					</div>
-				</div><a class="see-next" href="command">
+				</div><a class="see-next" href="command" data-aos="fade-up">
 					<div class="see-next__content">
 						<div class="row">
 							<div class="col-2">
@@ -190,60 +214,44 @@
 			<footer class="footer container-fluid px-0">
 				<div class="footer__content">
 					<div class="row">
-						<div class="col-4">
+						<div class="col-8 col-md-3 col-xl-4">
 							<p class="footer__title"><span>С</span>ила <br> <span>С</span>табильного <br> <span>П</span>артнерства</p>
 						</div>
-						<div class="col-4">
-							<div class="footer-block">
-								<div class="row row-cols-1">
-									<div class="col">
-										<div class="footer__links-wrapper">
-											<div class="row justify-content-between">
-												<div class="col-4">
-													<ul class="footer__links">
-														<div class="row">
-															<div class="col">
-																<li class="footer__links-block">
-																	<ul class="footer__links-items">
-																		<li class="footer__links-item"><a class="link" href="cases">Кейсы</a></li>
-																		<li class="footer__links-item"><a class="link" href="about-company">О компании</a></li>
-																		<li class="footer__links-item"><a class="link" href="#">Команда</a></li>
-																	</ul>
-																</li>
-															</div>
-															<div class="col">
-																<li class="footer__links-block">
-																	<ul class="footer__links-items">
-																		<li class="footer__links-item"><a class="link" href="events">События</a></li>
-																		<li class="footer__links-item"><a class="link" href="contacts">Контакты</a></li>
-																	</ul>
-																</li>
-															</div>
-														</div>
-													</ul>
-												</div>
-												<div class="col-2">
-													<ul class="footer__networks">
-														<li class="footer__network"><a class="link" href="#" target="_blank">Instagram</a></li>
-														<li class="footer__network"><a class="link" href="#" target="_blank">Facebook</a></li>
-														<li class="footer__network"><a class="link" href="#" target="_blank">Telegram</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
+						<div class="col-8 col-md-5 col-xl-4">
+							<div class="footer__links">
+								<div class="row">
+									<div class="col-4 col-md-2 order-1">
+										<ul class="footer__links-block">
+											<li class="footer__links-item"><a class="link" href="cases">Кейсы</a></li>
+											<li class="footer__links-item"><a class="link" href="about-company">О компании</a></li>
+											<li class="footer__links-item"><a class="link" href="#">Команда</a></li>
+										</ul>
 									</div>
-									<div class="col">
+									<div class="col-4 order-2">
+										<ul class="footer__links-block">
+											<li class="footer__links-item"><a class="link" href="events">События</a></li>
+											<li class="footer__links-item"><a class="link" href="contacts">Контакты</a></li>
+										</ul>
+									</div>
+									<div class="col-4 col-md-2 order-4 order-md-3 ms-auto ms-md-0">
+										<ul class="footer__networks">
+											<li class="footer__network"><a class="link" href="#" target="_blank">Instagram</a></li>
+											<li class="footer__network"><a class="link" href="#" target="_blank">Facebook</a></li>
+											<li class="footer__network"><a class="link" href="#" target="_blank">Telegram</a></li>
+										</ul>
+									</div>
+									<div class="col-8 order-3 order-md-4">
 										<div class="footer__contacts d-flex flex-column"><a class="phone" href="tel:+7 812 901–02–01">+7 812 901–02–01</a><a class="email" href="mailto:site@ssp-consult.ru">site@ssp-consult.ru</a></div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="footer__bottom row justify-content-between">
-						<div class="col-1">
+					<div class="footer__bottom row justify-content-between flex-column flex-md-row">
+						<div class="col">
 							<p class="copyrigh">© 2020 ССП-Консалт</p>
 						</div>
-						<div class="col-1">
+						<div class="col d-flex justify-content-md-end">
 							<p class="author">Сделано в<a href="https://cloudmill.ru/" target="_blank"> CloudMill</a></p>
 						</div>
 					</div>
