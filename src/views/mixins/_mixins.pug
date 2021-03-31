@@ -29,7 +29,7 @@ mixin pageTitle(title)
         h1= title
 
 mixin seeNext(url, title)
-  a.see-next(href=url)
+  a.see-next(href=url data-aos="fade-up")
     .see-next__content
       .row
         .col-2
@@ -46,7 +46,7 @@ mixin agreeCheckbox(id)
     p.error Остутствует согласие на обработку персональных данных
 
 mixin eventsSubscribe(is_detail)
-  .events__subscribe
+  .events__subscribe(data-aos="fade-up")
     .events__subscribe-block
       if !is_detail
         .filter
@@ -82,7 +82,7 @@ mixin eventsSubscribe(is_detail)
               a(href="#") Вконтакте
 
 mixin feedbackForm(title)
-  .feedback
+  .feedback(data-aos="fade-up")
     h2.feedback__title.active=title
     h2.feedback__title Мы приняли ваше сообщение и ответим вам в ближайшее время.
     form.feedback__form
@@ -105,7 +105,7 @@ mixin feedbackForm(title)
         +agreeCheckbox("feedback-agree")
 
 mixin caseItem(caseItem, isOtherCases)
-  li.case-item(class = isOtherCases ? "small" : "")
+  li.case-item(class = isOtherCases ? "small" : "" data-aos="fade-up")
     .case-item__content
       a(href=caseItem.url).case-item__link
       .case-item__content-title-block

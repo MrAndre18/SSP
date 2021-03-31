@@ -98,7 +98,7 @@ block content
     .practices__content
       include ../components/_all-practices.pug
 
-      ul.practices__timeline
+      ul.practices__timeline(data-aos="fade-up")
         .practices__timeline-line
           .row.row-cols-8
             .col
@@ -138,12 +138,12 @@ block content
       .practices__about
         .row
           .col-2
-            p.practices__about-title О практике
+            p.practices__about-title(data-aos="fade-up") О практике
           .col-5
-            p.practices__about-top В рамках административно–правовой защиты бизнеса юристы ССП–Консалт оказывают поддержку организациям в ходе взаимодействия с государственными органами, а также помогают разрешить уже возникшие споры по делам об административных правонарушениях.
+            p.practices__about-top(data-aos="fade-up" data-aos-delay="200") В рамках административно–правовой защиты бизнеса юристы ССП–Консалт оказывают поддержку организациям в ходе взаимодействия с государственными органами, а также помогают разрешить уже возникшие споры по делам об административных правонарушениях.
         .row.justify-content-end
           .col-4
-            .practices__about-bottom
+            .practices__about-bottom(data-aos="fade-up" data-aos-delay="400")
               p Усиление государственного регулирования бизнеса приводит к тому, что компании все чаще нуждаются в квалифицированной юридической помощи в сфере административного права. Большинство организаций и предпринимателей регулярно сталкиваются со всевозможными проверками, нередко их следствием являются штрафы и предписания, обоснованность которых можно поставить под сомнение.
 
       .practices__services
@@ -153,7 +153,7 @@ block content
           .col-6
             ul.practices__services-accordion
               each item,i in accordion
-                li.practices__services-accordion-item.accordion-item(class = i == 3 ? "active" : "")
+                li.practices__services-accordion-item.accordion-item(class = i == 3 ? "active" : "" data-aos="fade-up")
                   .accordion-item__trigger
                     span.accordion-item__trigger-number= (i + 1)
                     p.accordion-item__trigger-title= item.title
@@ -165,19 +165,19 @@ block content
       .practices__manager-content
         .row.justify-content-between
           .col-2
-            .practices__manager-img
+            .practices__manager-img(data-aos="fade-up")
               img(src="assets/images/practices/practice-manager.jpg")
           .col-5
             .practices__manager-block
               .position-block
-                p Руководитель практики
+                p(data-aos="fade-up" data-aos-delay="200") Руководитель практики
                 .position-right
-                  p Руководитель практики административного и страхового права
+                  p(data-aos="fade-up" data-aos-delay="400") Руководитель практики административного и страхового права
               .name-block
-                p.surname Назарова #[br]
-                p.name Екатерина Артёмовна
-              a(href="mailto:nea@ssp-consult.ru").email nea@ssp-consult.ru
-              .practices__manager-bottom
+                p.surname(data-aos="fade-up" data-aos-delay="600") Назарова #[br]
+                p.name(data-aos="fade-up" data-aos-delay="800") Екатерина Артёмовна
+              a(href="mailto:nea@ssp-consult.ru" data-aos="fade-up" data-aos-delay="800").email nea@ssp-consult.ru
+              .practices__manager-bottom(data-aos="fade-up" data-aos-delay="1000")
                 +moreBtn("#", "Задать вопрос")
                 .newtworks
                   a(href="#") Telegram

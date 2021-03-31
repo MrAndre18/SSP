@@ -80,15 +80,15 @@ block content
             +eventsSubscribe()
         .col-6
           ul.events__block-list
-            li.events__block-item
+            li.events__block-item(data-aos="fade-up")
               ul.events__items
                 each event in events
                   +newsItem(event.date, event.title, event.moreUrl, event.tabs)
-            li.events__block-item
+            li.events__block-item(data-aos="fade-up")
               ul.events__items
                 each event in events
                   +newsItem(event.date, event.title, event.moreUrl, event.tabs)
-            li.events__block-item
+            li.events__block-item(data-aos="fade-up")
               ul.events__items
                 each event in events
                   +newsItem(event.date, event.title, event.moreUrl, event.tabs)

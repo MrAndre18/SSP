@@ -7,7 +7,7 @@ block header
 block content
   main.main.contacts.container-fluid.px-0
     .contacts-block
-      .contacts-block__content
+      .contacts-block__content(data-aos="fade-up")
         +pageTitle("Контакты")
         .row
           .col-2
@@ -25,7 +25,7 @@ block content
               a(href="mailto:site@ssp-consult.ru").email site@ssp-consult.ru
               p.work-time #[span пнд — пт] #[br] #[span 9 — 18.30]
 
-    .contacts__map
+    .contacts__map(data-aos="fade-up")
       #map
 
     .contacts__advices
@@ -34,16 +34,16 @@ block content
       .contacts__advices-imgs
         .row.justify-content-end
           .col-2
-            a.contacts__advice-img(href="#")
+            a.contacts__advice-img(href="#" data-aos="fade-up")
               img(src="assets/images/contacts/advice-1.png")
           .col-2
-            a.contacts__advice-img(href="#")
+            a.contacts__advice-img(href="#" data-aos="fade-up" data-aos-delay="200")
               img(src="assets/images/contacts/advice-2.png")
           .col-2
-            a.contacts__advice-img(href="#")
+            a.contacts__advice-img(href="#" data-aos="fade-up" data-aos-delay="400")
               img(src="assets/images/contacts/advice-3.png")
       .contacts__advices-join
-        .row.justify-content-end
+        .row.justify-content-end(data-aos="fade-up")
           .col-4
             p.join-title Присоединяйтесь
           .col-2

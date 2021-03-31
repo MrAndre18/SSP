@@ -122,7 +122,7 @@ block content
     .cases__content
       .row.justify-content-end
         .col-6
-          .cases__filter
+          .cases__filter(data-aos="fade-up")
             .cases__filter-block
               .cases__filter-tabs
                 each item, index in cases_filters
@@ -136,9 +136,9 @@ block content
       .cases__last
         .row
           .col-2
-            h3.cases__last-title Последний кейс
+            h3.cases__last-title(data-aos="fade-up") Последний кейс
           .col-6
-            .cases__last-block.last-case
+            .cases__last-block.last-case(data-aos="fade-up" data-aos-delay="200")
               a(href="case").cases__last-link
               .last-case__img
                 span

@@ -1,11 +1,11 @@
 header.header.container-fluid.p-0
   .header__content
-    .row.align-items-center
+    .row.align-items-center.justify-content-between
       .col-2
         .header__logo
           a(href="/")
             img.svg.logo__img(src="assets/images/icons/logo.svg", alt="logo")
-      .col-2
+      .col-2.d-xl-block.d-none
         ul.practices.d-flex
           li.practices__item
             a.link.practices(href="practices") Практики
@@ -15,13 +15,39 @@ header.header.container-fluid.p-0
                 li.dot
           li.practices__item
             a.link.cases(href="cases") Кейсы
-      .col-4
+      .col-4.d-xl-block.d-none
         ul.header__menu.menu.d-flex.justify-content-end
-            li.menu__item
-              a.link.about-company(href="about-company") О компании
-            li.menu__item
-              a.link.command(href="#") Команда
-            li.menu__item
-              a.link.events(href="events") События
-            li.menu__item
-              a.link.contacts(href="contacts") Контакты
+          li.menu__item
+            a.link.about-company(href="about-company") О компании
+          li.menu__item
+            a.link.command(href="#") Команда
+          li.menu__item
+            a.link.events(href="events") События
+          li.menu__item
+            a.link.contacts(href="contacts") Контакты
+      .col-6.d-xl-none.d-flex.justify-content-end
+        .header__burger
+          .header__burger_active
+            span
+          .header__burger_close
+            img.svg(src="assets/images/icons/close.svg")
+  .mobile-menu.d-block.d-xl-none
+    .mobile-menu__content
+      ul.practices
+        li.practices__item
+          a.link(href="practices") Практики
+            ul.practices__item-dots
+              li.dot
+              li.dot
+              li.dot
+        li.practices__item
+          a.link(href="cases") Кейсы
+      ul.header__menu.menu
+        li.menu__item
+          a.link.about-company(href="about-company") О компании
+        li.menu__item
+          a.link.command(href="#") Команда
+        li.menu__item
+          a.link.events(href="events") События
+        li.menu__item
+          a.link.contacts(href="contacts") Контакты

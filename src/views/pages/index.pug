@@ -10,8 +10,8 @@ block content
       .fulpage__slider.swiper-container
         .fulpage__slider-wrapper.swiper-wrapper
           .fulpage__slider-slide.fulpage__slider-slide-1.swiper-slide
-            h3.fulpage__slider-title Сила
-            .fullpage__slider-description
+            h3.fulpage__slider-title(data-aos="fade-up") Сила
+            .fullpage__slider-description(data-aos="fade-up")
               p Мы исключительные профессионалы. Для нас нет неразрешимых задач. Мы идем до конца. Экспертиза, креативное мышление и коллективизм — это то, что делает нашу компанию сильной.
               +moreBtn('/about-company', "Больше о нас")
           .fulpage__slider-slide.fulpage__slider-slide-2.swiper-slide
@@ -24,7 +24,7 @@ block content
             .fullpage__slider-description
               p Наша философия — каждый клиент это партнер. Именно такое отношение позволяет эффективно взаимодействовать, отметая формализм и барьеры в коммуникации.
               +moreBtn('/about-company', "Больше о нас")
-        .fulpage__slider-pagination.swiper-pagination
+        .fulpage__slider-pagination.swiper-pagination(data-aos="fade-up")
           .fulpage__slider-bullet.fulpage__slider-bullet-active.swiper-pagination-bullet(data-bullet-index=0)
             span.bullet-content С
             .colored-circle
@@ -41,18 +41,18 @@ block content
             svg.bullet-progress(width='220', height='220')
               circle.bullet-progress__circle(stroke='#fff', stroke-width='1', cx='104', cy='104', r='103', fill='transparent')
       .fullpage-block__content
-        h1.fullpage-block__title
+        h1.fullpage-block__title(data-aos="fade-up")
           p.first-line
             span.small-text Сила Стабильного Партнерства
             span.line
             span.big-text Наш основной принцип деятельности
           span.big-text заложен в самом названии
-        .fullpage-block__contacts
+        .fullpage-block__contacts(data-aos="fade-up")
           a(href="tel:+7 812 901–02–01").phone 8 812 901–02–01
           a(href="mailto:site@ssp-consult.ru").email site@ssp-consult.ru
 
     .practices-block
-      .practices__slider.swiper-container
+      .practices__slider.swiper-container(data-aos="fade-up")
         .practices__slider-wrapper.swiper-wrapper
           .practices__slider-slide.practices__slider-slide-1.swiper-slide
             p.slide__subtitle Ведущие практики
@@ -77,7 +77,7 @@ block content
 
     include ../components/_recognition.pug
 
-    .news
+    .news(data-aos="fade-up")
       .news__subtitle События
       .news__header
         h2.news__title

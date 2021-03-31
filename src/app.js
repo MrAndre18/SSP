@@ -1,7 +1,6 @@
 // /* src/app.js */
 import "jquery";
 import AOS from "aos";
-import Scrollbar from "smooth-scrollbar";
 import Sticky from "sticky-js";
 import "velocity-animate";
 // import './assets/scripts/backend.js';
@@ -12,6 +11,7 @@ import "velocity-animate";
 import "Styles/_app.scss";
 
 $(() => {
+  require("Scripts/header");
   require("Scripts/feedback-form");
   require("Scripts/sliders");
   require("Scripts/convert-svg");
@@ -158,12 +158,14 @@ $(() => {
         $(fullpageBullets[0]).addClass("fulpage__slider-bullet-filling");
         $(fullpageBulletsCircle[0]).css("strokeDashoffset", 0);
 
-        // AOS.init({ offset: 50 });
-        
-        Scrollbar.init(document.querySelector("#body"), {
-          damping: 0.09,
-          thumbMinSize: 10,
+        AOS.init({
+          offset: 50,
+          duration: 600,
+          easing: "ease-in-out-quad",
+          delay: 100,
+          once: true,
         });
+        
       }, 500);
     }
   } else {
@@ -172,12 +174,14 @@ $(() => {
     setTimeout(() => {
       $("body").css("overflow", "visible");
 
-      // AOS.init({ offset: 50 });
-
-      Scrollbar.init(document.querySelector("#body"), {
-        damping: 0.09,
-        thumbMinSize: 10,
+      AOS.init({
+        offset: 50,
+        duration: 600,
+        easing: "ease-in-out-quad",
+        delay: 100,
+        once: true,
       });
+
     }, 500);
   }
 });

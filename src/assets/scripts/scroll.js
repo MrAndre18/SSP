@@ -69,7 +69,8 @@ const changeHeaderBg = () => {
 
   if (
     $(window).scrollTop() > $(window).height() / 3 &&
-    $(window).scrollTop() > scrollPrev
+    $(window).scrollTop() > scrollPrev &&
+    !header.hasClass("active")
   )
     header.addClass("out");
   else header.removeClass("out");
