@@ -13,6 +13,33 @@ const clientsSliderSettings = {
   speed: 600,
   slidesPerView: 8,
 
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+    },
+    800: {
+      slidesPerView: 5,
+    },
+    960: {
+      slidesPerView: 6,
+    },
+    1120: {
+      slidesPerView: 7,
+    },
+    1280: {
+      slidesPerView: 8,
+    },
+  },
+
   navigation: {
     nextEl: ".next-btn",
     prevEl: ".prev-btn",

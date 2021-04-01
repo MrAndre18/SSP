@@ -12,6 +12,10 @@ $contacts-bg-img: url("../../assets/images/contacts/contacts-bg.png");
     background-size: cover;
     background-blend-mode: soft-light;
 
+    @media (max-width: 768px) {
+      height: 598px;
+    }
+
     &__content {
       max-width: 1920px;
       padding: 0 40px;
@@ -23,18 +27,43 @@ $contacts-bg-img: url("../../assets/images/contacts/contacts-bg.png");
 
       .page-title {
         padding: 160px 40px 77px;
+
+        @media (max-width: 768px) {
+          padding: 100px 20px 65px;
+        }
       }
     }
 
     &__addresses {
+      width: 50%;
       padding-left: 25px;
       font-size: 30px;
       line-height: 140%;
-      font-weight: 300;
+
+      @media (max-width: 1500px) {
+        width: 75%;
+      }
+
+      @media (max-width: 1300px) {
+        width: 100%;
+      }
+
+      @media (max-width: 1000px) {
+        font-size: 18px;
+        padding-left: 16px;
+      }
+
+      @media (max-width: 768px) {
+        margin-bottom: 40px;
+      }
 
       .contacts-block__address {
         position: relative;
         margin-bottom: 64px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 65px;
+        }
 
         &:last-child {
           margin-bottom: 0;
@@ -47,6 +76,11 @@ $contacts-bg-img: url("../../assets/images/contacts/contacts-bg.png");
           font-family: $additional-font-family;
           font-size: 24px;
           line-height: 140%;
+
+          @media (max-width: 1000px) {
+            font-size: 18px;
+            left: -16px;
+          }
         }
 
         .address {
@@ -69,6 +103,10 @@ $contacts-bg-img: url("../../assets/images/contacts/contacts-bg.png");
         white-space: nowrap;
         @include transition();
 
+        @media (max-width: 1000px) {
+          font-size: 34px;
+        }
+
         &:hover {
           color: $color-6;
         }
@@ -76,6 +114,10 @@ $contacts-bg-img: url("../../assets/images/contacts/contacts-bg.png");
 
       .email {
         margin: 20px 0 40px;
+
+        @media (max-width: 768px) {
+          margin: 10px 0 20px;
+        }
       }
 
       .work-time {
@@ -99,6 +141,10 @@ $contacts-bg-img: url("../../assets/images/contacts/contacts-bg.png");
     height: 600px;
     background: $color-8;
 
+    @media (max-width: 768px) {
+      height: 510px;
+    }
+
     #map {
       width: 100%;
       height: 100%;
@@ -114,40 +160,84 @@ $contacts-bg-img: url("../../assets/images/contacts/contacts-bg.png");
       padding: 0 20px;
     }
 
+    @media (max-width: 768px) {
+      margin: 80px auto;
+    }
+
     &-subtitle {
       font-size: 24px;
       line-height: 140%;
       font-family: $additional-font-family;
       margin-bottom: 20px;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
 
     &-title {
       font-size: 55px;
       line-height: 120%;
-      font-weight: 300;
       max-width: 680px;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+        max-width: 100%;
+      }
     }
 
     &-imgs {
       margin: 86px 0 160px;
+
+      @media (max-width: 768px) {
+        margin: 40px 0 80px;
+
+        .col {
+          padding-right: 0;
+          padding-left: 0;
+          margin-right: 0;
+          margin-left: 0;
+        }
+
+        .col:first-child {
+          padding-right: 5px;
+          margin-right: 0;
+        }
+
+        .col:last-child {
+          padding-left: 5px;
+          margin-left: 0;
+        }
+      }
     }
 
     &-join {
       .join-title {
-        font-weight: 300;
         font-size: 55px;
         line-height: 120%;
+
+        @media (max-width: 768px) {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
       }
 
       .contacts__advices-networks {
+        .contacts__advices-network {
+          margin-bottom: 10px;
+        }
+
         a {
           position: relative;
           width: fit-content;
-          font-weight: 300;
           color: $color-6;
           font-size: 55px;
           line-height: 120%;
           @include transition();
+
+          @media (max-width: 768px) {
+            font-size: 18px;
+          }
 
           &::before {
             content: "";
@@ -179,6 +269,10 @@ $contacts-bg-img: url("../../assets/images/contacts/contacts-bg.png");
 
     @media (max-width: 1200px) {
       padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+      margin: 0 auto 80px;
     }
   }
 }

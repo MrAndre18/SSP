@@ -201,17 +201,23 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
 
     @media (max-width: 1200px) {
       margin: 0 auto 80px;
-      padding: 0 0 0 20px;
+      padding: 0 20px;
     }
 
     &-header {
       margin-bottom: 80px;
 
-      
+      @media (max-width: 768px) {
+        margin-bottom: 40px;
+      }
 
       h2 {
         font-size: 55px;
         line-height: 120%;
+
+        @media (max-width: 768px) {
+          font-size: 24px;
+        }
       }
 
       .about-company__clients-slider-navigation {
@@ -228,6 +234,11 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
           border-radius: 50%;
           cursor: pointer;
           @include transition();
+
+          @media (max-width: 768px) {
+            width: 40px;
+            height: 40px;
+          }
 
           &:hover {
             background: $color-6;
@@ -252,6 +263,10 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
         .prev-btn {
           margin-right: 10px;
           transform: rotate(180deg);
+
+          @media (max-width: 768px) {
+            margin-right: 6px;
+          }
         }
       }
     }
@@ -261,6 +276,11 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
       padding: 50px 0 20px;
       border-top: 1px solid $color-2;
       border-bottom: 1px solid $color-2;
+
+      @media (max-width: 768px) {
+        height: 220px;
+        padding: 30px 0;
+      }
 
       &-slide {
         display: flex;
@@ -272,29 +292,63 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
           align-items: center;
           height: 100%;
 
+          // span {
+          //   display: inline-block;
+
+          //   img {
+          //     width: 50%;
+          //     height: auto;
+          //   }
+          // }
+
           .sevkabel {
             width: 165px;
             height: 38px;
+
+            @media (max-width: 768px) {
+              width: 136px;
+              height: 33px;
+            }
           }
 
           .rise-development {
             width: 165px;
             height: 43px;
+
+            @media (max-width: 768px) {
+              width: 136px;
+              height: 35px;
+            }
           }
 
           .university {
             width: 92px;
             height: 92px;
+
+            @media (max-width: 768px) {
+              width: 63px;
+              height: 63px;
+            }
           }
 
           .metrostroy {
             width: 127px;
             height: 97px;
+
+            @media (max-width: 768px) {
+              width: 91px;
+              height: 69px;
+            }
           }
 
           .baltic-plant {
             width: 135px;
             height: 46px;
+
+            @media (max-width: 768px) {
+              width: 95px;
+              height: 37px;
+            }
           }
         }
 
@@ -302,7 +356,13 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
           min-height: 88px;
           font-size: 16px;
           line-height: 140%;
-          margin: 20px 0 0;
+          margin-top: 20px;
+
+          @media (max-width: 768px) {
+            min-height: 80px;
+            font-size: 14px;
+            margin-top: 16px;
+          }
         }
       }
     }

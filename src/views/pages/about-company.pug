@@ -87,7 +87,7 @@ block content
     .about-company__clients(data-aos="fade-up")
       .about-company__clients-header
         .row.justify-content-between
-          .col-2
+          .col-2.d-none.d-md-block
           .col
             h2 Наши клиенты
           .col-auto
@@ -101,7 +101,8 @@ block content
           each client in clients
             .about-company__clients-slider-slide.swiper-slide
               .slide-img
-                img(src=client.url, alt=client.alt, class=client.class)
+                span
+                  img(src=client.url, alt=client.alt, class=client.class)
               p= client.name
 
 
