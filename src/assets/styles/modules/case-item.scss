@@ -11,6 +11,16 @@
     border-top: 1px solid $color-1;
     @include transition();
 
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+      padding: 20px 0 0;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 20px 0 40px;
+    }
+
     &:hover {
       background: $color-2;
     }
@@ -27,13 +37,52 @@
 
     &-title-block {
       max-width: 506px;
+      width: 100%;
       margin: 0 auto 0 0;
+
+      @media (max-width: 1200px) {
+        max-width: 50%;
+        padding-right: 5px;
+        margin: 20px 0 30px;
+        order: 2;
+      }
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+        padding-right: 0;
+      }
     }
 
     &-img-block,
     .case-item__practices {
       width: 25%;
       margin-left: 20px;
+
+      @media (max-width: 1200px) {
+        margin-left: 0;
+      }
+    }
+
+    &-img-block {
+      @media (max-width: 1200px) {
+        width: 100%;
+        order: 1;
+      }
+    }
+
+    .case-item__practices {
+      @media (max-width: 1200px) {
+        width: 50%;
+        padding-left: 5px;
+        margin: 20px 0 30px;
+        order: 3;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+      }
     }
   }
 
@@ -41,6 +90,10 @@
     font-size: 30px;
     line-height: 140%;
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   .tab-btn {
@@ -55,6 +108,10 @@
     justify-content: center;
     align-items: center;
     background: #fff;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
 
     span {
       display: inline-flex;
@@ -72,6 +129,11 @@
       line-height: 140%;
       font-family: $additional-font-family;
       margin-bottom: 30px;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
     }
 
     &-block {
@@ -84,6 +146,11 @@
       line-height: 100%;
       margin-bottom: 20px;
       font-weight: 500;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
 
       .link {
         position: relative;
@@ -108,10 +175,32 @@
     margin-left: -10px;
     margin-right: -10px;
 
+    @media (max-width: 1200px) {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
     .case-item__content {
       &-img-block,
       .case-item__practices {
         width: 27.5%;
+      }
+
+      &-img-block {
+        @media (max-width: 1200px) {
+          width: 100%;
+        }
+      }
+
+      .case-item__practices {
+        @media (max-width: 1200px) {
+          width: 50%;
+        }
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
       }
     }
   }

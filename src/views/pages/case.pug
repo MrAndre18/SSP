@@ -69,10 +69,11 @@ block content
         ]
       },
     ]
+
   main.main.case.container-fluid.px-0
     .case__content
       .row
-        .col-2
+        .col-2.d-none.d-lg-block
           .left-block(data-aos="fade-up")
             .case__share
               +beforeBtn("/cases", "Все кейсы")
@@ -83,10 +84,13 @@ block content
                     a(href="#") Facebook
                   li.share__links-item
                     a(href="#") Вконтакте
-        .col-4
+        .col-8.col-lg-6.col-xl-4
           .case__head
             h1.case__title Защита интересов Европейского Университета
             +tabBtn("#", "споры с государственными органами", "disabled")
+            .case__head-img
+              span
+                img(src="assets/images/cases/university.png", alt="Европейский университет в Санкт-Петербурге")
           .case-block
             .subject(data-aos="fade-up")
               p Будучи собственником двух парковочных мест в крытом паркинге наш Клиент после ввода в эксплуатацию паркинга обратился к Застройщику с требование о замене парковочных мест, так как использовать их без ущерба автомобилю невозможно: ширина проезжей части автостоянки заужена из-за установления металлических колесоотбойников. В замене мест Застройщик отказал.

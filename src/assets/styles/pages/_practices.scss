@@ -5,14 +5,148 @@ $practices-header-bg-color: #9ac9d8;
 .practices {
   padding-top: 0;
 
+  &__feedback-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: $color-7;
+    max-width: 830px;
+    padding: 60px 0 66px 40px;
+    transform: translateX(-100%);
+    box-shadow: 0 0 1000px 1000px transparent;
+    @include transition();
+
+    @media (max-width: 1200px) {
+      padding: 60px 0 66px 20px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 60px 13px 30px 20px;
+    }
+
+    &.active {
+      transform: translateX(0);
+      box-shadow: 0 0 1000px 1000px rgba(23, 53, 81, 0.5);
+    }
+
+    &-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 11;
+      width: 65px;
+      height: 65px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid rgba(23, 53, 81, 0.2);
+      @include transition();
+
+      &:hover {
+        border-color: $color-6;
+        cursor: pointer;
+      }
+
+      .svg {
+        path {
+          fill: $color-1;
+        }
+      }
+    }
+  }
+
+  .all-practices {
+    @media (max-width: 1060px) {
+      padding: 0;
+    }
+
+    &.active {
+      .all-practices__trigger-img {
+        transform: rotate(180deg);
+      }
+
+      .all-practices__trigger:hover {
+        .all-practices__trigger-img {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    &__trigger {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 1060px) {
+        cursor: pointer;
+        height: 42px;
+      }
+
+      &:hover {
+        .all-practices__trigger-img {
+          transform: rotate(180deg);
+        }
+      }
+
+      &-img {
+        display: none;
+
+        @media (max-width: 1060px) {
+          width: 25px;
+          height: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include transition();
+
+          .svg {
+            width: 80%;
+            height: 80%;
+            transform: rotate(90deg);
+
+            path {
+              fill: $color-1;
+            }
+          }
+        }
+      }
+    }
+
+    &-block {
+      @media (max-width: 1060px) {
+        margin: 0;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
   &__header {
+    position: relative;
     height: 725px;
     background: linear-gradient($color-10, $color-10),
       linear-gradient($practices-header-bg-color, $practices-header-bg-color), linear-gradient(#fff, #fff),
       $practices-header-bg-img;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-blend-mode: darken, color, multiply;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient($color-10, $color-10);
+    }
+
+    @media (max-width: 768px) {
+      height: 480px;
+      background-position: center bottom;
+    }
 
     &-content {
       position: relative;
@@ -20,6 +154,14 @@ $practices-header-bg-color: #9ac9d8;
       height: 100%;
       margin: 0 auto;
       padding: 160px 40px 0;
+
+      @media (max-width: 1200px) {
+        padding: 160px 20px 0;
+      }
+
+      @media (max-width: 768px) {
+        padding: 100px 55px 0;
+      }
     }
 
     &-title {
@@ -30,6 +172,11 @@ $practices-header-bg-color: #9ac9d8;
       margin: 0 auto;
       font-family: $additional-font-family;
       color: $color-7;
+
+      @media (max-width: 768px) {
+        font-size: 35px;
+        max-width: 100%;
+      }
     }
 
     &-number {
@@ -40,6 +187,12 @@ $practices-header-bg-color: #9ac9d8;
       line-height: 90%;
       font-family: $additional-font-family;
       color: $color-7;
+
+      @media (max-width: 768px) {
+        left: 20px;
+        bottom: 20px;
+        font-size: 35px;
+      }
     }
   }
 
@@ -47,27 +200,53 @@ $practices-header-bg-color: #9ac9d8;
     max-width: 1920px;
     margin: 0 auto;
     padding: 0 40px;
+
+    @media (max-width: 1200px) {
+      padding: 0 20px;
+    }
   }
 
   &__about {
     margin: 160px 0;
+
+    @media (max-width: 768px) {
+      margin: 80px 0;
+    }
 
     &-title {
       margin-top: 7px;
       font-size: 24px;
       line-height: 140%;
       font-family: $additional-font-family;
+
+      @media (max-width: 1200px) {
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
 
     &-top {
       font-size: 30px;
       line-height: 140%;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
     }
 
     &-bottom {
       margin-top: 80px;
       padding-top: 40px;
       border-top: 1px solid $color-1;
+
+      @media (max-width: 768px) {
+        margin-top: 40px;
+        padding-top: 20px;
+      }
 
       p {
         width: 75%;
@@ -77,6 +256,16 @@ $practices-header-bg-color: #9ac9d8;
         margin-right: -10px;
         font-size: 18px;
         line-height: 160%;
+
+        @media (max-width: 1200px) {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -84,6 +273,10 @@ $practices-header-bg-color: #9ac9d8;
   &__timeline {
     position: relative;
     margin-top: 160px;
+
+    @media (max-width: 768px) {
+      margin-top: 80px;
+    }
 
     &-line {
       position: absolute;
@@ -100,7 +293,7 @@ $practices-header-bg-color: #9ac9d8;
           content: "";
           position: absolute;
           right: 9px;
-          bottom: 0;
+          bottom: -1px;
           width: 1px;
           height: 20px;
           background: $color-1;
@@ -140,10 +333,18 @@ $practices-header-bg-color: #9ac9d8;
       line-height: 90%;
       font-family: $additional-font-family;
       color: $color-6;
+
+      @media (max-width: 768px) {
+        font-size: 40px;
+      }
     }
 
     &-accordion {
       margin-top: 58px;
+
+      @media (max-width: 768px) {
+        margin-top: 40px;
+      }
 
       .accordion-item {
         background: $color-7;
@@ -165,11 +366,17 @@ $practices-header-bg-color: #9ac9d8;
         }
 
         &__trigger {
+          position: relative;
           padding: 39px 40px;
           display: flex;
           background: inherit;
           cursor: pointer;
           @include transition();
+
+          @media (max-width: 768px) {
+            justify-content: space-between;
+            padding: 30px 20px 30px 30px;
+          }
 
           &:hover {
             background: $color-3;
@@ -184,6 +391,14 @@ $practices-header-bg-color: #9ac9d8;
             line-height: 120%;
             text-transform: uppercase;
             margin-right: 52px;
+
+            @media (max-width: 768px) {
+              position: absolute;
+              top: 10px;
+              left: 10px;
+              font-size: 12px;
+              margin-right: 10px;
+            }
           }
 
           &-title {
@@ -191,6 +406,11 @@ $practices-header-bg-color: #9ac9d8;
             text-transform: uppercase;
             font-size: 25px;
             line-height: 120%;
+
+            @media (max-width: 768px) {
+              width: 78%;
+              font-size: 14px;
+            }
           }
 
           &-img {
@@ -202,6 +422,17 @@ $practices-header-bg-color: #9ac9d8;
             align-self: center;
             margin-left: auto;
             @include transition();
+
+            @media (max-width: 768px) {
+              margin: 0;
+              width: 30px;
+              height: 30px;
+
+              .svg {
+                width: 80%;
+                height: 80%;
+              }
+            }
           }
         }
 
@@ -211,6 +442,10 @@ $practices-header-bg-color: #9ac9d8;
           flex-direction: column;
           align-items: center;
 
+          @media (max-width: 768px) {
+            padding: 0 0 40px;
+          }
+
           &-top {
             width: calc(100% / 6 * 4);
             padding-left: 10px;
@@ -219,11 +454,22 @@ $practices-header-bg-color: #9ac9d8;
             margin-right: -110px;
             margin-bottom: 80px;
 
+            @media (max-width: 768px) {
+              width: 100%;
+              margin: 0 0 40px;
+              padding: 0 30px;
+            }
+
             &-text {
               padding-top: 40px;
               border-top: 1px solid $color-1;
               font-size: 18px;
               line-height: 160%;
+
+              @media (max-width: 768px) {
+                padding-top: 20px;
+                font-size: 14px;
+              }
             }
           }
 
@@ -231,6 +477,11 @@ $practices-header-bg-color: #9ac9d8;
             width: 100%;
             height: 470px;
             padding: 0 100px;
+
+            @media (max-width: 768px) {
+              height: 140px;
+              padding: 0 20px;
+            }
           }
 
           &-bottom {
@@ -241,14 +492,30 @@ $practices-header-bg-color: #9ac9d8;
             margin-left: -110px;
             margin-right: -110px;
 
+            @media (max-width: 768px) {
+              width: 100%;
+              margin: 40px 0 0;
+              padding: 0;
+            }
+
             &-text {
               font-size: 30px;
               line-height: 140%;
+
+              @media (max-width: 768px) {
+                font-size: 18px;
+                padding: 0 20px;
+              }
             }
           }
 
           &-list {
             margin: 40px 0 80px 102px;
+
+            @media (max-width: 768px) {
+              margin: 40px 0;
+              padding: 0 18px 0 30px;
+            }
 
             li {
               position: relative;
@@ -257,12 +524,15 @@ $practices-header-bg-color: #9ac9d8;
               line-height: 160%;
               padding-left: 102px;
 
+              @media (max-width: 768px) {
+                font-size: 14px;
+                padding-left: 40px;
+              }
+
               span {
                 position: absolute;
                 left: 0;
                 top: 0;
-                font-size: 16px;
-                line-height: 160%;
               }
 
               &:last-child {
@@ -276,6 +546,12 @@ $practices-header-bg-color: #9ac9d8;
             border-top: 1px solid $color-1;
             display: flex;
 
+            @media (max-width: 768px) {
+              padding-top: 40px;
+              margin: 0 30px;
+              flex-direction: column;
+            }
+
             &_left,
             &_right {
               width: 50%;
@@ -286,20 +562,41 @@ $practices-header-bg-color: #9ac9d8;
               display: flex;
               flex-direction: column;
 
+              @media (max-width: 768px) {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+              }
+
               p {
                 font-size: 16px;
                 line-height: 160%;
                 margin-bottom: 5px;
+
+                @media (max-width: 768px) {
+                  font-size: 14px;
+                }
               }
 
               .link {
                 font-weight: 500;
                 font-size: 30px;
                 line-height: 140%;
+                white-space: nowrap;
+
+                @media (max-width: 768px) {
+                  font-size: 18px;
+                }
 
                 &::before {
                   background: $color-1;
                 }
+              }
+            }
+
+            &_left {
+              @media (max-width: 768px) {
+                margin-bottom: 40px;
               }
             }
           }
@@ -309,6 +606,7 @@ $practices-header-bg-color: #9ac9d8;
   }
 
   &__manager {
+    position: relative;
     margin-top: 160px;
     padding: 160px 0;
     background: $manager-bg-img, linear-gradient($color-2, $color-2);
@@ -317,42 +615,70 @@ $practices-header-bg-color: #9ac9d8;
     background-blend-mode: soft-light;
     background-position: bottom;
 
+    @media (max-width: 768px) {
+      margin-top: 80px;
+      padding: 40px 0;
+    }
+
     &-content {
       max-width: 1920px;
       margin: 0 auto;
       padding: 0 40px;
-    }
 
-    &-img {
-      // height: 470px;
+      @media (max-width: 1200px) {
+        padding: 0 20px;
+      }
     }
 
     &-block {
       border-top: 1px solid $color-1;
       padding-top: 20px;
 
+      @media (max-width: 992px) {
+        margin-top: 40px;
+        padding-top: 10px;
+      }
+
       .position-block {
         display: flex;
         justify-content: space-between;
         margin-bottom: 32px;
 
+        @media (max-width: 768px) {
+          margin-bottom: 40px;
+        }
+
         > p:first-child {
           font-family: $additional-font-family;
           font-size: 24px;
           line-height: 140%;
+
+          @media (max-width: 768px) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .position-right {
+        width: 40%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: -10px;
+        margin-right: -10px;
+
+        @media (max-width: 992px) {
+          width: 75%;
+          margin-bottom: 40px;
         }
 
-        .position-right {
-          width: 40%;
-          padding-left: 10px;
-          padding-right: 10px;
-          margin-left: -10px;
-          margin-right: -10px;
+        p {
+          max-width: 284px;
+          font-size: 20px;
+          line-height: 140%;
 
-          p {
-            max-width: 284px;
-            font-size: 20px;
-            line-height: 140%;
+          @media (max-width: 768px) {
+            max-width: unset;
+            font-size: 14px;
           }
         }
       }
@@ -360,11 +686,19 @@ $practices-header-bg-color: #9ac9d8;
       .name-block {
         margin-bottom: 20px;
 
+        @media (max-width: 768px) {
+          margin-bottom: 40px;
+        }
+
         .surname {
           font-size: 100px;
           line-height: 140%;
           font-family: $additional-font-family;
           color: $color-7;
+
+          @media (max-width: 768px) {
+            font-size: 40px;
+          }
         }
 
         .name {
@@ -372,32 +706,99 @@ $practices-header-bg-color: #9ac9d8;
           line-height: 120%;
           margin-top: -12px;
           margin-left: 102px;
+
+          @media (max-width: 768px) {
+            line-height: 140%;
+            font-size: 18px;
+            margin-top: 0;
+            margin-left: 30px;
+          }
         }
       }
 
-      .email {
-        position: relative;
-        margin-left: 102px;
-        font-size: 20px;
-        line-height: 140%;
-        @include transition();
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 1px;
-          width: 100%;
-          height: 1px;
-          background: $color-1;
-          @include transition();
+      .practices__manager-links {
+        @media (max-width: 992px) {
+          display: flex;
+          justify-content: space-between;
         }
 
-        &:hover {
-          color: $color-6;
+        .email {
+          display: inline-block;
+          height: fit-content;
+          position: relative;
+          margin-left: 102px;
+          font-size: 20px;
+          line-height: 140%;
+          @include transition();
+
+          @media (max-width: 991px) {
+            margin-left: 0;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 16px;
+          }
 
           &::before {
-            width: 0;
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 1px;
+            width: 100%;
+            height: 1px;
+            background: $color-1;
+            @include transition();
+          }
+
+          &:hover {
+            color: $color-6;
+
+            &::before {
+              width: 0;
+            }
+          }
+        }
+
+        .newtworks {
+          display: flex;
+          flex-direction: column;
+          margin-right: 40px;
+
+          a {
+            position: relative;
+            width: fit-content;
+            font-size: 20px;
+            line-height: 140%;
+            margin-bottom: 10px;
+            @include transition();
+
+            @media (max-width: 768px) {
+              font-size: 16px;
+              margin-bottom: 5px;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 2px;
+              width: 100%;
+              height: 1px;
+              background: $color-1;
+              @include transition();
+            }
+
+            &:hover {
+              color: $color-6;
+
+              &::before {
+                width: 0;
+              }
+            }
           }
         }
       }
@@ -409,6 +810,14 @@ $practices-header-bg-color: #9ac9d8;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+
+      @media (max-width: 991px) {
+        margin-left: 0;
+      }
+
+      @media (max-width: 768px) {
+        margin-top: 40px;
+      }
 
       .newtworks {
         display: flex;
@@ -459,8 +868,20 @@ $practices-header-bg-color: #9ac9d8;
     margin: 160px auto;
     padding: 0 40px;
 
+    @media (max-width: 1200px) {
+      padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+      margin: 80px auto;
+    }
+
     &-block {
       margin-bottom: 120px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 40px;
+      }
     }
 
     &-title {
@@ -468,6 +889,11 @@ $practices-header-bg-color: #9ac9d8;
       line-height: 90%;
       font-family: $additional-font-family;
       margin-bottom: 80px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 40px;
+        font-size: 40px;
+      }
     }
 
     &-items {

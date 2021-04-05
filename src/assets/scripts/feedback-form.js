@@ -1,7 +1,7 @@
 $(".feedback .more-btn").on("click", (e) => {
   e.preventDefault();
 
-  const feedback = $(".feedback"),
+  const feedback = $(e.delegateTarget).closest(".feedback"),
     submitBtn = $(feedback).find(".submit-btn"),
     title = $(feedback).find(".feedback__title"),
     form = $(feedback).find(".feedback__form"),

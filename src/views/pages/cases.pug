@@ -121,8 +121,12 @@ block content
 
     .cases__content
       .row.justify-content-end
-        .col-6
+        .col-8.col-xl-6
           .cases__filter(data-aos="fade-up")
+            .cases__filter-trigger
+              p.cases__filter-trigger-title Категории
+              .cases__filter-trigger-img
+                img.svg(src="assets/images/practices/tab-arrow.svg" alt="arrow")
             .cases__filter-block
               .cases__filter-tabs
                 each item, index in cases_filters
@@ -130,21 +134,21 @@ block content
                     +tabBtn(item.url, item.text, "active")
                   else
                     +tabBtn(item.url, item.text)
-            button.cases__filter-discard
-              img.svg(src="assets/images/icons/discard.svg", alt="discard")
-              span Сбросить
+              button.cases__filter-discard
+                img.svg(src="assets/images/icons/discard.svg", alt="discard")
+                span Сбросить
       .cases__last
         .row
-          .col-2
+          .col-8.col-xl-2
             h3.cases__last-title(data-aos="fade-up") Последний кейс
-          .col-6
+          .col-8.col-xl-6
             .cases__last-block.last-case(data-aos="fade-up" data-aos-delay="200")
               a(href="case").cases__last-link
+              h4.last-case__title Защита интересов Европейского Университета
+              +tabBtn("#", "споры с государственными органами", "disabled")
               .last-case__img
                 span
                   img(src="assets/images/cases/university.png", alt="Европейский университет в Санкт-Петербурге")
-              h4.last-case__title Защита интересов Европейского Университета
-              +tabBtn("#", "споры с государственными органами", "disabled")
               .last-case__practices
                 p.last-case__practices-title Практики
                 ul.last-case__practices-block 

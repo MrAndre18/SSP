@@ -6,28 +6,115 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
     max-width: 1920px;
     margin: 0 auto 120px;
     padding: 0 40px;
+
+    @media (max-width: 1200px) {
+      padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+      margin: 0 auto 40px;
+    }
   }
 
   &__filter {
     margin-bottom: 80px;
 
-    &-block {
-      padding-bottom: 20px;
-      margin-bottom: 20px;
+    @media (max-width: 768px) {
+      margin-bottom: 60px;
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-top: 1px solid $color-2;
       border-bottom: 1px solid $color-2;
+    }
+
+    &.active {
+      border-color: $color-1;
+
+      .cases__filter-trigger-img {
+        transform: rotate(180deg);
+      }
+
+      .cases__filter-trigger:hover {
+        .cases__filter-trigger-img {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    &-trigger {
+      display: none;
+      background: transparent;
+      cursor: pointer;
+      @include transition();
+
+      &:hover {
+        .cases__filter-trigger-img {
+          transform: rotate(180deg);
+        }
+      }
+
+      &-title {
+        font-size: 14px;
+        line-height: 100%;
+      }
+
+      &-img {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include transition();
+
+        .svg {
+          width: 80%;
+          height: 80%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    &-block {
+      @media (max-width: 768px) {
+        padding-top: 18px;
+        padding-bottom: 30px;
+      }
     }
 
     &-tabs {
       display: flex;
       flex-wrap: wrap;
-      width: 83.33%;
-      padding-right: 10px;
-      padding-left: 10px;
-      margin-right: -10px;
-      margin-left: -10px;
+      padding: 0 10px 20px 10px;
+      margin: 0 -10px 20px -10px;
+      border-bottom: 1px solid $color-2;
+
+      @media (max-width: 768px) {
+        padding: 0 0 20px 0;
+        margin: 0 0 20px 0;
+        flex-direction: column;
+      }
 
       .tab-btn {
         margin: 0 10px 10px 0;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+          margin: 0 0 10px 0;
+        }
+
+        &:last-child {
+          @media (max-width: 768px) {
+            margin: 0;
+          }
+        }
       }
     }
 
@@ -61,6 +148,10 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
 
       span {
         font-size: 16px;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -68,10 +159,22 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
   &__last {
     margin-bottom: 80px;
 
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+
     &-title {
       font-size: 24px;
       line-height: 140%;
       font-family: $additional-font-family;
+
+      @media (max-width: 1200px) {
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
 
     .last-case {
@@ -83,6 +186,10 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
       background-position: right bottom;
       padding: 30px 40px 40px 80px;
       @include transition();
+
+      @media (max-width: 768px) {
+        padding: 20px;
+      }
 
       &:hover {
         background-color: $color-3;
@@ -109,6 +216,16 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
         align-items: center;
         background: #fff;
 
+        @media (max-width: 1200px) {
+          position: static;
+          width: 100%;
+          margin: 20px 0 40px;
+        }
+
+        @media (max-width: 768px) {
+          height: 78px;
+        }
+
         span {
           display: inline-flex;
           justify-content: center;
@@ -116,14 +233,23 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
 
         img {
           width: 50%;
+
+          @media (max-width: 768px) {
+            width: 24%;
+          }
         }
       }
 
       &__title {
         font-size: 39px;
         line-height: 140%;
-        max-width: 710px;
+        width: 70%;
         margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+          width: 100%;
+        }
       }
 
       .tab-btn {
@@ -133,11 +259,20 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
       &__practices {
         margin-top: 87px;
 
+        @media (max-width: 1200px) {
+          margin-top: 0;
+        }
+
         &-title {
           font-size: 20px;
           line-height: 140%;
           font-family: $additional-font-family;
           margin-bottom: 30px;
+
+          @media (max-width: 768px) {
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
         }
 
         &-block {
@@ -150,6 +285,10 @@ $last-case-bg-img: url("../../assets/images/cases/last-case-bg.svg");
           line-height: 100%;
           margin-bottom: 20px;
           font-weight: 500;
+
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
 
           .link {
             position: relative;

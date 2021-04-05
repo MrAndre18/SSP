@@ -1,8 +1,16 @@
 .case {
   &__content {
     max-width: 1920px;
-    margin: 40px auto 160px;
+    margin: 40px auto 120px;
     padding: 0 40px;
+
+    @media (max-width: 1200px) {
+      padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+      margin: 30px 0 40px;
+    }
 
     .left-block {
       width: 100%;
@@ -72,6 +80,34 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 80px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+
+    &-img {
+      display: none;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 160px;
+        margin-top: 20px;
+        border: 1px solid $color-2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+
+        span {
+          display: inline-flex;
+          justify-content: center;
+        }
+
+        img {
+          width: 50%;
+        }
+      }
+    }
   }
 
   &__title {
@@ -80,21 +116,43 @@
     text-align: center;
     font-family: $additional-font-family;
     margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      line-height: 110%;
+      margin-bottom: 20px;
+    }
   }
 
   &-block {
     padding-left: 80px;
 
+    @media (max-width: 1200px) {
+      padding-left: 0;
+    }
+
     p {
       font-size: 18px;
       line-height: 160%;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
     }
 
     .subject {
       margin-bottom: 80px;
 
+      @media (max-width: 768px) {
+        margin-bottom: 60px;
+      }
+
       p {
         margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 10px;
+        }
 
         &:last-child {
           margin-bottom: 0;
@@ -107,10 +165,18 @@
         font-size: 30px;
         line-height: 140%;
         margin-bottom: 40px;
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+        }
       }
 
       &__numeric-list {
         margin-bottom: 80px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 60px;
+        }
 
         li {
           position: relative;
@@ -118,6 +184,11 @@
           font-size: 16px;
           line-height: 160%;
           margin-bottom: 20px;
+
+          @media (max-width: 768px) {
+            padding-left: 40px;
+            font-size: 14px;
+          }
 
           &:last-child {
             margin-bottom: 0;
@@ -135,6 +206,10 @@
         font-size: 18px;
         line-height: 160%;
         margin-bottom: 40px;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
       }
 
       &__disc-list {
@@ -144,6 +219,11 @@
           font-size: 16px;
           line-height: 160%;
           margin-bottom: 20px;
+
+          @media (max-width: 768px) {
+            font-size: 14px;
+            padding-left: 40px;
+          }
 
           &:last-child {
             margin-bottom: 0;
@@ -172,6 +252,14 @@
       line-height: 90%;
       font-family: $additional-font-family;
       margin: 160px 0 80px;
+
+      @media (max-width: 992px) {
+        font-size: 40px;
+      }
+
+      @media (max-width: 768px) {
+        margin: 80px 0 40px;
+      }
     }
 
     &-block {

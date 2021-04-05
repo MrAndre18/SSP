@@ -96,39 +96,65 @@ block content
         span.practices__header-number 01
 
     .practices__content
-      include ../components/_all-practices.pug
+      .all-practices
+        .all-practices__trigger
+          p.all-practices__title(data-aos="fade-up") Все практики
+          .all-practices__trigger-img
+            img.svg(src="assets/images/icons/arrow-right.svg" alt="arrow")
+        .all-practices-block
+          ul.all-practices__items(data-aos="fade-up" data-aos-delay="200")
+            li.all-practices__item
+              a.link(href="#") Банкротство и корпоративные конфликты
+            li.all-practices__item
+              a.link(href="#") Административно–правовая защита
+            li.all-practices__item
+              a.link(href="#") Абонентское обслуживание
+          ul.all-practices__items(data-aos="fade-up" data-aos-delay="400")
+            li.all-practices__item
+              a.link(href="#") Трудовое и административное право
+            li.all-practices__item
+              a.link(href="#") Недвижимость и строительство
+            li.all-practices__item
+              a.link(href="#") Страховое право
+          ul.all-practices__items(data-aos="fade-up" data-aos-delay="600")
+            li.all-practices__item
+              a.link(href="#") Управление финансовой задолженностью
+            li.all-practices__item
+              a.link(href="#") Разрешение споров
+            li.all-practices__item
+              a.link(href="#") PRO BONO
 
       ul.practices__timeline(data-aos="fade-up")
         .practices__timeline-line
           .row.row-cols-8
             .col
             .col
-            .col
-            .col
-            .col
-            .col
-            .col
-            .col
+            .col.d-none.d-md-block
+            .col.d-none.d-md-block
+            .col.d-none.d-xl-block
+            .col.d-none.d-xl-block
+            .col.d-none.d-xl-block
+            .col.d-none.d-xl-block
         .row.align-items-center
-          .col-1
+          .col-4.col-md-2.col-xl-1
             li.practices__timeline-item
               .practices__timeline-item-img
                 img(src="assets/images/practices/pravo-300.jpg")
               span.name ПРАВО–300
               span.date 2020
-          .col-1
+          .col-4.col-md-2.col-xl-1
             li.practices__timeline-item
               .practices__timeline-item-img
                 img(src="assets/images/practices/pravo-300.jpg")
               span.name ПРАВО–300
               span.date 2019
-          .col-1
+          .col-2.col-xl-1.d-none.d-md-block
             li.practices__timeline-item
               .practices__timeline-item-img
                 img(src="assets/images/practices/pravo-300.jpg")
               span.name ПРАВО–300
               span.date 2018
-          .col-1
+          .col-2.col-xl-1.d-none.d-md-block
             li.practices__timeline-item
               .practices__timeline-item-img
                 img(src="assets/images/practices/pravo-300.jpg")
@@ -137,20 +163,20 @@ block content
 
       .practices__about
         .row
-          .col-2
+          .col-8.col-xl-2
             p.practices__about-title(data-aos="fade-up") О практике
-          .col-5
+          .col-8.col-xl-5
             p.practices__about-top(data-aos="fade-up" data-aos-delay="200") В рамках административно–правовой защиты бизнеса юристы ССП–Консалт оказывают поддержку организациям в ходе взаимодействия с государственными органами, а также помогают разрешить уже возникшие споры по делам об административных правонарушениях.
         .row.justify-content-end
-          .col-4
+          .col-8.col-lg-6.col-xl-4
             .practices__about-bottom(data-aos="fade-up" data-aos-delay="400")
               p Усиление государственного регулирования бизнеса приводит к тому, что компании все чаще нуждаются в квалифицированной юридической помощи в сфере административного права. Большинство организаций и предпринимателей регулярно сталкиваются со всевозможными проверками, нередко их следствием являются штрафы и предписания, обоснованность которых можно поставить под сомнение.
 
       .practices__services
         .row.justify-content-end
-          .col-7
+          .col-8.col-xl-7
             h2.practices__services-title Услуги
-          .col-6
+          .col-8.col-lg-7.col-xl-6
             ul.practices__services-accordion
               each item,i in accordion
                 li.practices__services-accordion-item.accordion-item(class = i == 3 ? "active" : "" data-aos="fade-up")
@@ -162,24 +188,35 @@ block content
                   include ../components/_accordion-content.pug
 
     .practices__manager
+      .practices__feedback-modal
+        .practices__feedback-modal-close
+          img.svg(src="assets/images/icons/close.svg", alt="close")
+        +feedbackForm("Задать вопрос руководителю практики")
+
       .practices__manager-content
         .row.justify-content-between
-          .col-2
+          .col-6.col-sm-3.col-md-2
             .practices__manager-img(data-aos="fade-up")
               img(src="assets/images/practices/practice-manager.jpg")
-          .col-5
+          .col-lg-6.col-xl-5
             .practices__manager-block
               .position-block
                 p(data-aos="fade-up" data-aos-delay="200") Руководитель практики
-                .position-right
+                .position-right.d-none.d-lg-block
                   p(data-aos="fade-up" data-aos-delay="400") Руководитель практики административного и страхового права
               .name-block
                 p.surname(data-aos="fade-up" data-aos-delay="600") Назарова #[br]
                 p.name(data-aos="fade-up" data-aos-delay="800") Екатерина Артёмовна
-              a(href="mailto:nea@ssp-consult.ru" data-aos="fade-up" data-aos-delay="800").email nea@ssp-consult.ru
+              .position-right.d-lg-none
+                p(data-aos="fade-up" data-aos-delay="400") Руководитель практики административного и страхового права
+              .practices__manager-links
+                a(href="mailto:nea@ssp-consult.ru" data-aos="fade-up" data-aos-delay="800").email nea@ssp-consult.ru
+                .newtworks.d-lg-none(data-aos="fade-up" data-aos-delay="1000")
+                  a(href="#") Telegram
+                  a(href="#") WhatsApp
               .practices__manager-bottom(data-aos="fade-up" data-aos-delay="1000")
                 +moreBtn("#", "Задать вопрос")
-                .newtworks
+                .newtworks.d-none.d-lg-flex
                   a(href="#") Telegram
                   a(href="#") WhatsApp
 
@@ -192,7 +229,7 @@ block content
 
       .practices__feedback
         .row.justify-content-center
-          .col-6
+          .col-8.col-lg-6
             +feedbackForm("Задать вопрос или запросить коммерческое предложение")
 
     +seeNext("#", "Административно-правовая защита")
