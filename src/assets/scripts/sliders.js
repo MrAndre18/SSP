@@ -14,15 +14,12 @@ const clientsSliderSettings = {
   slidesPerView: 8,
 
   breakpoints: {
-    // when window width is >= 320px
     320: {
       slidesPerView: 2,
     },
-    // when window width is >= 480px
     480: {
       slidesPerView: 3,
     },
-    // when window width is >= 640px
     640: {
       slidesPerView: 4,
     },
@@ -58,8 +55,15 @@ const practicesSlider = new Swiper(".practices__slider", {
   allowSlidePrev: false,
   watchOverflow: true,
   initialSlide: 0,
-  speed: 600,
+  speed: 1000,
   simulateTouch: false,
+
+  breakpoints: {
+    768: {
+      simulateTouch: true,
+      allowSlidePrev: true,
+    },
+  },
 
   navigation: {
     nextEl: ".swiper-button-next",
