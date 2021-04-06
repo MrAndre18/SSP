@@ -9,7 +9,7 @@ mixin beforeBtn(href, text)
     span= text
 
 mixin tabBtn(href, text, className)
-  a.tab-btn(href=href ? href : "#" class=className ? className : "")
+  a.tab-btn(href=href ? href : "#", class=className ? className : "", onclick="event.preventDefault()")
     span= text
 
 mixin newsItem(date, title, moreUrl, tabs)

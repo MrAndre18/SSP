@@ -1,0 +1,211 @@
+extends ../layouts/master.pug
+
+block header
+  .command-page
+    include ../partials/_header.pug
+
+block content
+  -
+    const command = [
+      {
+        surname: "Панфиленко",
+        fullName: "Сергей Сергеевич",
+        number: "01",
+        img: "assets/images/command/Panfilenko-Sergei.jpg",
+        nextImg: "assets/images/command/Privalov-Sergei.jpg",
+        position: "Управляющий партнер",
+        categories: [
+          {
+            category: "корпоративные конфликты"
+          },
+          {
+            category: "M&A"
+          },
+          {
+            category: "duedillgence"
+          },
+          {
+            category: "банкротства"
+          },
+          {
+            category: "реструктуризация"
+          },
+        ]
+      },
+      {
+        surname: "Привалов",
+        fullName: "Сергей Анатольевич",
+        number: "02",
+        img: "assets/images/command/Privalov-Sergei.jpg",
+        nextImg: "assets/images/command/Nazarova-Ekaterina.jpg",
+        position: "Старший партнер, руководитель практики банкротств",
+        categories: [
+          {
+            category: "корпоративные конфликты"
+          },
+          {
+            category: "M&A"
+          },
+          {
+            category: "банкротства"
+          },
+          {
+            category: "реструктуризация"
+          },
+          {
+            category: "арбитражный управляющий"
+          },
+          {
+            category: "корпоративное право и оптимизация корпоративного управления"
+          },
+        ]
+      },
+      {
+        surname: "Назарова",
+        fullName: "Екатерина Артёмовна",
+        number: "03",
+        img: "assets/images/command/Nazarova-Ekaterina.jpg",
+        nextImg: "assets/images/command/Timofeeva-Eva.jpg",
+        position: "Руководитель практики страхового и административного права",
+        categories: [
+          {
+            category: "страховое право и урегулирование убытков"
+          },
+          {
+            category: "трудовое право"
+          },
+          {
+            category: "разрешение споров"
+          },
+          {
+            category: "административное право"
+          },
+        ]
+      },
+      {
+        surname: "Тимофеева",
+        fullName: "Ева Станиславовна",
+        number: "04",
+        img: "assets/images/command/Timofeeva-Eva.jpg",
+        nextImg: "assets/images/command/Titkova-Daria.jpg",
+        position: "Советник по трудовым вопросам",
+        categories: [
+          {
+            category: "трудовые споры"
+          },
+          {
+            category: "сопровождение банкротств"
+          },
+          {
+            category: "ВЭД"
+          },
+          {
+            category: "арбитражный управляющий"
+          },
+          {
+            category: "споры с таможней"
+          },
+          {
+            category: "юридическое сопровождение деятельности компаний"
+          },
+        ]
+      },
+      {
+        surname: "Титкова",
+        fullName: "Дарья Андреевна",
+        number: "05",
+        img: "assets/images/command/Titkova-Daria.jpg",
+        nextImg: "assets/images/command/Nadezhina-Julia.jpg",
+        position: "Руководитель практики разрешения споров и юридического сопровождения",
+        categories: [
+          {
+            category: "Юридическое сопровождение деятельности компаний"
+          },
+          {
+            category: "судебные споры с крупными корпорациями"
+          },
+          {
+            category: "цифровая экономика"
+          },
+          {
+            category: "интеллектуальное право"
+          },
+          {
+            category: "антимонопольные споры"
+          },
+        ]
+      },
+      {
+        surname: "Надежина",
+        fullName: "Юлия Валерьевна",
+        number: "06",
+        img: "assets/images/command/Nadezhina-Julia.jpg",
+        nextImg: "assets/images/command/Panfilenko-Sergei.jpg",
+        position: "Директор по развитию",
+        categories: [
+          {
+            category: "Контакты со СМИ"
+          },
+          {
+            category: "Мероприятия, рейтинги"
+          },
+          {
+            category: "Запрос комментариев"
+          },
+        ]
+      },
+    ]
+  main.main.command.container-fluid.px-0
+    +pageTitle("Команда")
+
+    .command__content
+      .row
+        .col-8
+          .command__img
+            img(src="assets/images/command/command-img.jpg").desktop
+            img(src="assets/images/command/command-img-mobile.jpg").mobile
+            .command__img-text.command__img-text
+              img.svg(src="assets/images/command/S.svg")
+              img.svg(src="assets/images/command/S.svg")
+              img.svg(src="assets/images/command/P.svg")
+      .row
+        .col-8
+          .command__slider.swiper-container(data-aos="fade-up")
+            .command__slider-wrapper.swiper-wrapper
+              each slide in command
+                .command__slider-slide.swiper-slide
+                  .row
+                    .col-6.col-sm-3.order-1
+                      .command__slider-slide-img
+                        img(src=slide.img, alt=slide.surname)
+                    .col-8.col-xxl-3.order-3.order-xxl-2
+                      .command__slider-slide-content
+                        span.number= slide.number
+                        h4.surname= slide.surname
+                        p.name= slide.fullName
+                        .command__slider-slide-content-block
+                          p.position= slide.position
+                          .links-block
+                            a(href="mailto:mail@ssp-consult.ru").email mail@ssp-consult.ru
+                            .networks
+                              a(href="#") Telegram
+                              a(href="#") WhatsApp
+                        ul.categories
+                          each category in slide.categories
+                            +tabBtn("#", category.category, "disabled")
+                    .col-2.col-sm-5.col-xxl-2.d-flex.justify-content-end.order-2.order-xxl-3(style="position: relative;")
+                      .command__slider-button-prev.swiper-button-prev
+                        .button-active
+                          img.svg(src="assets/images/icons/slider-arrow-small.svg", alt="prev")
+                        img.svg(src="assets/images/icons/slider-arrow.svg", alt="prev")
+                      .command__slider-button-next.swiper-button-next
+                        .button-active
+                          img.svg(src="assets/images/icons/slider-arrow-small.svg", alt="next")
+                        img.svg(src="assets/images/icons/slider-arrow.svg", alt="next")
+                      .command__slider-slide-next-img
+                        img(src=slide.nextImg)
+
+    +seeNext("events", "События")
+
+block footer
+  include ../partials/_footer.pug

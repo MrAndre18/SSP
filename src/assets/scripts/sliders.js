@@ -70,6 +70,20 @@ const practicesSlider = new Swiper(".practices__slider", {
   },
 });
 
+const commandSlider = new Swiper(".command__slider", {
+  loop: true,
+  loopedSlides: 3,
+  initialSlide: 0,
+  spaceBetween: 40,
+  speed: 600,
+  simulateTouch: false,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 const fullPageSliderSettings = {
   loop: true,
   effect: "fade",

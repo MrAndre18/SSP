@@ -13,9 +13,11 @@ html(lang="ru")
     include ../partials/_loader.pug
 
     .loaded-content
-      block header
-      block content
-      block footer
+      //- include ../components/_anonce.pug
+      .content
+        block header
+        block content
+        block footer
     block scripts
       //- script
       //-   |  function initMap() {

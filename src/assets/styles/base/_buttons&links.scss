@@ -22,8 +22,8 @@
 }
 
 .tab-btn {
-  height: 30px;
   width: fit-content;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,10 +33,6 @@
   color: $color-1;
   border-radius: 4px;
   @include transition();
-
-  @media (max-width: 768px) {
-    height: 22px;
-  }
 
   span {
     display: inline-block;

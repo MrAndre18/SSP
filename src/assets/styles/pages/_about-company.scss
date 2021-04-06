@@ -282,6 +282,10 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
         padding: 30px 0;
       }
 
+      &-wrapper {
+        transition-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+      }
+
       &-slide {
         display: flex;
         flex-direction: column;

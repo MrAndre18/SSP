@@ -42,9 +42,6 @@
   .link::before {
     @include transition($duration: 0.9s);
     background: $color-1;
-
-    @media (max-width: 1200px) {
-    }
   }
 
   &.active {
@@ -342,7 +339,7 @@
               .dot {
                 background: $color-7;
 
-                @media (max-width: 1200px) {
+                @media (max-width: 1199px) {
                   background: $color-1;
                 }
               }
@@ -404,7 +401,7 @@
   display: block;
 }
 
-.command-page .header .link.command::after {
+.command-page .header .link.command-link::after {
   display: block;
 }
 

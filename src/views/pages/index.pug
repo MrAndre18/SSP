@@ -47,7 +47,7 @@ block content
             span.line
             span.big-text Наш основной принцип деятельности
           span.big-text заложен в самом названии
-        .fullpage-block__contacts(data-aos="fade-up")
+        .fullpage-block__contacts(data-aos="fade-up").d-none.d-xl-flex
           a(href="tel:+7 812 901–02–01").phone 8 812 901–02–01
           a(href="mailto:site@ssp-consult.ru").email site@ssp-consult.ru
 
@@ -91,7 +91,7 @@ block content
           .col-2.ps-0.d-none.d-xxl-block
             .news__content-img
               img(src="assets/images/news.jpg", alt="news")
-          .col-8.col-xxl-6.pe-0
+          .col-8.col-xxl-6.px-0
             ul.news__content-block.news__items.d-flex.justify-content-between
               +newsItem(
                 "20 декабря 2020",
