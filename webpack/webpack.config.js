@@ -189,12 +189,12 @@ module.exports = env => {
 			// 	]
 			// }),
 
-			new SVGSpriteMapPlugin('src/sprites/**/*.svg', {
-				styles: path.join(__dirname, '../src/assets/styles/_sprites.scss'),
-				output: {
-					filename: 'assets/sprite.svg'
-				}
-			}),
+			// new SVGSpriteMapPlugin('src/sprites/**/*.svg', {
+			// 	styles: path.join(__dirname, '../src/assets/styles/_sprites.scss'),
+			// 	output: {
+			// 		filename: 'assets/sprite.svg'
+			// 	}
+			// }),
 
 			new MiniCssExtractPlugin({
 				filename: '[name].css',

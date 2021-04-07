@@ -6,6 +6,18 @@ const circles = $(".bullet-progress__circle"),
 
 initialCircles(circles);
 
+const anonceSlider = new Swiper(".anonce__slider", {
+  loop: true,
+  speed: 600,
+  simulateTouch: false,
+  slidesPerView: 1,
+
+  navigation: {
+    nextEl: ".next-btn",
+    prevEl: ".prev-btn",
+  },
+});
+
 const clientsSliderSettings = {
   loop: true,
   spaceBetween: 20,

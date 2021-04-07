@@ -5,10 +5,4 @@ if ($(".header").width()) {
   $(burger).on("click", () => {
     header.toggleClass("active");
   })
-
-  // if ($(".anonce").width() && $(".index-page").width()) {
-  //   const anonce = $(".anonce");
-
-  //   $(anonce).css("display", block);
-  // }
 }

@@ -1,11 +1,8 @@
 // /* src/app.js */
 import "jquery";
 import AOS from "aos";
-import Sticky from "sticky-js";
 import "velocity-animate";
-// import './assets/scripts/backend.js';
 // import "./assets/scripts/initMap.js";
-// import './assets/scripts/tab-nav.js';
 
 // Styles
 import "Styles/_app.scss";
@@ -21,6 +18,7 @@ $(() => {
   require("Scripts/contacts");
   require("Scripts/cases");
   require("Scripts/practices");
+  require("Scripts/anonce");
   // require("Scripts/gMapsAPI");
   // require("Scripts/initMap");
 });
@@ -165,7 +163,7 @@ $(() => {
           delay: 100,
           once: true,
         });
-        
+
       }, 500);
     }
   } else {

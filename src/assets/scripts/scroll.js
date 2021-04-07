@@ -58,6 +58,7 @@ let scrollPrev = 0;
 
 $(window).on("scroll", () => {
   changeHeaderBg();
+  // changeHeaderPosition();
 });
 
 const changeHeaderBg = () => {
