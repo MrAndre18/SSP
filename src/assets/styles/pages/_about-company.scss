@@ -4,6 +4,10 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
   .page-title {
     text-align: left;
 
+    h1 {
+      margin-left: -4px;
+    }
+
     @media (max-width: 1200px) {
       text-align: center;
     }
@@ -158,7 +162,7 @@ $advantages-bg-img: url("../../assets/images/about-company/about-company-advanta
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #edf5fb;
+    background-color: #E6F5FA;
     background-image: $advantages-bg-img;
     background-position: bottom;
     background-size: cover;

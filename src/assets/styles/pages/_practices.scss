@@ -1,4 +1,4 @@
-$manager-bg-img: url("../../assets/images/practices/practice-manager-bg.svg");
+$manager-bg-img: url("../../assets/images/practices/practice-manager-bg.png");
 $practices-header-bg-img: url("../../assets/images/practices/practice-1.jpg");
 $practices-header-bg-color: #9ac9d8;
 
@@ -127,7 +127,7 @@ $practices-header-bg-color: #9ac9d8;
     background: linear-gradient($color-10, $color-10),
       linear-gradient($practices-header-bg-color, $practices-header-bg-color), linear-gradient(#fff, #fff),
       $practices-header-bg-img;
-    background-size: 100%;
+    background-size: 75%;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-blend-mode: darken, color, multiply;
@@ -146,6 +146,7 @@ $practices-header-bg-color: #9ac9d8;
     @media (max-width: 768px) {
       height: 480px;
       background-position: center bottom;
+      background-size: 100%;
     }
 
     &-content {

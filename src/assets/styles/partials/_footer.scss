@@ -53,11 +53,11 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
       }
 
       .link:hover {
-        color: $color-4;
+        color: $color-6;
       }
 
       .link::before {
-        background: $color-4;
+        background: $color-6;
       }
 
       &-item {
@@ -100,7 +100,7 @@ $footer-bg-img: url("../../assets/images/icons/footer-bg.svg");
           @include transition();
 
           &:hover {
-            color: $color-4;
+            color: $color-6;
           }
         }
 

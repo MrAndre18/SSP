@@ -110,6 +110,14 @@
         }
       }
 
+      input[name="agree"] + label {
+        margin-bottom: 40px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 20px;
+        }
+      }
+
       &-btn {
         display: none;
 

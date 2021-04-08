@@ -12,7 +12,7 @@
 
   &-block {
     position: sticky;
-    top: 40px;
+    top: 130px;
     height: fit-content;
 
     @media (max-width: 1200px) {
@@ -142,7 +142,12 @@
         display: none;
 
         &.active {
+          margin-top: 40px;
           display: block;
+
+          @media (max-width: 768px) {
+            margin-top: 20px;
+          }
         }
       }
 

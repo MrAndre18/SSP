@@ -417,6 +417,10 @@
           width: 73px;
           height: 55px;
         }
+
+        path {
+          stroke: $color-1;
+        }
       }
 
       .button-active {
@@ -464,6 +468,10 @@
         @media (max-width: 768px) {
           width: 32px;
           height: 24px;
+        }
+
+        path {
+          stroke: $color-1;
         }
       }
 

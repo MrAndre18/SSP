@@ -39,6 +39,7 @@
         font-size: 20px;
         line-height: 100%;
         border-bottom: 1px solid $color-2;
+        color: $color-1;
         @include transition();
 
         &:focus {
@@ -73,6 +74,7 @@
       line-height: 100%;
       border-bottom: 1px solid $color-2;
       height: 140px;
+      color: $color-1;
       @include transition();
 
       @media (max-width: 768px) {

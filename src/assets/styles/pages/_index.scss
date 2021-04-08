@@ -66,7 +66,8 @@ $fullpage-slide-bg-imgs: (
           right: 40px;
           top: 35%;
           bottom: auto;
-          max-width: 486px;
+          width: 28%;
+          // max-width: 486px;
           font-size: 24px;
           line-height: 140%;
 
@@ -155,10 +156,10 @@ $fullpage-slide-bg-imgs: (
             position: relative;
             z-index: 5;
             font-size: 110px;
-            line-height: 140%;
+            line-height: 100%;
             font-family: $additional-font-family;
             color: $color-7;
-            // padding-bottom: 8px;
+            transform: translateY(8px);
           }
 
           .colored-circle {
@@ -305,14 +306,14 @@ $fullpage-slide-bg-imgs: (
 
   .practices-block {
     overflow: hidden;
-    padding: 40px 0 40px 40px;
+    padding: 40px 0 0 40px;
 
     @media (max-width: 1200px) {
-      padding: 40px 0 40px 20px;
+      padding: 40px 0 0 20px;
     }
 
     @media (max-width: 768px) {
-      padding: 20px 0 30px 20px;
+      padding: 20px 0 0 20px;
     }
 
     .all {

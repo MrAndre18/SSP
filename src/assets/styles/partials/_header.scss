@@ -27,7 +27,8 @@
     @include transition($duration: 0.9s);
   }
 
-  .link::after {
+  .link::after,
+  .practices-link::after {
     content: "";
     position: absolute;
     top: calc(50% - 4px);
@@ -114,7 +115,9 @@
           margin: 0;
         }
 
-        a {
+        .practices-link {
+          position: relative;
+          @include transition($duration: 0.9s);
           display: flex;
 
           .practices__item-dots {
@@ -130,7 +133,24 @@
               height: 6px;
               background: $color-1;
               border-radius: 50%;
-              @include transition($duration: 0.9s);
+              @include transition();
+            }
+          }
+
+          &:hover {
+            .dot {
+              &:first-child {
+                transform: translateX(12px);
+              }
+
+              &:nth-child(2) {
+                width: 10px;
+                height: 10px;
+              }
+
+              &:last-child {
+                transform: translateX(-12px);
+              }
             }
           }
         }
@@ -396,7 +416,7 @@
   }
 }
 
-.practices-page .header .link.practices::after {
+.practices-page .header .practices-link::after {
   display: block;
 }
 
