@@ -1,17 +1,17 @@
 -
   const anonces = [
     {
-      preview: "Всем арендателям. Как получить скидку 50% на аренду. Наши ведущий юрист дает советы.",
+      preview: "Всем арендателям. Как получить скидку 50% на аренду. Наш ведущий юрист дает советы.",
       description: "Ковид бушует как никогда. Экономика страдает, а правительство закручивает гайки. Ваш бизнес под угрозой! Мы можем помочь, раскажем, как снизить арендную плату и получить субсидии от В.В. Путина.",
       url: "#"
     },
     {
-      preview: "Всем арендателям. Как получить скидку 50% на аренду. Наши ведущий юрист дает советы.",
+      preview: "Всем арендателям. Как получить скидку 50% на аренду. Наш ведущий юрист дает советы.",
       description: "Ковид бушует как никогда. Экономика страдает, а правительство закручивает гайки. Ваш бизнес под угрозой! Мы можем помочь, раскажем, как снизить арендную плату и получить субсидии от В.В. Путина.",
       url: "#"
     },
     {
-      preview: "Всем арендателям. Как получить скидку 50% на аренду. Наши ведущий юрист дает советы.",
+      preview: "Всем арендателям. Как получить скидку 50% на аренду. Наш ведущий юрист дает советы.",
       description: "Ковид бушует как никогда. Экономика страдает, а правительство закручивает гайки. Ваш бизнес под угрозой! Мы можем помочь, раскажем, как снизить арендную плату и получить субсидии от В.В. Путина.",
       url: "#"
     },
@@ -36,15 +36,15 @@
                     img.svg(src="assets/images/icons/arrow-right.svg", alt="more")
                   .close
                     img.svg(src="assets/images/icons/close.svg", alt="close")
-            .anonce__block
-              .anonce__block-content
-                .row
-                  .col-2
-                    .anonce__block-navigation
-                      .anonce__slider-button-prev.prev-btn
-                        img.svg(src="assets/images/icons/slider-arrow-small.svg", alt="prev")
-                      .anonce__slider-button-next.next-btn
-                        img.svg(src="assets/images/icons/slider-arrow-small.svg", alt="next")
-                  .col-3
-                    p.anonce__block-description= anonce.description
-                    +moreBtn(anonce.url, "Подробнее")
+          .anonce__block
+            .anonce__block-content
+              .row
+                .col-2
+                  .anonce__block-navigation
+                    .anonce__slider-button-prev.prev-btn
+                      img.svg(src="assets/images/icons/slider-arrow-small.svg", alt="prev")
+                    .anonce__slider-button-next.next-btn
+                      img.svg(src="assets/images/icons/slider-arrow-small.svg", alt="next")
+                .col-3
+                  p.anonce__block-description= anonce.description
+                  +moreBtn(anonce.url, "Подробнее")

@@ -16,6 +16,14 @@ $practices-modal-bg-color-2: #bbdcf9;
   color: $color-7;
   font-family: $main-font-family;
   width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  @include transition();
+  transform: translateX(-100%);
+
+  &.active {
+    transform: translateX(0);
+  }
 
   &__content {
     max-width: 1920px;
@@ -24,6 +32,29 @@ $practices-modal-bg-color-2: #bbdcf9;
 
     @media (max-width: 1200px) {
       padding: 15px 20px 40px;
+    }
+  }
+
+  &_close {
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $color-6;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @include transition();
+
+    @media (max-width: 1200px) {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      right: 20px;
     }
   }
 
@@ -44,6 +75,12 @@ $practices-modal-bg-color-2: #bbdcf9;
       margin-bottom: 20px;
     }
 
+    @media (max-width: 768px) {
+      span {
+        display: none;
+      }
+    }
+
     &:hover {
       .btn-close {
         border: 1px solid $color-6;
@@ -60,6 +97,13 @@ $practices-modal-bg-color-2: #bbdcf9;
       align-items: center;
       margin-left: 24px;
       @include transition();
+
+      @media (max-width: 767px) {
+        margin-left: 0;
+        margin-top: 61px;
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 

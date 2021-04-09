@@ -3,15 +3,15 @@ import Limarquee from "limarquee";
 const tickerText = $(".ticker-wrapper.text"),
   tickerImgs = $(".ticker-wrapper.images");
 
-const recognition = () => {
-  const limarquee = new Limarquee(".recognition__content");
-  limarquee.render({
-    circular: true,
-    drag: false,
-    hoverstop: false,
-    scrollamount: 80,
-  });
-};
+// const recognition = () => {
+//   const limarquee = new Limarquee(".recognition__content");
+//   limarquee.render({
+//     circular: true,
+//     drag: false,
+//     hoverstop: false,
+//     scrollamount: 80,
+//   });
+// };
 
 const aboutCompanyTicker = () => {
   let timer;
@@ -47,5 +47,5 @@ const aboutCompanyTicker = () => {
   });
 };
 
-recognition();
+// recognition();
 aboutCompanyTicker();

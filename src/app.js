@@ -2,7 +2,6 @@
 import "jquery";
 import AOS from "aos";
 import "velocity-animate";
-// import "./assets/scripts/initMap.js";
 
 // Styles
 import "Styles/_app.scss";
@@ -19,8 +18,8 @@ $(() => {
   require("Scripts/cases");
   require("Scripts/practices");
   require("Scripts/anonce");
-  // require("Scripts/gMapsAPI");
-  // require("Scripts/initMap");
+  require("Scripts/practices-modal");
+  require("Scripts/gMapsAPI");
 });
 
 // MAIN PAGE: loader

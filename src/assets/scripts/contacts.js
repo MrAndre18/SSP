@@ -10,5 +10,5 @@ if ($(".main.contacts").width()) {
   //   });
   // }
 
-  console.log("contacts: ", contacts);
+  // console.log("contacts: ", contacts);
 }

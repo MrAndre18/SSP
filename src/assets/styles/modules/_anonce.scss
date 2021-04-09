@@ -1,26 +1,31 @@
 .anonce {
   position: relative;
+  z-index: 20;
   background: $color-6;
+  color: $color-7;
+  font-family: $main-font-family;
   @include transition();
 
   &__slider {
     position: static;
+    overflow: visible;
 
     &-wrapper {
       position: static;
+      overflow: visible;
       transition-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
     }
 
     &-slide {
-      position: static;
+      position: relative;
+      overflow: visible;
     }
   }
 
   &__content {
+    overflow: visible;
     max-width: 1920px;
     padding: 0 40px;
-    color: $color-7;
-    font-family: $main-font-family;
   }
 
   &__trigger {
@@ -114,7 +119,6 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 20;
     background: $color-8;
     padding-bottom: 80px;
 

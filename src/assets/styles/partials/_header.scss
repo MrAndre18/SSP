@@ -285,7 +285,9 @@
           }
 
           a {
+            position: relative;
             display: flex;
+            width: fit-content;
 
             .practices__item-dots {
               margin-left: 20px;
@@ -300,7 +302,24 @@
                 height: 6px;
                 background: $color-1;
                 border-radius: 50%;
-                @include transition($duration: 0.9s);
+                @include transition();
+              }
+            }
+
+            &:hover {
+              .dot {
+                &:first-child {
+                  transform: translateX(12px);
+                }
+
+                &:nth-child(2) {
+                  width: 10px;
+                  height: 10px;
+                }
+
+                &:last-child {
+                  transform: translateX(-12px);
+                }
               }
             }
           }

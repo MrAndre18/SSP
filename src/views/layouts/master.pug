@@ -13,18 +13,10 @@ html(lang="ru")
     include ../partials/_loader.pug
 
     .loaded-content
-      //- include ../components/_anonce.pug
+      include ../components/_anonce.pug
       .content
         include ../components/_practices-modal.pug
         block header
         block content
         block footer
     block scripts
-      //- script
-      //-   |  function initMap() {
-      //-   |    map = new google.maps.Map($("#map"), {
-      //-   |      center: { lat: -34.397, lng: 150.644 },
-      //-   |      zoom: 8,
-      //-   |    });
-      //-   |  }
-      //- script(defer, async, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH6vqQLGTGXjMIF7KEDy1-ijODaKbDxyQ&callback=initMap")
