@@ -26,6 +26,7 @@
     overflow: visible;
     max-width: 1920px;
     padding: 0 40px;
+    margin: 0 auto;
   }
 
   &__trigger {
@@ -116,6 +117,7 @@
   }
 
   &__block {
+    width: 100%;
     position: absolute;
     top: 100%;
     left: 0;
@@ -125,6 +127,7 @@
     &-content {
       max-width: 1920px;
       padding: 0 40px;
+      margin: 0 auto;
     }
 
     &-navigation {
