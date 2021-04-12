@@ -18,6 +18,10 @@
     width: 0;
     background: $color-4;
     @include transition();
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &:hover::before {

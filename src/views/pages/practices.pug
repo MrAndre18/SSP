@@ -124,42 +124,32 @@ block content
             li.all-practices__item
               a.link(href="#") PRO BONO
 
-      ul.practices__timeline(data-aos="fade-up")
-        .practices__timeline-line
-          .row.row-cols-8
-            .col
-            .col
-            .col.d-none.d-md-block
-            .col.d-none.d-md-block
-            .col.d-none.d-xl-block
-            .col.d-none.d-xl-block
-            .col.d-none.d-xl-block
-            .col.d-none.d-xl-block
-        .row.align-items-center
-          .col-4.col-md-2.col-xl-1
-            li.practices__timeline-item
-              .practices__timeline-item-img
-                img(src="assets/images/practices/pravo-300.jpg")
-              span.name ПРАВО–300
-              span.date 2020
-          .col-4.col-md-2.col-xl-1
-            li.practices__timeline-item
-              .practices__timeline-item-img
-                img(src="assets/images/practices/pravo-300.jpg")
-              span.name ПРАВО–300
-              span.date 2019
-          .col-2.col-xl-1.d-none.d-md-block
-            li.practices__timeline-item
-              .practices__timeline-item-img
-                img(src="assets/images/practices/pravo-300.jpg")
-              span.name ПРАВО–300
-              span.date 2018
-          .col-2.col-xl-1.d-none.d-md-block
-            li.practices__timeline-item
-              .practices__timeline-item-img
-                img(src="assets/images/practices/pravo-300.jpg")
-              span.name ПРАВО–300
-              span.date 2017
+      .practices__timeline-slider.swiper-container
+        .practices__timeline.swiper-wrapper(data-aos="fade-up")
+          .practices__timeline-item.swiper-slide
+            .practices__timeline-item-img
+              img(src="assets/images/practices/pravo-300.jpg")
+            span.name ПРАВО–300
+            span.date 2020
+          .practices__timeline-item.swiper-slide
+            .practices__timeline-item-img
+              img(src="assets/images/practices/pravo-300.jpg")
+            span.name ПРАВО–300
+            span.date 2019
+          .practices__timeline-item.swiper-slide
+            .practices__timeline-item-img
+              img(src="assets/images/practices/pravo-300.jpg")
+            span.name ПРАВО–300
+            span.date 2018
+          .practices__timeline-item.swiper-slide
+            .practices__timeline-item-img
+              img(src="assets/images/practices/pravo-300.jpg")
+            span.name ПРАВО–300
+            span.date 2017
+          .practices__timeline-item.swiper-slide
+          .practices__timeline-item.swiper-slide
+          .practices__timeline-item.swiper-slide
+          .practices__timeline-item.swiper-slide
 
       .practices__about
         .row

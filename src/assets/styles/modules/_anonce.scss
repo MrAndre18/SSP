@@ -27,14 +27,22 @@
     max-width: 1920px;
     padding: 0 40px;
     margin: 0 auto;
+
+    @media (max-width: 1200px) {
+      padding: 0 20px;
+    }
   }
 
   &__trigger {
     height: 80px;
     width: 100%;
-    display: flex;
-    align-items: center;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+      height: fit-content;
+      padding-bottom: 20px;
+      padding-top: 8px;
+    }
 
     &:hover {
       .anonce__trigger-title {
@@ -50,6 +58,32 @@
         .more {
           .svg path {
             fill: $color-6;
+          }
+        }
+      }
+    }
+
+    .row {
+      height: 100%;
+
+      @media (max-width: 992px) {
+        > div {
+          width: fit-content;
+          flex: 0 0 auto;
+          margin: 0;
+          padding: 0;
+
+          &:nth-child(2) {
+            width: calc(100% - 40px - 25px);
+            padding-left: 10px;
+
+            @media (max-width: 768px) {
+              width: calc(100% - 34px - 25px);
+            }
+          }
+
+          &:last-child {
+            padding-right: 10px;
           }
         }
       }
@@ -85,6 +119,10 @@
     &-preview {
       font-size: 20px;
       line-height: 140%;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
     }
 
     &-btn {
@@ -97,6 +135,15 @@
       align-items: center;
       transform: rotate(90deg);
       @include transition();
+
+      @media (max-width: 992px) {
+        margin-left: 15px;
+      }
+
+      @media (max-width: 768px) {
+        width: 34px;
+        height: 34px;
+      }
 
       .more {
         display: block;
@@ -124,14 +171,28 @@
     background: $color-8;
     padding-bottom: 80px;
 
+    @media (max-width: 768px) {
+      padding-bottom: 30px;
+    }
+
     &-content {
       max-width: 1920px;
       padding: 0 40px;
       margin: 0 auto;
+
+      @media (max-width: 1200px) {
+        padding: 0 20px;
+      }
     }
 
     &-navigation {
       display: flex;
+
+      @media (max-width: 768px) {
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
+      }
 
       .next-btn,
       .prev-btn {
@@ -179,6 +240,11 @@
       line-height: 160%;
       opacity: 0.5;
       margin-bottom: 40px;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+        margin-bottom: 30px;
+      }
     }
 
     .more-btn span {

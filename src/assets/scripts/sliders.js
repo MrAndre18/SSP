@@ -6,6 +6,15 @@ const circles = $(".bullet-progress__circle"),
 
 initialCircles(circles);
 
+const practicesTimeline = new Swiper(".practices__timeline-slider", {
+  speed: 300,
+  slidesPerView: "auto",
+  centeredSlides: false,
+  watchOverflow: true,
+  spaceBetween: 20,
+  freeMode: true,
+});
+
 const anonceSlider = new Swiper(".anonce__slider", {
   loop: true,
   speed: 600,

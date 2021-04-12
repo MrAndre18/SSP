@@ -166,8 +166,14 @@ $practices-modal-bg-color-2: #bbdcf9;
     }
 
     .link {
+      display: inline-block;
       font-size: 24px;
       line-height: 120%;
+      margin-top: 20px;
+
+      @media (max-width: 1199px) {
+        margin-top: 0;
+      }
 
       @media (max-width: 768px) {
         font-size: 14px;

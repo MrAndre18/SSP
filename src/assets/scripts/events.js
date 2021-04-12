@@ -54,6 +54,7 @@ if ($(".main.events").width() || $(".main.event").width()) {
         $(eventsSubscribe).addClass("subscribed");
         $(subscribeTitle).toggleClass("active");
         $(".subscribe-btn").toggleClass("active");
+        $(email).val("");
       }
     }
   });

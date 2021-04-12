@@ -23,28 +23,29 @@
       each anonce in anonces
         .anonce__slider-slide.swiper-slide
           .anonce__content
-            .anonce__trigger.row
-              .col-2
-                .anonce__trigger-title
-                  h4 Анонсы
-                  .line
-              .col-5
-                p.anonce__trigger-preview= anonce.preview
-              .col-1.d-flex.justify-content-end
-                .anonce__trigger-btn
-                  .more
-                    img.svg(src="assets/images/icons/arrow-right.svg", alt="more")
-                  .close
-                    img.svg(src="assets/images/icons/close.svg", alt="close")
+            .anonce__trigger
+              .row.align-items-center
+                .col-2.d-none.d-lg-block
+                  .anonce__trigger-title
+                    h4 Анонсы
+                    .line
+                .col-auto.col-lg-5
+                  p.anonce__trigger-preview= anonce.preview
+                .col-auto.col-lg-1.d-flex.justify-content-end
+                  .anonce__trigger-btn
+                    .more
+                      img.svg(src="assets/images/icons/arrow-right.svg", alt="more")
+                    .close
+                      img.svg(src="assets/images/icons/close.svg", alt="close")
           .anonce__block
             .anonce__block-content
               .row
-                .col-2
+                .col-auto.col-sm-2
                   .anonce__block-navigation
                     .anonce__slider-button-prev.prev-btn
                       img.svg(src="assets/images/icons/slider-arrow-small.svg", alt="prev")
                     .anonce__slider-button-next.next-btn
                       img.svg(src="assets/images/icons/slider-arrow-small.svg", alt="next")
-                .col-3
+                .col-sm-6.col-lg-3
                   p.anonce__block-description= anonce.description
                   +moreBtn(anonce.url, "Подробнее")

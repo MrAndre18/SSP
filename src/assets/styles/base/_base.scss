@@ -2,6 +2,7 @@
   color: $color-1;
   font-family: $main-font-family;
   padding-top: 120px;
+  overflow: hidden;
 
   @media (max-width: 1200px) {
     padding-top: 70px;

@@ -23,6 +23,10 @@
     color: $color-1;
     font-family: $additional-font-family;
 
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+
     span {
       font-family: $main-font-family;
     }
@@ -35,12 +39,32 @@
     width: 610px;
     height: 610px;
 
+    @media (max-width: 768px) {
+      width: 290px;
+      height: 290px;
+      top: calc(50% - 290px / 2);
+      left: calc(50% - 290px / 2);
+    }
+
     &__circle {
       transform-origin: center;
       transform: rotate(-90deg);
       stroke: $color-1;
-
       @include transition($property: stroke-dashoffset);
+    }
+
+    &.loader-progress_mobile {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      &.loader-progress_desktop {
+        display: none;
+      }
+
+      &.loader-progress_mobile {
+        display: block;
+      }
     }
   }
 }

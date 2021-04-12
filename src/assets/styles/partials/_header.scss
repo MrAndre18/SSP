@@ -47,7 +47,7 @@
 
   &.active {
     .mobile-menu {
-      left: 0;
+      transform: translateX(0);
     }
   }
 
@@ -194,6 +194,7 @@
     height: 40px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     cursor: pointer;
 
     &:hover {
@@ -251,9 +252,8 @@
 
   .mobile-menu {
     width: 100%;
-    position: fixed;
-    top: 68px;
-    left: 100%;
+    position: sticky;
+    transform: translateX(100%);
     z-index: 16;
     color: $color-1;
     background: $color-7;

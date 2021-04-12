@@ -39,8 +39,8 @@ input[name="agree"] {
       border-color: $color-6;
     }
 
-    a {
-      font-weight: 400;
+    .link {
+      font-weight: 500;
 
       &::before {
         background: $color-1;
