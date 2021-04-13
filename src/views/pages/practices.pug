@@ -88,12 +88,113 @@ block content
       },
     ]
 
+    const practices_headers = [
+      {
+        title: "Банкротство#[br]и корпоративные#[br]конфликты",
+        number: "01",
+        className: "bankruptcy",
+        imgs: [
+          {
+            src: "assets/images/practices/practice-1.jpg",
+          }
+        ]
+      },
+      {
+        title: "Административно#[br]–правовая#[br]защита",
+        number: "02",
+        className: "protection",
+        imgs: [
+          {
+            src: "assets/images/practices/practice-2.jpg",
+          }
+        ]
+      },
+      {
+        title: "Абонентское#[br]обслуживание",
+        number: "03",
+        className: "service",
+        imgs: [
+          {
+            src: "assets/images/practices/practice-3.jpg",
+          }
+        ]
+      },
+      {
+        title: "Трудовое#[br]право",
+        number: "04",
+        className: "labor-law",
+        imgs: [
+          {
+            src: "assets/images/practices/practice-4.jpg",
+          }
+        ]
+      },
+      {
+        title: "Недвижимость#[br]и строительство",
+        number: "05",
+        className: "real-estate",
+        imgs: [
+          {
+            src: "assets/images/practices/practice-5.jpg",
+          }
+        ]
+      },
+      {
+        title: "Страховое#[br]право",
+        number: "06",
+        className: "insurance-law",
+        imgs: [
+          {
+            src: "assets/images/practices/practice-6.jpg",
+          }
+        ]
+      },
+      {
+        title: "Управление#[br]финансовой#[br]задолженностью",
+        number: "07",
+        className: "indebtedness",
+        imgs: [
+          {
+            src: "assets/images/practices/practice-7.png",
+          }
+        ]
+      },
+      {
+        title: "Разрешение#[br]споров",
+        number: "08",
+        className: "dispute-resolution",
+        imgs: [
+          {
+            src: "assets/images/practices/practice-8.jpg",
+          }
+        ]
+      },
+      {
+        title: "PRO BONO",
+        number: "09",
+        className: "pro-bono",
+        imgs: [
+          {
+            src: "assets/images/practices/practice-9-1.png",
+          },
+          {
+            src: "assets/images/practices/practice-9-2.png",
+          }
+        ]
+      },
+    ]
+
   main.main.practices.container-fluid.px-0
 
-    .practices__header
-      .practices__header-content
-        h1.practices__header-title Банкротство и корпоративные конфликты
-        span.practices__header-number 01
+    each header in practices_headers
+      if header.className == "indebtedness"
+        .practices__header(class= header.className)
+          each img in header.imgs
+            .practices__header-img
+              img(src= img.src, alt= header.title)
+          .practices__header-content
+            h1.practices__header-title= header.title
+            span.practices__header-number= header.number
 
     .practices__content
       .all-practices
@@ -181,7 +282,7 @@ block content
       .practices__feedback-modal
         .practices__feedback-modal-close
           img.svg(src="assets/images/icons/close.svg", alt="close")
-        +feedbackForm("Задать вопрос руководителю практики")
+        +feedbackForm("Задать вопрос руководителю практики", "feedback-agree-modal")
 
       .practices__manager-content
         .row.justify-content-between
@@ -220,7 +321,7 @@ block content
       .practices__feedback
         .row.justify-content-center
           .col-8.col-lg-6
-            +feedbackForm("Задать вопрос или запросить коммерческое предложение")
+            +feedbackForm("Задать вопрос или запросить коммерческое предложение", "feedback-agree")
 
     +seeNext("#", "Административно-правовая защита")
 

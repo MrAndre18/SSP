@@ -47,10 +47,10 @@
     }
 
     &__circle {
+      display: none;
       transform-origin: center;
       transform: rotate(-90deg);
       stroke: $color-1;
-      @include transition($property: stroke-dashoffset);
     }
 
     &.loader-progress_mobile {

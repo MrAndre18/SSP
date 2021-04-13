@@ -17,15 +17,18 @@ if ($(".header").width()) {
 
   if ($(".practices-modal").width()) {
     const practicesModal = $(".practices-modal"),
-      practicesLink = $(header).find(".practices-link");
+      practicesLink = $(header).find(".practices-link"),
+      zoomHideItem = $(practicesModal).find(".zoom-hide-item");
 
     $(practicesLink).on("click", (e) => {
       e.preventDefault();
       practicesModal.toggleClass("active");
-    });
 
-    $(burgerClose).on("click", () => {
-      practicesModal.removeClass("active");
+      setTimeout(() => {
+        $(zoomHideItem).each(function (index, item) {
+          $(item).addClass("show");
+        });
+      }, 700);
     });
   }
 }

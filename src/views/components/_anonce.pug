@@ -41,11 +41,12 @@
             .anonce__block-content
               .row
                 .col-auto.col-sm-2
-                  .anonce__block-navigation
+                  .anonce__block-navigation.zoom-hide-item
                     .anonce__slider-button-prev.prev-btn
                       img.svg(src="assets/images/icons/slider-arrow-small.svg", alt="prev")
                     .anonce__slider-button-next.next-btn
                       img.svg(src="assets/images/icons/slider-arrow-small.svg", alt="next")
                 .col-sm-6.col-lg-3
-                  p.anonce__block-description= anonce.description
-                  +moreBtn(anonce.url, "Подробнее")
+                  .anonce__block-text.zoom-hide-item
+                    p.anonce__block-description= anonce.description
+                    +moreBtn(anonce.url, "Подробнее")

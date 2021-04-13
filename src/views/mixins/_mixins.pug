@@ -81,7 +81,7 @@ mixin eventsSubscribe(is_detail)
             li.share__links-item
               a(href="#") Вконтакте
 
-mixin feedbackForm(title)
+mixin feedbackForm(title, agree_id)
   .feedback(data-aos="fade-up")
     h2.feedback__title.active=title
     h2.feedback__title Мы приняли ваше сообщение и ответим вам в ближайшее время.
@@ -102,7 +102,7 @@ mixin feedbackForm(title)
       .submit-btn
         +moreBtn("#", "Отправить еще")
       .feedback-agree
-        +agreeCheckbox("feedback-agree")
+        +agreeCheckbox(agree_id)
 
 mixin caseItem(caseItem, isOtherCases)
   li.case-item(class = isOtherCases ? "small" : "" data-aos="fade-up")

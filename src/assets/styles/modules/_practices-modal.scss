@@ -25,6 +25,16 @@ $practices-modal-bg-color-2: #bbdcf9;
     transform: translateX(0);
   }
 
+  .zoom-hide-item {
+    transform: scale(1.1);
+    opacity: 0;
+
+    &.show {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
   &__content {
     max-width: 1920px;
     padding: 30px 40px 90px;
@@ -112,6 +122,18 @@ $practices-modal-bg-color-2: #bbdcf9;
     flex-direction: column;
     margin: 60px 0;
 
+    &-1 {
+      @include transition($delay: 0.1s);
+    }
+
+    &-2 {
+      @include transition($delay: 0.25s);
+    }
+
+    &-3 {
+      @include transition($delay: 0.4s);
+    }
+
     @media (max-width: 1199px) {
       margin: 0 0 20px;
     }
@@ -193,6 +215,7 @@ $practices-modal-bg-color-2: #bbdcf9;
   &__links {
     display: flex;
     flex-direction: column;
+    @include transition($delay: 0.55s);
 
     @media (max-width: 1200px) {
       margin-bottom: 20px;
